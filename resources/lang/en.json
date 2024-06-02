@@ -1,0 +1,35 @@
+{
+    "auth": {
+        "invalid_credentials": "Invalid credentials. Please try again."
+    },
+    "validation": {
+        "required": "Please enter a :attribute.",
+        "email": "Please enter a valid email address."
+    },
+    "attributes": {
+        "name": "name",
+        "email": "email address",
+        "password": "password",
+        "subject": "subject",
+        "message": "message"
+    },
+    "general_form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+    },
+    "contact_form": {
+        "subjects": {
+            "general_inquiry": "General Inquiry",
+            "project_collaboration": "Project Collaboration",
+            "job_offers": "Job Offers",
+            "bug_reporting": "Bug Reporting",
+            "other": "Other"
+        }
+    },
+    "buttons": {
+        "login": "Login",
+        "send": "Send"
+    }
+}

@@ -1,0 +1,7 @@
+// _main.scss
+
+main {
+    > section:not(first-of-type) {
+        padding-top: 50px;
+    }
+}

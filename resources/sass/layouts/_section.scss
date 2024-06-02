@@ -1,0 +1,45 @@
+section {
+    min-height: 100%;
+
+    &.full-height {
+        height: 100dvh;
+    }
+
+    &.text {
+        margin: 0 1em;
+        width: clamp(45ch, 50%, 75ch);
+    }
+
+    .left,
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    section {
+        &.text {
+            margin: 0 2em;
+        }
+    }
+}
+
+@media screen and (min-width: 905px) {
+    section {
+        &.text {
+            margin: 0 12em;
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    section {
+        &.text {
+            margin: 0 auto;
+        }
+    }
+}

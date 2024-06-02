@@ -1,0 +1,38 @@
+// main.scss
+
+@import "utils/variables";
+@import "utils/mixins";
+
+// Import base styles
+@import "base/reset";
+@import "base/colors";
+@import "base/typography";
+@import "base/base";
+@import "base/darkmode";
+@import "base/dyslexia";
+@import "base/reduced_motion";
+@import "base/printable";
+@import "base/helper";
+
+// Import layout styles
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/aside";
+@import "layouts/section";
+@import "layouts/home";
+@import "layouts/contact";
+
+// Import page styles
+// @import "pages/_home.scss";
+// @import "pages/_about.scss";
+// @import "pages/_events.scss";
+
+// Import component styles
+@import "components/tables";
+@import "components/forms";
+@import "components/buttons";
+@import "components/errors";
+@import "components/articles";
+// @import "components/modal";
+// @import "components/form_group";
+// @import "components/cookie_banner";

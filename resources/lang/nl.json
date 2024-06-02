@@ -1,0 +1,35 @@
+{
+    "auth": {
+        "invalid_credentials": "Ongeldige inloggegevens. Probeer opnieuw."
+    },
+    "validation": {
+        "required": "Gelieve een :attribute in te vullen.",
+        "email": "Gelieve een geldig e-mailadres in te vullen."
+    },
+    "attributes": {
+        "name": "naam",
+        "email": "e-mailadres",
+        "password": "wachtwoord",
+        "subject": "onderwerp",
+        "message": "bericht"
+    },
+    "general_form": {
+        "name": "Naam",
+        "email": "E-mail",
+        "subject": "Onderwerp",
+        "message": "Bericht"
+    },
+    "contact_form": {
+        "subjects": {
+            "general_inquiry": "Algemene Vraag",
+            "project_collaboration": "Project Samenwerking",
+            "job_offers": "Werkaanbiedingen",
+            "bug_reporting": "Foutmelding",
+            "other": "Overig"
+        }
+    },
+    "buttons": {
+        "login": "Aanmelden",
+        "send": "Verzend"
+    }
+}

@@ -1,0 +1,132 @@
+// _forms.scss
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background: $color-white;
+    border-radius: $border-radius;
+
+    .form-control {
+        position: relative;
+        margin-bottom: 1.8125em;
+
+        .form__label {
+            position: absolute;
+            transform: scale(1);
+            transform-origin: top left;
+            bottom: -0.2em;
+            font-size: 1.125em;
+            margin-left: 0.625em;
+            margin-bottom: 0.625em;
+            transition:
+                transform 200ms cubic-bezier(0, 0, 0.2, 1),
+                left 200ms cubic-bezier(0, 0, 0.2, 1),
+                bottom 200ms cubic-bezier(0, 0, 0.2, 1);
+            z-index: 1;
+            cursor: text;
+        }
+
+        .form__input,
+        .form__select,
+        .form__textarea {
+            font-family: $font-family-primary;
+            width: 100%;
+            padding: 0.375em 0.625em;
+            font-size: 1.125em;
+            border: none;
+            border-color: rgba($color-black, 0.42);
+            outline: none;
+
+            &.input--standard {
+                border-bottom: 1px solid;
+            }
+
+            &.input--filled {
+                background: rgba($color-black, 0.1);
+                border-bottom: 1px solid;
+                border-top-left-radius: $border-radius;
+                border-top-right-radius: $border-radius;
+                padding-top: 1.125em;
+            }
+
+            &.input--outlined {
+                border: 1px solid;
+                border-radius: $border-radius;
+            }
+        }
+
+        .form__textarea {
+            resize: vertical;
+        }
+
+        .form__error {
+            position: absolute;
+            margin-top: 0.375em;
+        }
+
+        &:has(.input--standard)::after,
+        &:has(.input--filled)::after,
+        &:has(.input--outlined)::after {
+            position: absolute;
+            content: "";
+            border-color: $color-primary;
+        }
+
+        &:has(.input--standard)::after,
+        &:has(.input--filled)::after {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: scaleX(0);
+            transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+        }
+
+        &:has(.input--standard:hover)::after,
+        &:has(.input--standard:focus)::after,
+        &:has(.input--filled:hover)::after,
+        &:has(.input--filled:focus)::after {
+            transform: scaleX(1);
+        }
+
+        &:has(.input--outlined:hover)::after,
+        &:has(.input--outlined:focus)::after {
+            inset: 0;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: $border-radius;
+            pointer-events: none;
+        }
+
+        &:has(.input--standard:focus) .form__label,
+        &:has(.input--standard:not(:placeholder-shown)) .form__label,
+        &:has(.input--standard > option:checked) .form__label,
+        &:has(.input--filled:focus) .form__label,
+        &:has(.input--filled:not(:placeholder-shown)) .form__label,
+        &:has(.input--filled > option:checked) .form__label,
+        &:has(.input--outlined:focus) .form__label,
+        &:has(.input--outlined:not(:placeholder-shown)) .form__label,
+        &:has(.input--outlined > option:checked) .form__label {
+            transform: scale(0.8125);
+            color: $color-primary;
+            cursor: default;
+        }
+        &:has(.input--standard:focus) .form__label,
+        &:has(.input--standard:not(:placeholder-shown)) .form__label,
+        &:has(.input--standard > option:checked) .form__label,
+        &:has(.input--filled:focus) .form__label,
+        &:has(.input--filled:not(:placeholder-shown)) .form__label,
+        &:has(.input--filled > option:checked) .form__label {
+            bottom: 1.125em;
+        }
+
+        &:has(.input--outlined:focus) .form__label,
+        &:has(.input--outlined:not(:placeholder-shown)) .form__label,
+        &:has(.input--outlined > option:checked) .form__label {
+            bottom: 0.8125em;
+            background: $color-white;
+        }
+    }
+}

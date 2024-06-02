@@ -1,0 +1,24 @@
+// _helper.scss
+
+.hidden {
+    display: none;
+}
+
+.elevate {
+    box-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.underline {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 100%;
+        background: $color-black;
+        bottom: 0;
+    }
+}

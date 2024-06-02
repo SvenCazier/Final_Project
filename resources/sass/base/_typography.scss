@@ -1,0 +1,7 @@
+// _typography.scss
+
+@include font-face("Poppins", "../fonts/Poppins-Regular", normal, normal);
+@include font-face("Poppins", "../fonts/Poppins-Light", 300, normal);
+@include font-face("SF New Republic", "../fonts/SFNewRepublic-Bold", bold, normal);
+@include font-face("OpenDyslexic", "../fonts/OpenDyslexic-Regular", normal, normal);
+@include font-face("OpenDyslexic", "../fonts/OpenDyslexic-Bold", bold, normal);

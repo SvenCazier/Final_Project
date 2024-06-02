@@ -1,0 +1,60 @@
+// _dyslexia.scss
+
+html {
+    &.dyslexia-friendly {
+        font-size: 1em !important;
+        line-height: 1.5 !important;
+        letter-spacing: 0.12em !important;
+        word-spacing: 0.42em !important;
+        text-transform: none !important;
+        font-style: normal !important;
+        text-decoration: none !important;
+        animation: none !important;
+        transition: none !important;
+
+        *:focus {
+            outline: 2px solid $color-dyslexia-accent !important;
+        }
+
+        a {
+            color: $color-dyslexia-accent !important;
+            text-decoration: underline !important;
+        }
+
+        h1 {
+            font-size: 9.0625em !important;
+        }
+        h2 {
+            font-size: 5.25em !important;
+        }
+        h3 {
+            font-size: 3em !important;
+        }
+        h4 {
+            font-size: 2em !important;
+        }
+        h5 {
+            font-size: 1.5em !important;
+        }
+        h6 {
+            font-size: 1.25em !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        body {
+            font-family: $font-family-dyslexia !important;
+        }
+
+        input,
+        textarea,
+        select {
+            font-family: inherit !important;
+            font-size: inherit !important;
+        }
+    }
+}

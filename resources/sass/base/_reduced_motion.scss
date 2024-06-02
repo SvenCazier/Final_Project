@@ -1,0 +1,8 @@
+// _recuded_motion.scss
+
+@media (prefers-reduced-motion: reduced) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
