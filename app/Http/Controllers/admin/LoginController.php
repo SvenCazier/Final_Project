@@ -17,9 +17,6 @@ class LoginController extends Controller
         return view("admin.login");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function authenticate(Request $request)
     {
         $attributes = request()->validate([

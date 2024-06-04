@@ -13,6 +13,11 @@
         "subject": "onderwerp",
         "message": "bericht"
     },
+    "nav": {
+        "about": "Over",
+        "projects": "Projecten",
+        "contact": "Contacteer"
+    },
     "general_form": {
         "name": "Naam",
         "email": "E-mail",
@@ -31,5 +36,11 @@
     "buttons": {
         "login": "Aanmelden",
         "send": "Verzend"
+    },
+    "about": {
+        "about": "Over",
+        "me": "mij",
+        "Once Upon a Time...": "Er was eens...",
+        "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer.": "Een kind dat thuis talloze uren doorbracht met het spelen van games op de MS-DOS-computer en eindeloze vreugde vond in de pixelachtige avonturen en de zoemende geluiden van de machine. Op 10-jarige leeftijd stond hij voor zijn klasgenoten en gaf zijn eerste spreekbeurt over de wonderen van internet. Vanaf dat moment was hij gefascineerd en verslaafd aan de grenzeloze mogelijkheden die de digitale wereld te bieden had."
     }
 }

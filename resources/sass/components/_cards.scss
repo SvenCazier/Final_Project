@@ -1,1 +1,72 @@
 // _cards.scss
+
+.card {
+    display: inline-block;
+    position: relative;
+    height: 400px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.23);
+    background: #eaeaea;
+
+    &::before {
+        content: "";
+        background: #5a07ff;
+        border-radius: 16px;
+        position: absolute;
+        top: 55%;
+        left: -4%;
+        height: 65%;
+        width: 100%;
+        transform: skew(16deg, -12deg);
+        box-shadow:
+            0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    &__title {
+        position: absolute;
+        color: #fff;
+        font-weight: 900;
+        left: 150px;
+        bottom: 26%;
+    }
+
+    &__logo {
+        height: 100px;
+        width: 100px;
+        border-radius: 4px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 30%;
+        left: 30px;
+        overflow: hidden;
+        box-shadow:
+            0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__links {
+        position: absolute;
+        color: #fff;
+        right: 30px;
+        bottom: 10%;
+    }
+}
+
+.image {
+    height: 70%;
+}
+
+.date {
+    position: absolute;
+    color: #fff;
+    left: 30px;
+    bottom: 10%;
+}

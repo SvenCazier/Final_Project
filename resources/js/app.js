@@ -1,87 +1,80 @@
+"use strict";
+
 import "./bootstrap";
 
-document.addEventListener("DOMContentLoaded", function () {
-    const eventsContainer = document.querySelector(".events__container");
+document.addEventListener("scroll", scrollFunction);
 
-    // Extract sections from the events container
-    const sections = Array.from(eventsContainer.querySelectorAll(".events"));
+function scrollFunction() {
+    const navbar = document.getElementById("navbar");
+    if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+    ) {
+        navbar.classList.remove("expanded");
+        navbar.classList.add("elevate");
+    } else {
+        navbar.classList.add("expanded");
+        navbar.classList.remove("elevate");
+    }
+}
 
-    // Array to store articles with their local dates
-    const articlesWithLocalDates = [];
+const inboxTable = document.getElementById("inbox");
+document.addEventListener("DOMContentLoaded", makeMessageArray);
 
-    // Iterate over each section to extract articles and their local dates
-    sections.forEach((section) => {
-        const sectionDate = new Date(
-            section
-                .querySelector(".events__title__text")
-                .getAttribute("datetime")
+function makeMessageArray() {
+    const messageRows = Array.from(inboxTable.querySelectorAll(".message"));
+    const messagesWithLocalDates = [];
+
+    messageRows.forEach((messageRow) => {
+        const messageRowTimeElement = messageRow.querySelector(".time time");
+        const messageDate = new Date(
+            messageRowTimeElement.getAttribute("datetime")
         );
-
-        // Extract articles and their local dates
-        section.querySelectorAll(".event").forEach((article) => {
-            const articleTimeEl = article.querySelector(".event__time");
-            const articleTime = new Date(
-                articleTimeEl.getAttribute("datetime")
-            );
-            // Set article datetime attribute to local format
-            articleTimeEl.setAttribute("datetime", articleTime.toString());
-            // Set article time to local format
-            articleTimeEl.textContent = articleTime.toLocalTimeString();
-            const localDate = articleTime.toLocaleDateString();
-            articlesWithLocalDates.push({ localDate, articleElement: article });
+        messageRowTimeElement.setAttribute("datetime", messageDate.toString());
+        const localTime = messageDate.toLocalTimeString();
+        messageRowTimeElement.textContent = localTime;
+        const localDate = messageDate.toLocalDateString();
+        messagesWithLocalDates.push({
+            localDate,
+            localTime,
+            messageRow: messageRow,
         });
-
-        // Remove the section from the events container
-        section.remove();
     });
+    createTable(messagesWithLocalDates);
+}
 
-    // Array to store sections
-    const sectionsArray = [];
-
-    // Iterate over articles with local dates to create/update sections
-    articlesWithLocalDates.forEach(({ localDate, articleElement }) => {
-        // Check if a section with the same local date exists
-        let sectionIndex = sectionsArray.findIndex(
-            (sec) => sec.date === localDate
+function createTable(messageArray) {
+    const tableBodyArray = [];
+    messageArray.forEach(({ localDate, localTime, messageRow }) => {
+        let tableBodyIndex = tableBodyArray.findIndex(
+            (index) => index.date === localDate
         );
-
-        // If section doesn't exist, create a new section
-        if (sectionIndex === -1) {
-            const section = createSection(new Date(localDate));
-            sectionsArray.push({ date: localDate, section });
-            sectionIndex = sectionsArray.length - 1; // Set section index to the last added section
+        if (tableBodyIndex === -1) {
+            const tableBody = createTBody(new Date(localDate));
+            tableBodyArray.push({ date: localDate, tableBody });
+            tableBodyIndex = tableBodyArray.length - 1;
         }
-
-        // Append the article to the appropriate section
-        const section = sectionsArray[sectionIndex].section;
-        section.querySelector(".events__articles").appendChild(articleElement);
+        tableBodyArray[tableBodyIndex].tableBody.appendChild(messageRow);
     });
-
-    // Add the updated sections back to the events container
-    sectionsArray.forEach(({ section }) => {
-        eventsContainer.appendChild(section);
+    tableBodyArray.forEach(({ tableBody }) => {
+        inboxTable.append(tableBody);
     });
+}
 
-    // Change titles to local format, also for UTC time
-    const eventTitles = document.querySelectorAll(".events__title__text");
-    eventTitles.forEach((eventTitle) => {
-        const utcTime = new Date(eventTitle.getAttribute("datetime"));
-        eventTitle.setAttribute("datetime", utcTime.toDateString());
-        eventTitle.textContent = utcTime.toLocalDateString();
-    });
-});
+function createTBody(date) {
+    const headerCell = document.createElement("th");
+    headerCell.classList.add("table__cell");
+    headerCell.innerText = date.toISODateString();
+    headerCell.setAttribute("colspan", 4);
 
-// Function to create a new section
-function createSection(date) {
-    const section = document.createElement("section");
-    section.classList.add("events");
-    section.innerHTML = `
-	  <header class="events__title">
-		<h4 class="events__title__text" datetime="${date.toISOString()}">${date.toLocaleDateString()}</h4>
-	  </header>
-	  <div class="events__articles"></div>
-	`;
-    return section;
+    const headerRow = document.createElement("tr");
+    headerRow.classList.add("table__row", "header", "header--body");
+    headerRow.appendChild(headerCell);
+
+    const tbody = document.createElement("tbody");
+    tbody.appendChild(headerRow);
+
+    return tbody;
 }
 
 // Function to format date as YYYY-MM-DD format

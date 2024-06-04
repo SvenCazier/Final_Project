@@ -1,13 +1,26 @@
 section {
-    min-height: 100%;
-
     &.full-height {
         height: 100dvh;
     }
 
+    &.content-grid {
+        display: grid;
+
+        & > * {
+            grid-column: content;
+        }
+
+        & > .full-width {
+            grid-column: full-width;
+        }
+    }
+
+    &.hero {
+        grid-template-columns: [full-width-start] 1em [content-start] 1fr [content-end] 1em [full-width-end];
+    }
+
     &.text {
-        margin: 0 1em;
-        width: clamp(45ch, 50%, 75ch);
+        grid-template-columns: [full-width-start] auto [content-start] clamp(45ch, 50%, 75ch) [content-end] auto [full-width-end];
     }
 
     .left,
@@ -20,26 +33,34 @@ section {
     }
 }
 
-@media screen and (min-width: 600px) {
+@media #{$mq-xs} {
     section {
-        &.text {
-            margin: 0 2em;
+        &.hero {
+            grid-template-columns: [full-width-start] 2em [content-start] 1fr [content-end] 2em [full-width-end];
         }
     }
 }
 
-@media screen and (min-width: 905px) {
+@media #{$mq-sm} {
     section {
-        &.text {
-            margin: 0 12em;
+        &.hero {
+            grid-template-columns: [full-width-start] auto [content-start] 840px [content-end] auto [full-width-end];
         }
     }
 }
 
-@media screen and (min-width: 1240px) {
+@media #{$mq-md} {
     section {
-        &.text {
-            margin: 0 auto;
+        &.hero {
+            grid-template-columns: [full-width-start] 12em [content-start] 1fr [content-end] 12em [full-width-end];
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    section {
+        &.hero {
+            grid-template-columns: [full-width-start] auto [content-start] 1040px [content-end] auto [full-width-end];
         }
     }
 }

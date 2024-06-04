@@ -21,14 +21,14 @@
         <x-nav></x-nav>
     </header>
     <main>
-        <section id="home" class="full-height">
+        <section id="home" class="content-grid hero full-height">
             <div class="left">
                 <h1 class="title">FULL STACK DEVELOPER</h1>
             </div>
         </section>
-        <section id="about">
-            <h2 class="article__title--main"><span class="article__title--underline">About</span> Me</h2>
-            <article class="article text">
+        <section id="about" class="content-grid text">
+            <h2 class="title article__title--main"><span class="article__title--underline">About</span> Me</h2>
+            <article class="article">
                 <h3 class="article__title">Once Upon a Time...</h3>
                 <p class="article__content">
                     There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding
@@ -38,7 +38,7 @@
                     offer.
                 </p>
             </article>
-            <article class="article text">
+            <article class="article">
                 <h3 class="article__title">The Academic Wanderer</h3>
                 <p class="article__content">
                     In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name
@@ -47,7 +47,7 @@
                     "monkey see, monkey do" for my liking. Student life, however, was a blast.
                 </p>
             </article>
-            <article class="article text">
+            <article class="article">
                 <h4 class="article__title">The Family Biz Coder</h4>
                 <p class="article__content">
                     Post-college, I joined the family business but couldn't shake off my coding addiction. I even ended
@@ -56,7 +56,7 @@
                     push.
                 </p>
             </article>
-            <article class="article text">
+            <article class="article">
                 <h4 class="article__title">"We'll Fast-forward To A Few Years Later" (- Alanis Morissette)</h4>
                 <p class="article__content">
                     Fast forward to now, and I've completed the VDAB course for full-stack developers to expand my
@@ -67,7 +67,7 @@
                     with a bunch of brilliant minds, and it made the entire experience unforgettable.
                 </p>
             </article>
-            <article class="article text">
+            <article class="article">
                 <h4 class="article__title">Tech Wizardry</h4>
                 <p class="article__content">
                     In my voyage through the vast seas of programming, I've amassed a diverse arsenal of languages and
@@ -101,16 +101,18 @@
                     pursuit of excellence.
                 </p>
             </article>
-            <article class="article text">
+            <article class="article">
                 <h4 class="article__title">The Grand Quest</h4>
                 <p class="article__content">
-                    I’m on a mission to solve complex problems and create seamless, user-friendly applications. I thrive
+                    I'm on a mission to solve complex problems and create seamless, user-friendly applications. I thrive
                     in collaborative environments and am always eager to learn something new. My ultimate goal? To make
                     a lasting impact with the solutions I develop.
                 </p>
             </article>
         </section>
-        <section id="projects"></section>
+        <section id="projects">
+            <x-cards.card />
+        </section>
         <section id="contact">
             <div class="left"></div>
             <div class="right">

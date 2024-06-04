@@ -13,6 +13,11 @@
         "subject": "subject",
         "message": "message"
     },
+    "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
     "general_form": {
         "name": "Name",
         "email": "Email",
@@ -31,5 +36,13 @@
     "buttons": {
         "login": "Login",
         "send": "Send"
+    },
+    "about": {
+        "about": "About",
+        "me": "me",
+        "Once Upon a Time...": "Once Upon a Time...",
+        "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer.": "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer.",
+        "The Academic Wanderer": "The Academic Wanderer",
+        "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much \"monkey see, monkey do\" for my liking. Student life, however, was a blast.": "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much \"monkey see, monkey do\" for my liking. Student life, however, was a blast."
     }
 }

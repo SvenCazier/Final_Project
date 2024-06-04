@@ -15,7 +15,7 @@ class ContactFormController extends Controller
             "name" => ["required"],
             "email" => ["required", "email", "max:254"],
             "subject" => ["required", Rule::in(array_column(ContactFormSubject::cases(), "value"))],
-            "message" => ["required", "max:"],
+            "message" => ["required", "max:500"],
         ]);
 
         $attributes["from"] = $attributes["name"];

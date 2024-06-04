@@ -1,6 +1,6 @@
-@props(['tableData'])
+@props(['tableData', 'id' => 'inbox'])
 
-<table class="table table--inbox elevate">
+<table id="{{ $id }}" class="table table--inbox elevate">
     <thead>
         <tr class="table__row header header--table">
             <th class="table__cell">From</th>
@@ -15,16 +15,19 @@
                 <th class="table__cell" colspan="4">{{ $date }}</th>
             </tr>
             @foreach ($rows as $row)
-                <tr class="table__row {{ !$row['is_handled'] ? ' highlight' : '' }}">
-                    <td class="table__cell">{{ $row['from'] }}</td>
-                    <td class="table__cell">{{ $row['subject'] }}</td>
-                    <td class="table__cell time"><time datime="{{ $row['fullUTCString'] }}">{{ $row['uTCTime'] }}</time>
-                    </td>
-                    <td class="table__cell">
-                        {{-- <x-forms.form method="DELETE" action="/message/{{ $row['id'] }}">
+                <tr class="table__row message {{ !$row['is_handled'] ? 'highlight' : '' }}">
+                    <a href="/messages/{{ $row['id'] }}">
+                        <td class="table__cell from">{{ $row['from'] }}</td>
+                        <td class="table__cell subject">{{ $row['subject'] }}</td>
+                        <td class="table__cell time"><time
+                                datetime="{{ $row['fullUTCString'] }}">{{ $row['uTCTime'] }}</time>
+                        </td>
+                        <td class="table__cell">
+                            {{-- <x-forms.form method="DELETE" action="/message/{{ $row['id'] }}">
                             <x-button class="button button--delete">delete</x-button>
                         </x-forms.form> --}}
-                    </td>
+                        </td>
+                    </a>
                 </tr>
             @endforeach
         </tbody>

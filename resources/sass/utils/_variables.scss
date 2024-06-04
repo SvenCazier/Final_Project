@@ -10,3 +10,15 @@ $font-small: 0.8125em;
 
 /* BORDER-RADIUS */
 $border-radius: 4px;
+
+/* BREAKPOINTS */
+$bp-xs: 37.5em; // 600px
+$bp-sm: 56.5625em; // 905px
+$bp-md: 77.5em; // 1240px
+$bp-lg: 90em; // 1440px
+
+/* MEDIAQUERIES */
+$mq-xs: "screen and (min-width: #{$bp-xs})";
+$mq-sm: "screen and (min-width: #{$bp-sm})";
+$mq-md: "screen and (min-width: #{$bp-md})";
+$mq-lg: "screen and (min-width: #{$bp-lg})";

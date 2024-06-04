@@ -14,6 +14,8 @@ header {
         align-items: center;
         width: 100%;
         height: 50px;
+        padding: 1em;
+        background: $color-primary;
 
         ul {
             display: none;
@@ -47,7 +49,7 @@ header {
             left: 0;
             height: 4px;
             width: 100%;
-            background: black;
+            background: white;
             border-radius: 7px;
 
             &:first-of-type {
@@ -65,13 +67,21 @@ header {
     }
 }
 
-@media (min-width: 1240px) {
+@media #{$mq-md} {
     header {
         nav {
             flex-direction: row;
             justify-content: space-between;
-            padding: 2.5em 5em;
-            font-size: 2em;
+            padding: 1.5em 3em;
+            transition:
+                0.3s padding ease,
+                0.3s font-size ease;
+
+            &.expanded {
+                padding: 2.5em 5em;
+                font-size: 2em;
+                background: none;
+            }
 
             ul {
                 display: flex;
