@@ -1,0 +1,39 @@
+// _contact.scss
+
+section#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .left {
+        width: 100%;
+        padding: 5em;
+    }
+
+    .right {
+        form {
+            width: 100%;
+        }
+    }
+}
+
+@media #{$mq-md} {
+    section#contact {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow-x: hidden;
+
+        .left {
+            width: 50%;
+            padding: 5em;
+        }
+
+        .right {
+            form {
+                width: 700px;
+                transform: translateX(100%);
+            }
+        }
+    }
+}

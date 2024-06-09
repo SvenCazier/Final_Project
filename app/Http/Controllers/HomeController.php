@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        $subjects = ContactFormSubject::cases();
-        return view("index", compact("subjects"));
+        //$subjects = ContactFormSubject::cases();
+        return view("index"/*, compact("subjects")*/);
     }
 }

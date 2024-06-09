@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\ContactFormSubject;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,8 +20,9 @@ class ContactFormSubmissionFactory extends Factory
         return [
             "from" => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            "subject" => fake()->words(3, true),
+            "subject" => fake()->randomElement(ContactFormSubject::cases()),
             "message" => fake()->words(200, true),
+            "created_at" => fake()->dateTimeBetween("-5 days"),
         ];
     }
 }

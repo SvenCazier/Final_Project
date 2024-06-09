@@ -19,13 +19,11 @@
 @import "layouts/main";
 @import "layouts/aside";
 @import "layouts/section";
-@import "layouts/home";
-@import "layouts/contact";
+@import "layouts/footer";
 
 // Import page styles
-// @import "pages/_home.scss";
-// @import "pages/_about.scss";
-// @import "pages/_events.scss";
+@import "pages/home";
+@import "pages/contact";
 
 // Import component styles
 @import "components/tables";
@@ -34,6 +32,8 @@
 @import "components/buttons";
 @import "components/errors";
 @import "components/articles";
+@import "components/socials";
+@import "components/divider";
 // @import "components/modal";
 // @import "components/form_group";
 // @import "components/cookie_banner";

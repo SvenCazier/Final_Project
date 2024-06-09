@@ -1,4 +1,10 @@
 {
+    "languages": {
+        "english": "Engels",
+        "dutch": "Nederlands",
+        "french": "Frans",
+        "spanish": "Spaans"
+    },
     "auth": {
         "invalid_credentials": "Ongeldige inloggegevens. Probeer opnieuw."
     },
@@ -28,7 +34,7 @@
         "subjects": {
             "general_inquiry": "Algemene Vraag",
             "project_collaboration": "Project Samenwerking",
-            "job_offers": "Werkaanbiedingen",
+            "job_offer": "Werkaanbieding",
             "bug_reporting": "Foutmelding",
             "other": "Overig"
         }

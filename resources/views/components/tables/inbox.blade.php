@@ -18,7 +18,8 @@
                 <tr class="table__row message {{ !$row['is_handled'] ? 'highlight' : '' }}">
                     <a href="/messages/{{ $row['id'] }}">
                         <td class="table__cell from">{{ $row['from'] }}</td>
-                        <td class="table__cell subject">{{ $row['subject'] }}</td>
+                        <td class="table__cell subject">
+                            {{ __(App\Enums\ContactFormSubject::getLabel($row['subject'])) }}</td>
                         <td class="table__cell time"><time
                                 datetime="{{ $row['fullUTCString'] }}">{{ $row['uTCTime'] }}</time>
                         </td>

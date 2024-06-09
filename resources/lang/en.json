@@ -1,4 +1,10 @@
 {
+    "languages": {
+        "english": "English",
+        "dutch": "Dutch",
+        "french": "French",
+        "spanish": "Spanish"
+    },
     "auth": {
         "invalid_credentials": "Invalid credentials. Please try again."
     },
@@ -28,7 +34,7 @@
         "subjects": {
             "general_inquiry": "General Inquiry",
             "project_collaboration": "Project Collaboration",
-            "job_offers": "Job Offers",
+            "job_offer": "Job Offer",
             "bug_reporting": "Bug Reporting",
             "other": "Other"
         }

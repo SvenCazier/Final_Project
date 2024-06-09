@@ -2,6 +2,9 @@
 
 main {
     > section:not(first-of-type) {
-        padding-top: 50px;
+        padding-top: 3.75em;
+    }
+    > section:last-of-type {
+        padding-bottom: 3.75em;
     }
 }

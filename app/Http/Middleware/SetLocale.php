@@ -15,7 +15,7 @@ class SetLocale
 
         $locale = strlen($request->segment(1)) === 2 ? $request->segment(1) : null;
 
-        if (is_null($locale)) $locale = "en";  //return redirect('/' . Locale::ENGLISH . $request->getPathInfo());
+        if (is_null($locale)) return redirect('/' . Locale::ENGLISH . $request->getPathInfo());
         if (!in_array($locale, Locale::values())) abort(404);
 
         App::setLocale($locale);

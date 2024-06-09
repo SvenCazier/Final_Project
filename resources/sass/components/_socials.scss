@@ -1,0 +1,22 @@
+// _socials.scss
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    svg {
+        width: 1.5em;
+
+        .svg {
+            &--back {
+                fill: $color-black;
+            }
+
+            &--front {
+                fill: $color-white;
+            }
+        }
+    }
+}

@@ -1,9 +1,19 @@
 // _base.scss
 
+a:focus,
+a:focus-within,
+a:focus-visible,
+a:active {
+    outline: 2px solid $color-secondary-dark;
+    outline-offset: 4px;
+    border-radius: $border-radius;
+}
+
 body {
     font-family: $font-family-primary;
     background: $color-light;
     color: $color-black;
+    font-size: clamp(10px, 16px, 3.2vw);
 }
 
 h1 {

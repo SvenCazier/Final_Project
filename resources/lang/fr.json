@@ -1,0 +1,54 @@
+{
+    "languages": {
+        "english": "Anglais",
+        "dutch": "Néerlandais",
+        "french": "Français",
+        "spanish": "Espagnol"
+    },
+    "auth": {
+        "invalid_credentials": "Identifiants invalides. Veuillez réessayer."
+    },
+    "validation": {
+        "required": "Veuillez entrer un(e) :attribute.",
+        "email": "Veuillez entrer une adresse e-mail valide."
+    },
+    "attributes": {
+        "name": "nom",
+        "email": "adresse e-mail",
+        "password": "mot de passe",
+        "subject": "sujet",
+        "message": "message"
+    },
+    "nav": {
+        "about": "Qui suis-je?",
+        "projects": "Projets",
+        "contact": "Contact"
+    },
+    "general_form": {
+        "name": "Nom",
+        "email": "E-mail",
+        "subject": "Sujet",
+        "message": "Message"
+    },
+    "contact_form": {
+        "subjects": {
+            "general_inquiry": "Demande générale",
+            "project_collaboration": "Collaboration de projet",
+            "job_offer": "Offre d'emploi",
+            "bug_reporting": "Signalement de bug",
+            "other": "Autre"
+        }
+    },
+    "buttons": {
+        "login": "Connexion",
+        "send": "Envoyer"
+    },
+    "about": {
+        "about": "Qui",
+        "me": "suis-je?",
+        "Once Upon a Time...": "Il était une fois...",
+        "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer.": "Il était une fois un enfant qui passait des heures à jouer sur l'ordinateur MS-DOS à la maison, trouvant une joie infinie dans les aventures pixelisées et les bruits de la machine. À l'âge de 10 ans, il se tenait devant ses camarades de classe et faisait sa première présentation sur les merveilles d'Internet. Dès ce moment, il fut captivé, accroché aux possibilités infinies qu'offrait le monde numérique.",
+        "The Academic Wanderer": "Le Vagabond Académique",
+        "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much \"monkey see, monkey do\" for my liking. Student life, however, was a blast.": "Au lycée, j'ai touché à un peu de tout : le latin, l'économie, les maths, les langues modernes—vous nommez-le. Malgré mon amour pour ces sujets, rien ne m'a vraiment accroché jusqu'à ce que je découvre l'informatique. L'université était censée être ma grande aventure dans la tech, mais c'était un peu trop \"faire comme le singe\" à mon goût. La vie étudiante, cependant, était fantastique."
+    }
+}

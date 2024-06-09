@@ -7,17 +7,15 @@ use Illuminate\Support\Facades\Route;
 $domain = "portfolio.local";
 
 Route::group(
-    ["domain" => "www.$domain"],
+    ["domain" => "www.$domain", "prefix" => "{locale?}"],
     function () {
-        Route::group(["prefix" => "{locale?}"], function () {
-            Route::get("/", HomeController::class);
-        });
+        Route::get("/", HomeController::class);
         Route::post("/contact", ContactFormController::class);
     }
 );
 
 Route::group(
-    ["domain" => "admin.$domain"],
+    ["domain" => "admin.$domain", "prefix" => "{locale?}"],
     function () {
         Route::middleware("guest")->group(
             function () {
@@ -29,6 +27,7 @@ Route::group(
             function () {
                 Route::get("/", [AdminHomeController::class, "index"]);
                 Route::get("/messages/{message}", [AdminHomeController::class, "show"]);
+                Route::patch("/messages/{message}", [AdminHomeController::class, "update"]);
                 Route::delete("/messages/{message}", [AdminHomeController::class, "destroy"]);
                 Route::delete("/logout", [AdminLoginController::class, "destroy"]);
             }

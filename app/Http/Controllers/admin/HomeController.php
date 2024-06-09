@@ -37,4 +37,12 @@ class HomeController extends Controller
     {
         //
     }
+
+    public function update()
+    {
+    }
+
+    public function destroy()
+    {
+    }
 }

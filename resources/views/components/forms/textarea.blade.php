@@ -7,7 +7,7 @@
         'standard' => 'input--standard',
     ];
 
-    $defaultClasses = 'form__input ' . $inputClasses[$style];
+    $defaultClasses = 'form__textarea ' . $inputClasses[$style];
 
     $defaults = [
         'id' => $name,
