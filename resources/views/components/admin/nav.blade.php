@@ -1,6 +1,10 @@
-<nav>
-    <h3>Admin</h3>
+<nav class="sticky">
+    <h3><a href="{{ url('') }}/{{ app()->getLocale() }}">Admin</a></h3>
     <ul>
-        <li><a href="#">Logout</a></li>
+        <li>
+            <x-forms.form method="DELETE" action="/{{ app()->getLocale() }}/logout">
+                <x-button style="text">Logout</x-button>
+            </x-forms.form>
+        </li>
     </ul>
 </nav>

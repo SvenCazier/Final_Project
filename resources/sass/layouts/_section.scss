@@ -5,6 +5,7 @@ section {
 
     &.content-grid {
         display: grid;
+        grid-template-columns: [full-width-start] 1em [content-start] 1fr [content-end] 1em [full-width-end];
 
         & > * {
             grid-column: content;
@@ -16,7 +17,7 @@ section {
     }
 
     &.hero {
-        grid-template-columns: [full-width-start] 1em [content-start] 1fr [content-end] 1em [full-width-end];
+        padding-top: 0;
     }
 
     &.text {
@@ -36,7 +37,7 @@ section {
 
 @media #{$mq-xs} {
     section {
-        &.hero {
+        &.content-grid {
             grid-template-columns: [full-width-start] 2em [content-start] 1fr [content-end] 2em [full-width-end];
         }
         &.text {
@@ -47,7 +48,7 @@ section {
 
 @media #{$mq-sm} {
     section {
-        &.hero {
+        &.content-grid {
             grid-template-columns: [full-width-start] auto [content-start] 840px [content-end] auto [full-width-end];
         }
         &.text {
@@ -58,7 +59,7 @@ section {
 
 @media #{$mq-md} {
     section {
-        &.hero {
+        &.content-grid {
             grid-template-columns: [full-width-start] 12em [content-start] 1fr [content-end] 12em [full-width-end];
         }
         &.text {
@@ -69,7 +70,7 @@ section {
 
 @media #{$mq-lg} {
     section {
-        &.hero {
+        &.content-grid {
             grid-template-columns: [full-width-start] auto [content-start] 1040px [content-end] auto [full-width-end];
         }
         &.text {

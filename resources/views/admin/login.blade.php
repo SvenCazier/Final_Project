@@ -12,12 +12,14 @@
 
 <body>
     <main>
-        <x-forms.form method="POST" action="/{{ app()->getLocale() }}/login">
-            <x-forms.input label="Email" name="email" type="text" />
-            <x-forms.input label="Password" name="password" type="password" />
-            <x-forms.error :error="$errors->first('invalid_credentials')" />
-            <x-button>Login</x-button>
-        </x-forms.form>
+        <section class="content-grid">
+            <x-forms.form method="POST" action="/{{ app()->getLocale() }}/login">
+                <x-forms.input label="Email" name="email" type="text" />
+                <x-forms.input label="Password" name="password" type="password" />
+                <x-forms.error :error="$errors->first('invalid_credentials')" />
+                <x-button>Login</x-button>
+            </x-forms.form>
+        </section>
     </main>
 </body>
 

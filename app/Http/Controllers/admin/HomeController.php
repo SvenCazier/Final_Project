@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $submissions = ContactFormSubmission::all()->sortDesc()->map(function ($item) {
+        $submissions = ContactFormSubmission::all()->sortByDesc("created_at")->map(function ($item) {
             $itemData = $item->only(["id", "from", "subject", "is_handled"]);
 
             $createdAt = $item["created_at"]->timestamp;
@@ -30,19 +30,20 @@ class HomeController extends Controller
         );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function show(Request $request)
+    public function show(string $lang, ContactFormSubmission $message)
     {
-        //
+        return view("admin.message", [
+            "message" => $message,
+        ]);
     }
 
     public function update()
     {
     }
 
-    public function destroy()
+    public function destroy(string $lang, ContactFormSubmission $message)
     {
+        $message->delete();
+        return redirect("/");
     }
 }

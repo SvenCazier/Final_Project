@@ -1,4 +1,8 @@
 // _printable.scss
 
 @media print {
+    a::after {
+        content: " (" attr(href) ") ";
+        text-decoration: underline;
+    }
 }

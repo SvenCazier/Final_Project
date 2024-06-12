@@ -6,14 +6,16 @@ use Illuminate\Support\Facades\Route;
 
 $domain = "portfolio.local";
 
-Route::group(
-    ["domain" => "www.$domain", "prefix" => "{locale?}"],
-    function () {
-        Route::get("/", HomeController::class);
-        Route::post("/contact", ContactFormController::class);
-    }
-);
+//Regular routes
+$regularRoutes = function () {
+    Route::get("/", HomeController::class);
+    Route::post("/contact", ContactFormController::class);
+};
 
+Route::group(["domain" => "$domain", "prefix" => "{locale?}"], $regularRoutes);
+Route::group(["domain" => "www.$domain", "prefix" => "{locale?}"], $regularRoutes);
+
+//Admin routes
 Route::group(
     ["domain" => "admin.$domain", "prefix" => "{locale?}"],
     function () {

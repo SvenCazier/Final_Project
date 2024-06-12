@@ -1,5 +1,6 @@
 {
-    "languages": {
+    "locales": {
+        "labelText": "Changer la langue actuelle en",
         "english": "Anglais",
         "dutch": "Néerlandais",
         "french": "Français",
@@ -39,9 +40,18 @@
             "other": "Autre"
         }
     },
+    "inbox": {
+        "from": "De",
+        "subject": "Sujet",
+        "received": "Reçu",
+        "date": "Date",
+        "time": "Heure"
+    },
     "buttons": {
+        "contact": "Contactez-moi",
         "login": "Connexion",
-        "send": "Envoyer"
+        "send": "Envoyer",
+        "delete": "Supprimer"
     },
     "about": {
         "about": "Qui",

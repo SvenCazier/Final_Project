@@ -20,3 +20,11 @@
         }
     }
 }
+
+@media print {
+    svg {
+        g {
+            display: none;
+        }
+    }
+}

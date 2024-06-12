@@ -1,8 +1,13 @@
 // _recuded_motion.scss
 
-@media (prefers-reduced-motion: reduced) {
-    * {
+@media (prefers-reduced-motion) {
+    *,
+    *::before,
+    *::after {
         animation: none !important;
         transition: none !important;
+    }
+    html {
+        scroll-behavior: auto !important;
     }
 }

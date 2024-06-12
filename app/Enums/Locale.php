@@ -12,10 +12,10 @@ class Locale extends Enum
     public static function getFullLanguageName(string $locale): string
     {
         $languages = [
-            self::ENGLISH => __("languages.english"),
-            self::DUTCH => __("languages.dutch"),
-            self::FRENCH => __("languages.french"),
-            self::SPANISH => __("languages.spanish"),
+            self::ENGLISH => __("locales.english"),
+            self::DUTCH => __("locales.dutch"),
+            self::FRENCH => __("locales.french"),
+            self::SPANISH => __("locales.spanish"),
         ];
 
         return $languages[$locale] ?? $locale;

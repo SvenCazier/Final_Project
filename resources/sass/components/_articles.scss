@@ -31,3 +31,15 @@
         border-bottom: 8px solid $color-dark;
     }
 }
+
+@media print {
+    .article {
+        display: table;
+    }
+
+    .article__title--underline {
+        &::before {
+            border-bottom: 2px solid $color-dark;
+        }
+    }
+}

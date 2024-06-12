@@ -15,7 +15,9 @@
         <x-admin.nav />
     </header>
     <main>
-        <x-tables.inbox :tableData="$submissions" />
+        <section class="content-grid">
+            <x-cards.message :messageData="$message" />
+        </section>
     </main>
 </body>
 

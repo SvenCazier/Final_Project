@@ -1,5 +1,6 @@
 {
-    "languages": {
+    "locales": {
+        "labelText": "Verander de huidige taal in",
         "english": "Engels",
         "dutch": "Nederlands",
         "french": "Frans",
@@ -39,9 +40,18 @@
             "other": "Overig"
         }
     },
+    "inbox": {
+        "from": "Van",
+        "subject": "Onderwerp",
+        "received": "Ontvangen",
+        "date": "Datum",
+        "time": "Tijd"
+    },
     "buttons": {
+        "contact": "Contacteer mij",
         "login": "Aanmelden",
-        "send": "Verzend"
+        "send": "Verzend",
+        "delete": "Verwijderen"
     },
     "about": {
         "about": "Over",

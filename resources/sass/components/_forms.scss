@@ -3,13 +3,12 @@
 form {
     display: flex;
     flex-direction: column;
-    padding: 2em;
-    background: $color-white;
+    width: 100%;
     border-radius: $border-radius;
 
     .form-control {
         position: relative;
-        margin-bottom: 1.8125em;
+        margin-bottom: 2.5em;
 
         .form__label {
             position: absolute;
@@ -125,18 +124,29 @@ form {
 
         &:has(.input--standard:focus) .form__label,
         &:has(.input--standard:not(:placeholder-shown)) .form__label,
-        &:has(.input--standard > option:checked) .form__label,
+        &:has(.input--standard > option:checked) .form__label {
+            top: -1em;
+        }
+
         &:has(.input--filled:focus) .form__label,
         &:has(.input--filled:not(:placeholder-shown)) .form__label,
-        &:has(.input--filled > option:checked) .form__label {
-            top: -0.8125em;
+        &:has(.input--filled > option:checked) .form__label,
+        &:has(.input--outlined:focus) .form__label,
+        &:has(.input--outlined:not(:placeholder-shown)) .form__label,
+        &:has(.input--outlined > option:checked) .form__label {
+            top: -0.625em;
         }
 
         &:has(.input--outlined:focus) .form__label,
         &:has(.input--outlined:not(:placeholder-shown)) .form__label,
         &:has(.input--outlined > option:checked) .form__label {
-            top: -0.625em;
             background: $color-white;
         }
+    }
+}
+
+@media print {
+    form {
+        display: table;
     }
 }
