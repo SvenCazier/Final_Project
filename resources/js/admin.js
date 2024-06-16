@@ -2,6 +2,15 @@
 
 import "./bootstrap";
 
+// window.addEventListener("pageshow", function (event) {
+//     if (
+//         event.persisted ||
+//         performance.getEntriesByType("navigation")[0].type === "back_forward"
+//     ) {
+//         location.reload();
+//     }
+// });
+
 const tableRows = document.querySelectorAll("tbody tr");
 for (const tableRow of tableRows) {
     tableRow.addEventListener("click", function () {

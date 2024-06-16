@@ -3,19 +3,22 @@
 .socials {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    padding: 1em 0;
 
-    svg {
-        width: 1.5em;
+    &__item {
+        padding: 0 1.5em;
 
-        .svg {
-            &--back {
-                fill: $color-black;
-            }
+        &:not(:last-of-type) {
+            border-right: 1px solid rgba($color-white, 0.1);
+        }
 
-            &--front {
-                fill: $color-white;
+        a {
+            display: flex;
+
+            svg {
+                height: 2em;
             }
         }
     }

@@ -1,5 +1,6 @@
 {
     "locales": {
+        "selectedLang": "Current language:",
         "labelText": "Change the current language to",
         "english": "English",
         "dutch": "Dutch",
@@ -23,7 +24,8 @@
     "nav": {
         "about": "About",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "settings": "Settings"
     },
     "general_form": {
         "name": "Name",
@@ -48,10 +50,14 @@
         "time": "Time"
     },
     "buttons": {
+        "projects": "Dive Into My Projects",
         "contact": "Let's Connect",
         "login": "Login",
         "send": "Send",
         "delete": "Delete"
+    },
+    "hero": {
+        "intro": "Welcome to my website! I'm a Full Stack Developer who loves creating seamless user experiences and robust backend systems. Check out my projects to see my work in action."
     },
     "about": {
         "about": "About",
@@ -62,7 +68,7 @@
         },
         "section_2": {
             "title": "The Academic Wanderer",
-            "content_1": "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much \"monkey see, monkey do\" for my liking. Student life, however, was a blast."
+            "content_1": "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much theory in a rigid environment, not enough exploring for my liking. Student life, however, was a blast."
         },
         "section_3": {
             "title": "The Family Biz Coder",

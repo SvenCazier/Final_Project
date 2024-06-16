@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <header>
+        <x-admin.nav />
+    </header>
     <main>
         <section class="content-grid">
             <x-forms.form method="POST" action="/{{ app()->getLocale() }}/login">

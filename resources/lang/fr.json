@@ -1,5 +1,6 @@
 {
     "locales": {
+        "selectedLang": "Langue actuelle:",
         "labelText": "Changer la langue actuelle en",
         "english": "Anglais",
         "dutch": "Néerlandais",
@@ -23,7 +24,8 @@
     "nav": {
         "about": "Qui suis-je?",
         "projects": "Projets",
-        "contact": "Contact"
+        "contact": "Contact",
+        "settings": "Paramètres"
     },
     "general_form": {
         "name": "Nom",
@@ -48,17 +50,45 @@
         "time": "Heure"
     },
     "buttons": {
+        "projects": "Explorez Mes Projets",
         "contact": "Contactez-moi",
         "login": "Connexion",
         "send": "Envoyer",
         "delete": "Supprimer"
     },
+    "hero": {
+        "intro": "Bienvenue sur ma page web ! Je suis un développeur Full Stack passionné par la création d'expériences utilisateur fluides et de systèmes backend robustes. Découvrez mes projets pour voir mon travail en action."
+    },
     "about": {
         "about": "Qui",
         "me": "suis-je?",
-        "Once Upon a Time...": "Il était une fois...",
-        "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer.": "Il était une fois un enfant qui passait des heures à jouer sur l'ordinateur MS-DOS à la maison, trouvant une joie infinie dans les aventures pixelisées et les bruits de la machine. À l'âge de 10 ans, il se tenait devant ses camarades de classe et faisait sa première présentation sur les merveilles d'Internet. Dès ce moment, il fut captivé, accroché aux possibilités infinies qu'offrait le monde numérique.",
-        "The Academic Wanderer": "Le Vagabond Académique",
-        "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much \"monkey see, monkey do\" for my liking. Student life, however, was a blast.": "Au lycée, j'ai touché à un peu de tout : le latin, l'économie, les maths, les langues modernes—vous nommez-le. Malgré mon amour pour ces sujets, rien ne m'a vraiment accroché jusqu'à ce que je découvre l'informatique. L'université était censée être ma grande aventure dans la tech, mais c'était un peu trop \"faire comme le singe\" à mon goût. La vie étudiante, cependant, était fantastique."
+        "section_1": {
+            "title": "Il Était Une Fois...",
+            "content_1": "Il y avait un enfant qui passait des heures interminables à jouer à des jeux sur l'ordinateur MS-DOS à la maison, trouvant une joie sans fin dans les aventures pixelisées et les bruits de la machine. À l'âge de 10 ans, il se tenait devant ses camarades de classe et faisait sa première présentation sur les merveilles d'internet. À partir de ce moment, il était captivé, accro aux possibilités infinies offertes par le monde numérique."
+        },
+        "section_2": {
+            "title": "Le Vagabond Académique",
+            "content_1": "Au lycée, j'ai touché à tout : latin, économie, maths, langues modernes - vous le nommez. Malgré mon amour pour ces sujets, rien ne cliquait vraiment jusqu'à ce que je découvre l'informatique. La haute école était censée être ma grande aventure dans le domaine de la technologie, mais c'était finalement trop théorique dans un environnement rigide, pas assez d'exploration à mon goût.. La vie étudiante, cependant, était un régal."
+        },
+        "section_3": {
+            "title": "Le Codeur de L'Entreprise Familiale",
+            "content_1": "Après l'université, j'ai rejoint l'entreprise familiale, mais je ne pouvais pas me débarrasser de mon addiction au codage. J'ai même fini par coder toutes les missions pour ma petite amie américaine de l'époque. Elle me disait constamment : \"Tu es tellement bon dans ce domaine; tu devrais vraiment obtenir ton diplôme !\" Je suppose que je devrais la remercier pour la poussée."
+        },
+        "section_4": {
+            "title": "\"On Avancera De Quelques Années\" (- Alanis Morissette)",
+            "content_1": "Avance rapide jusqu'à maintenant, et j'ai terminé le cours de développeurs full-stack de VDAB pour élargir mes compétences. Une expérience mémorable a été le projet SCRUM, où j'ai appris la magie du travail d'équipe et des méthodologies agiles. C'était incroyablement amusant; nous trouvions constamment de nouvelles façons de rendre les réunions debout quotidiennes amusantes et engageantes. Notre équipe était toujours là les uns pour les autres, brainstormant des solutions et se soutenant mutuellement face aux défis. Cela ressemblait à assembler un puzzle technologique avec des esprits brillants, et cela a rendu l'expérience inoubliable."
+        },
+        "section_5": {
+            "title": "La Sorcellerie Technologique",
+            "content_1": "Dans mon voyage à travers les vastes mers de la programmation, j'ai amassé un arsenal diversifié de langages et d'outils, chacun ajoutant un nouveau sort à mon répertoire technologique. Tout a commencé au lycée avec <b class=\"lang-tag\">VBA</b>, où j'ai fait mon premier plongeon dans le monde du codage. L'université m'a plongé plus profondément dans les royaumes du codage, où j'ai rencontré <b class=\"lang-tag\">Assembler</b>, <b class=\"lang-tag\">Java</b> et <b class=\"lang-tag\">COBOL</b>, aux côtés de la trilogie fondatrice de <b class=\"lang-tag\">HTML</b>, <b class=\"lang-tag\">CSS</b> et <b class=\"lang-tag\">JavaScript</b>, complétée par leurs compagnons backend <b class=\"lang-tag\">SQL</b> et <b class=\"lang-tag\">PHP</b>.",
+            "content_2": "Ma quête d'innovation m'a conduit à me demander pourquoi PHP ne pouvait pas ressembler davantage à JavaScript, jusqu'à ce que je tombe sur la Bonne Sorcière de <b class=\"lang-tag\">Node.js</b>, accompagnée de <b class=\"lang-tag\">NoSQL</b> et <b class=\"lang-tag\">ReQL</b>. Ce n'était définitivement plus le Kansas. J'ai trempé mes orteils dans <b class=\"lang-tag\">Python</b> et grâce à ma petite amie de l'époque, j'ai appris <b class=\"lang-tag\">C++</b>, <b class=\"lang-tag\">Spring</b> pour Java et <b class=\"lang-tag\">Flask</b> pour Python.",
+            "content_3": "Fort de mes nouvelles connaissances, j'ai entrepris de créer mon propre Metube en Node.js, en utilisant ReQL et <b class=\"lang-tag\">EJS</b> comme moteur de modèle, le tout protégé par un proxy <b class=\"lang-tag\">NGINX</b>, servant des centaines de vidéos. Malheureusement, sa fin est venue rapidement lorsque le disque dur sur lequel tout fonctionnait s'est verrouillé.",
+            "content_4": "Toujours à la recherche de nouveaux horizons, je me suis retrouvé dans une relation amour-haine avec le <b class=\"lang-tag\">TypeScript</b> de <b class=\"lang-tag\">Angular</b>, une relation que je navigue encore. Grâce à VDAB, je me suis maintenant plongé dans les mondes de <b class=\"lang-tag\">SASS</b>, <b class=\"lang-tag\">Laravel</b>, <b class=\"lang-tag\">Twig</b> et <b class=\"lang-tag\">Blade</b> aussi.",
+            "content_5": "Tout au long de mon voyage, j'ai également rencontré <b class=\"lang-tag\">Twitter Bootstrap</b>, <b class=\"lang-tag\">Tailwind CSS</b> et <b class=\"lang-tag\">JQuery</b>. Bien que d'abord charmé par leur commodité, je me suis depuis retrouvé à graviter vers leurs homologues vanille. Il y a un certain charme à concevoir des solutions à partir de zéro, permettant une personnalisation et un contrôle accrus. C'est un voyage marqué par la découverte, l'expérimentation et la quête constante de l'excellence."
+        },
+        "section_6": {
+            "title": "La Grande Quête",
+            "content_1": "Je suis en mission pour résoudre des problèmes complexes et créer des applications fluides et conviviales. Je prospère dans les environnements collaboratifs et suis toujours désireux d'apprendre quelque chose de nouveau. Mon objectif ultime ? Avoir un impact durable avec les solutions que je développe."
+        }
     }
 }

@@ -28,9 +28,9 @@ Route::group(
         Route::middleware("auth")->group(
             function () {
                 Route::get("/", [AdminHomeController::class, "index"]);
-                Route::get("/messages/{message}", [AdminHomeController::class, "show"]);
-                Route::patch("/messages/{message}", [AdminHomeController::class, "update"]);
-                Route::delete("/messages/{message}", [AdminHomeController::class, "destroy"]);
+                Route::get("/message/{message}", [AdminHomeController::class, "show"]);
+                Route::patch("/message/{message}", [AdminHomeController::class, "update"]);
+                Route::delete("/message/{message}", [AdminHomeController::class, "destroy"]);
                 Route::delete("/logout", [AdminLoginController::class, "destroy"]);
             }
         );

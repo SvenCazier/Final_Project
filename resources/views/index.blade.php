@@ -23,12 +23,12 @@
         <x-nav class="expanded" />
     </header>
     <main>
-        <layouts.home />
-        <layouts.about />
-        <layouts.projects />
-        <layouts.contact />
+        <x-layouts.home />
+        <x-layouts.about />
+        <x-layouts.projects />
+        <x-layouts.contact />
     </main>
-    <layouts.footer />
+    <x-layouts.footer />
 </body>
 
 </html>

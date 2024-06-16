@@ -32,6 +32,9 @@ class HomeController extends Controller
 
     public function show(string $lang, ContactFormSubmission $message)
     {
+        $message->is_handled = 1;
+        $message->save();
+
         return view("admin.message", [
             "message" => $message,
         ]);

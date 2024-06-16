@@ -1,5 +1,6 @@
 {
     "locales": {
+        "selectedLang": "Idioma actual:",
         "labelText": "Cambiar el idioma actual a",
         "english": "Inglés",
         "dutch": "Holandés",
@@ -23,7 +24,8 @@
     "nav": {
         "about": "¿Quién soy yo?",
         "projects": "Proyectos",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "settings": "Configuración"
     },
     "general_form": {
         "name": "Nombre",
@@ -48,17 +50,45 @@
         "time": "Hora"
     },
     "buttons": {
+        "projects": "Descubre Mis Proyectos",
         "contact": "Contáctame",
         "login": "Iniciar sesión",
         "send": "Enviar",
         "delete": "Suprimir"
     },
+    "hero": {
+        "intro": "¡Bienvenido a mi página web! Soy un desarrollador Full Stack apasionado por crear experiencias de usuario fluidas y sistemas backend robustos. Mira mis proyectos para ver mi trabajo en acción."
+    },
     "about": {
         "about": "¿Quién",
         "me": "soy yo?",
-        "Once Upon a Time...": "Érase una vez...",
-        "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer.": "Había una vez un niño que pasaba incontables horas jugando en la computadora MS-DOS en casa, encontrando una alegría infinita en las aventuras pixeladas y los sonidos zumbantes de la máquina. A los 10 años, se paró frente a sus compañeros de clase e hizo su primera presentación sobre las maravillas de Internet. Desde ese momento, quedó cautivado, enganchado a las infinitas posibilidades que el mundo digital tenía para ofrecer.",
-        "The Academic Wanderer": "El Vagabundo Académico",
-        "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much \"monkey see, monkey do\" for my liking. Student life, however, was a blast.": "En la escuela secundaria, experimenté un poco con todo: latín, economía, matemáticas, lenguas modernas—lo que sea. A pesar de mi amor por estos temas, nada realmente me atrapó hasta que descubrí la informática. La universidad se suponía que iba a ser mi gran aventura en la tecnología, pero resultó ser un poco demasiado de \"haz lo que el mono ve\" para mi gusto. La vida estudiantil, sin embargo, fue una maravilla."
+        "section_1": {
+            "title": "Érase Una Vez...",
+            "content_1": "Había un niño que pasaba incontables horas jugando a juegos en el ordenador MS-DOS en casa, encontrando una alegría infinita en las aventuras pixeladas y los sonidos zumbantes de la máquina. A los 10 años, se presentó ante sus compañeros de clase e hizo su primera presentación sobre las maravillas de Internet. Desde ese momento, quedó cautivado, enganchado a las infinitas posibilidades que el mundo digital tenía para ofrecer."
+        },
+        "section_2": {
+            "title": "El Vagabundo Académico",
+            "content_1": "En la escuela secundaria probé un poco de todo: Latín, Economía, Matemáticas, Lenguas Modernas, lo que sea. A pesar de mi amor por estos temas, nada realmente hizo clic hasta que descubrí la informática. La universidad se suponía que iba a ser mi gran aventura en tecnología, pero resultó ser demasiado teórica en un entorno rígido, no había suficiente exploración para mi gusto. Sin embargo, la vida estudiantil fue increíble."
+        },
+        "section_3": {
+            "title": "El Programador del Negocio Familiar",
+            "content_1": "Después de la universidad, me uní al negocio familiar, pero no pude dejar mi adicción a la programación. Incluso terminé codificando todas las tareas para mi novia estadounidense de entonces. Ella me decía constantemente: \"Eres tan bueno en esto; ¡deberías obtener tu título!\" Supongo que debería agradecerle por el empujón."
+        },
+        "section_4": {
+            "title": "\"Avancemos Unos Años\" (- Alanis Morissette)",
+            "content_1": "Avancemos rápido hasta ahora, y he completado el curso de desarrolladores full-stack de VDAB para ampliar mis habilidades. Una experiencia memorable fue el proyecto SCRUM, donde aprendí la magia del trabajo en equipo y las metodologías ágiles. Fue increíblemente divertido; constantemente encontrábamos nuevas formas de hacer que las reuniones diarias de pie fueran divertidas y atractivas. Nuestro equipo siempre estaba ahí para apoyarse mutuamente, ideando soluciones y apoyándose mutuamente frente a los desafíos. Se sentía como armar un rompecabezas tecnológico con un grupo de mentes brillantes, y eso hizo que toda la experiencia fuera inolvidable."
+        },
+        "section_5": {
+            "title": "Magia Tecnológica",
+            "content_1": "En mi viaje a través de los vastos mares de la programación, he acumulado un arsenal diverso de lenguajes y herramientas, cada uno añadiendo un nuevo hechizo a mi repertorio tecnológico. Todo comenzó en la escuela secundaria con <b class=\"lang-tag\">VBA</b>, donde di mi primer salto al mundo de la codificación. La universidad me llevó más profundamente a los reinos de la codificación, donde encontré <b class=\"lang-tag\">Assembler</b>, <b class=\"lang-tag\">Java</b> y <b class=\"lang-tag\">COBOL</b>, junto con la tríada fundamental de <b class=\"lang-tag\">HTML</b>, <b class=\"lang-tag\">CSS</b> y <b class=\"lang-tag\">JavaScript</b>, complementados por sus compañeros de back-end <b class=\"lang-tag\">SQL</b> y <b class=\"lang-tag\">PHP</b>.",
+            "content_2": "Mi búsqueda de innovación me llevó a preguntarme por qué PHP no podía parecerse más a JavaScript, hasta que me encontré con la Buena Bruja de <b class=\"lang-tag\">Node.js</b>, acompañada de <b class=\"lang-tag\">NoSQL</b> y <b class=\"lang-tag\">ReQL</b>. Definitivamente, esto ya no era Kansas. Mojé mis pies en <b class=\"lang-tag\">Python</b> y gracias a mi entonces novia, aprendí <b class=\"lang-tag\">C++</b>, <b class=\"lang-tag\">Spring</b> para Java y <b class=\"lang-tag\">Flask</b> para Python.",
+            "content_3": "Fortalecido por mis nuevos conocimientos, me embarqué en la creación de mi propio Metube en Node.js, utilizando ReQL y <b class=\"lang-tag\">EJS</b> como motor de plantillas, todo protegido por un proxy <b class=\"lang-tag\">NGINX</b>, sirviendo cientos de videos. Lamentablemente, su fin llegó rápidamente cuando el disco duro en el que todo funcionaba se bloqueó.",
+            "content_4": "Siempre en busca de nuevos horizontes, me encontré en una relación de amor-odio con el <b class=\"lang-tag\">TypeScript</b> de <b class=\"lang-tag\">Angular</b>, una relación que aún estoy navegando. Gracias a VDAB, ahora me he sumergido en los mundos de <b class=\"lang-tag\">SASS</b>, <b class=\"lang-tag\">Laravel</b>, <b class=\"lang-tag\">Twig</b> y <b class=\"lang-tag\">Blade</b> también.",
+            "content_5": "A lo largo de mi viaje, también he encontrado <b class=\"lang-tag\">Twitter Bootstrap</b>, <b class=\"lang-tag\">Tailwind CSS</b> y <b class=\"lang-tag\">JQuery</b>. Aunque inicialmente me encantó su conveniencia, desde entonces me he encontrado gravitando hacia sus contrapartes de vainilla. Hay un cierto encanto en crear soluciones desde cero, lo que permite una mayor personalización y control. Es un viaje marcado por el descubrimiento, la experimentación y la búsqueda constante de la excelencia."
+        },
+        "section_6": {
+            "title": "La Gran Búsqueda",
+            "content_1": "Estoy en una misión para resolver problemas complejos y crear aplicaciones fluidas y fáciles de usar. Me desenvuelvo bien en entornos colaborativos y siempre estoy ansioso por aprender algo nuevo. ¿Mi objetivo final? Dejar una huella duradera con las soluciones que desarrollo."
+        }
     }
 }

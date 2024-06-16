@@ -45,6 +45,27 @@
     }
 
     &--inbox {
+        .table__row.message {
+            cursor: pointer;
+
+            &:hover,
+            &:focus,
+            &:focus-within {
+                background: $color-primary-light;
+                outline: none;
+            }
+
+            button:hover,
+            button:focus {
+                outline: none;
+
+                svg {
+                    path {
+                        fill: $color-error;
+                    }
+                }
+            }
+        }
     }
 
     .time {
