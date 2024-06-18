@@ -12,49 +12,43 @@ html {
         animation: none !important;
         transition: none !important;
 
+        * {
+            font-family: $font-family-dyslexia !important;
+        }
+
         *:focus {
             outline: 2px solid $color-dyslexia-accent !important;
         }
 
-        a {
-            color: $color-dyslexia-accent !important;
-            text-decoration: underline !important;
-        }
+        // a {
+        //     color: $color-dyslexia-accent !important;
+        //     text-decoration: underline !important;
+        // }
 
-        h1 {
-            font-size: 9.0625em !important;
-        }
-        h2 {
-            font-size: 5.25em !important;
-        }
-        h3 {
-            font-size: 3em !important;
-        }
-        h4 {
-            font-size: 2em !important;
-        }
-        h5 {
-            font-size: 1.5em !important;
-        }
-        h6 {
-            font-size: 1.25em !important;
-        }
+        // h1 {
+        //     font-size: 9.0625em;
+        // }
+        // h2 {
+        //     font-size: 5.25em;
+        // }
+        // h3 {
+        //     font-size: 3em;
+        // }
+        // h4 {
+        //     font-size: 2em;
+        // }
+        // h5 {
+        //     font-size: 1.5em;
+        // }
+        // h6 {
+        //     font-size: 1.25em;
+        // }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        body {
-            font-family: $font-family-dyslexia !important;
-        }
-
-        input,
-        textarea,
-        select {
-            font-family: inherit !important;
-            font-size: inherit !important;
-        }
+        // input,
+        // textarea,
+        // select {
+        //     font-family: inherit !important;
+        //     font-size: inherit !important;
+        // }
     }
 }

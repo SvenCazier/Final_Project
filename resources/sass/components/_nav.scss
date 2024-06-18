@@ -24,10 +24,11 @@ nav {
         font-family: inherit;
         font-size: inherit;
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: 1.5rem;
         display: inline-block;
         min-width: max-content;
         width: 100%;
+        cursor: pointer;
     }
 
     .nav__main {
@@ -40,36 +41,73 @@ nav {
             flex-direction: column;
             width: 100%;
             inset: 3.75em 0 0 0;
+            height: calc(100dvh - 3.75em);
+            overflow-y: auto;
+            background: $color-primary;
         }
 
         li {
-            padding: 1.5em 1em;
+            padding: 1.5em 0;
             width: 100%;
             text-align: center;
             background: $color-primary;
 
             a {
-                font-size: 1.5em;
+                &.active {
+                    text-decoration: underline 2px solid $color-white;
+                    text-underline-offset: 0.25em;
+                }
             }
         }
     }
 
-    .nav__locale {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    li.nav__secondary {
+        padding: 0;
+        margin-top: auto;
 
-        li {
-            padding: 0 1em;
-            text-align: center;
-            background: $color-primary;
+        a,
+        button,
+        span {
+            font-size: 1rem;
+        }
 
-            &:not(:last-of-type) {
-                border-right: 1px solid $color-white;
+        .nav__locale,
+        .nav__settings {
+            .submenu-selector {
+                display: none;
             }
 
-            a {
-                font-size: 1em;
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+
+                li {
+                    min-width: max-content;
+                    flex: 1;
+                    padding: 0 1em;
+                    text-align: center;
+                }
+            }
+        }
+        .nav__locale {
+            li {
+                background: $color-primary;
+
+                &:not(:last-of-type) {
+                    border-right: 1px solid $color-white;
+                }
+            }
+        }
+
+        .nav__settings {
+            ul {
+                li {
+                    span {
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -117,10 +155,13 @@ nav {
 
         &.expanded {
             padding: 2.5em 5em;
-            font-size: 2em;
             background: none;
             box-shadow: none;
             align-items: baseline;
+
+            a {
+                font-size: clamp(3rem, 3.5vw, 5rem);
+            }
 
             .nav__main {
                 align-items: baseline;
@@ -135,9 +176,17 @@ nav {
             display: flex;
             flex-direction: row;
             align-items: center;
-        }
 
-        .nav__main {
+            &.show {
+                position: initial;
+                flex-direction: initial;
+                width: initial;
+                inset: initial;
+                height: inherit;
+                overflow-y: initial;
+                background: initial;
+            }
+
             li {
                 padding: 0;
                 background: none;
@@ -146,22 +195,47 @@ nav {
                     margin-right: 1.5em;
                     border-right: none;
                 }
-
-                a {
-                    &.active {
-                        border-bottom: 2px solid $color-white;
-                    }
-                }
             }
         }
 
-        .nav__locale {
-            margin-top: 5px;
-            flex-direction: column;
+        li.nav__secondary {
+            margin-top: initial;
 
-            li {
-                &:not(:first-of-type) {
+            a,
+            button {
+                width: fit-content;
+            }
+
+            ul {
+                display: flex;
+            }
+
+            .nav__locale,
+            .nav__settings {
+                position: relative;
+
+                .submenu-selector {
+                    display: block;
+                }
+
+                ul {
                     display: none;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 8px;
+                }
+
+                &:hover ul {
+                    display: block;
+                }
+            }
+
+            .nav__locale {
+                li {
+                    &:not(:last-of-type) {
+                        border: none;
+                    }
                 }
             }
         }

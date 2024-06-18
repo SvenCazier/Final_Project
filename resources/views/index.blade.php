@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <x-nav class="expanded" />
+        <x-nav.nav class="expanded" />
     </header>
     <main>
         <x-layouts.home />

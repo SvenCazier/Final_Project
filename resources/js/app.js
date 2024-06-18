@@ -1,10 +1,18 @@
 "use strict";
 
 import "./bootstrap";
+import NavigationManager from "./components/NavigationManager";
 
 window.addEventListener("resize", toggleMenu);
-window.addEventListener("scroll", navScrollFunction);
-document.addEventListener("DOMContentLoaded", navScrollFunction);
+window.addEventListener("scroll", () => {
+    navScrollFunction();
+});
+document.addEventListener("DOMContentLoaded", () => {
+    navScrollFunction();
+    loadSettings();
+    const navigationManager = new NavigationManager();
+    navigationManager.setActiveNav(window.location.hash);
+});
 
 function navScrollFunction() {
     const navbar = document.getElementById("navbar");
@@ -15,10 +23,10 @@ function navScrollFunction() {
     }
 }
 
-const contactSection = document.getElementById("contact");
-const contactForm = document.getElementById("contactForm");
-const $finalPosition = contactSection.offsetTop;
-const $finalHeight = contactSection.offsetHeight;
+// const contactSection = document.getElementById("contact");
+// const contactForm = document.getElementById("contactForm");
+// const $finalPosition = contactSection.offsetTop;
+// const $finalHeight = contactSection.offsetHeight;
 const smallScreenBreakpoint = 1240;
 
 // window.addEventListener("scroll", () => {
@@ -63,4 +71,45 @@ function redirectWithHash(event) {
     window.location.href = `${event.target.getAttribute("href")}${
         window.location.hash
     }`;
+}
+
+const htmlElement = document.querySelector("html");
+
+const darkModeSwitch = document.getElementById("switch-dark-mode");
+const dyslexiaModeSwitch = document.getElementById("switch-dyslexia-mode");
+
+darkModeSwitch.addEventListener("change", setDarkMode);
+dyslexiaModeSwitch.addEventListener("change", setDyslexiaMode);
+
+function loadSettings() {
+    const darkModeEnabled = localStorage.getItem("darkmode") === "true";
+    const dyslexiaModeEnabled = localStorage.getItem("dyslexiamode") === "true";
+
+    darkModeSwitch.checked = darkModeEnabled;
+    dyslexiaModeSwitch.checked = dyslexiaModeEnabled;
+
+    toggleDarkMode(darkModeEnabled);
+    toggleDyslexiaMode(dyslexiaModeEnabled);
+}
+
+function setDarkMode() {
+    localStorage.setItem("darkmode", this.checked);
+    toggleDarkMode(this.checked);
+}
+
+function setDyslexiaMode() {
+    localStorage.setItem("dyslexiamode", this.checked);
+    toggleDyslexiaMode(this.checked);
+}
+
+function toggleDarkMode(darkModeEnabled) {
+    darkModeEnabled
+        ? htmlElement.classList.add("darkmode")
+        : htmlElement.classList.remove("darkmode");
+}
+
+function toggleDyslexiaMode(dyslexiaModeEnabled) {
+    dyslexiaModeEnabled
+        ? htmlElement.classList.add("dyslexia-friendly")
+        : htmlElement.classList.remove("dyslexia-friendly");
 }

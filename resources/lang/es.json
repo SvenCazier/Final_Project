@@ -27,6 +27,10 @@
         "contact": "Contacto",
         "settings": "Configuración"
     },
+    "settings": {
+        "darkmode": "Modo Oscuro",
+        "dyslexiamode": "Modo Dislexia"
+    },
     "general_form": {
         "name": "Nombre",
         "email": "Correo electrónico",

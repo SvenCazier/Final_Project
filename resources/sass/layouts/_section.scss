@@ -15,15 +15,14 @@ section {
         & > .full-width {
             grid-column: full-width;
         }
+
+        &.text {
+            grid-template-columns: [full-width-start] auto [content-start] clamp(45ch, 50%, 70ch) [content-end] auto [full-width-end];
+        }
     }
 
     &.hero {
         padding-top: 0;
-    }
-
-    &.text {
-        grid-template-columns: [full-width-start] auto [content-start] clamp(45ch, 50%, 70ch) [content-end] auto [full-width-end];
-        margin: 0 1em;
     }
 
     .left,
@@ -41,9 +40,6 @@ section {
         &.content-grid {
             grid-template-columns: [full-width-start] 2em [content-start] 1fr [content-end] 2em [full-width-end];
         }
-        &.text {
-            margin: 0 2em;
-        }
     }
 }
 
@@ -51,9 +47,6 @@ section {
     section {
         &.content-grid {
             grid-template-columns: [full-width-start] auto [content-start] 840px [content-end] auto [full-width-end];
-        }
-        &.text {
-            margin: 0;
         }
     }
 }
@@ -63,9 +56,6 @@ section {
         &.content-grid {
             grid-template-columns: [full-width-start] 12em [content-start] 1fr [content-end] 12em [full-width-end];
         }
-        &.text {
-            margin: 0 12em;
-        }
     }
 }
 
@@ -73,9 +63,6 @@ section {
     section {
         &.content-grid {
             grid-template-columns: [full-width-start] auto [content-start] 1040px [content-end] auto [full-width-end];
-        }
-        &.text {
-            margin: 0;
         }
     }
 }

@@ -1,0 +1,40 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+
+    input {
+        display: none;
+
+        &:checked + .slider {
+            background-color: $color-primary-dark;
+        }
+
+        &:checked + .slider::before {
+            transform: translate(2rem, -50%);
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: $color-primary-light;
+        transition: 200ms;
+        border-radius: 20px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0.25rem;
+            height: 1.5rem;
+            width: 1.5rem;
+            background-color: $color-white;
+            transition: 200ms;
+            border-radius: 50%;
+        }
+    }
+}

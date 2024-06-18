@@ -27,6 +27,10 @@
         "contact": "Contacteer",
         "settings": "Instellingen"
     },
+    "settings": {
+        "darkmode": "Donkere Modus",
+        "dyslexiamode": "Dyslexiemodus"
+    },
     "general_form": {
         "name": "Naam",
         "email": "E-mail",

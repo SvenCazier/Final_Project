@@ -71,10 +71,13 @@ svg {
     height: 1.5rem;
 
     .svg {
-        &--back {
+        &--black {
             fill: $color-black;
         }
-        &--front {
+        &--white {
+            fill: $color-white;
+        }
+        &--primary {
             fill: $color-primary;
         }
     }

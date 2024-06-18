@@ -1,6 +1,31 @@
 // _darkmode.scss
 
-@media (prefers-color-scheme: dark) {
-    :root {
-    }
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         $color-primary: #5a07ff;
+//         $color-primary-dark: #2c00f1;
+//         $color-primary-light: #b896ff;
+//         $color-secondary: #acff07;
+//         $color-secondary-dark: #96d400;
+//         $color-secondary-light: #d6ff9a;
+//         $color-white: #0a0909;
+//         $color-light: #121212;
+//         $color-black: #ffffff;
+//         $color-dark: #eaeaea;
+//         $color-error: #d32f2f;
+//     }
+// }
+
+html.dark {
+    $color-primary: #5a07ff;
+    $color-primary-dark: #2c00f1;
+    $color-primary-light: #b896ff;
+    $color-secondary: #acff07;
+    $color-secondary-dark: #96d400;
+    $color-secondary-light: #d6ff9a;
+    $color-white: #0a0909;
+    $color-light: #121212;
+    $color-black: #ffffff;
+    $color-dark: #eaeaea;
+    $color-error: #d32f2f;
 }
