@@ -1,0 +1,117 @@
+.tabset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h2 {
+        color: #ffcc00;
+    }
+
+    .project-background {
+        position: relative;
+
+        img {
+            filter: grayscale(1) blur(1px) brightness(0.75);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: $color-primary;
+        }
+    }
+
+    .nav-tabs {
+        width: 100%;
+        background: red;
+
+        ul {
+            display: flex;
+
+            a {
+                display: block;
+                background-color: #666666;
+                padding: 5px;
+                margin: 5px 0;
+                text-decoration: none;
+                color: #ffffff;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .main-content {
+        flex: 1;
+        background: green;
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .tab-panel {
+            display: none;
+            flex-direction: column;
+            height: 100%;
+
+            &.active {
+                display: flex;
+            }
+
+            main {
+                flex: 1;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .tech-section {
+        background-color: #333333;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .tech-section .skills {
+        display: flex;
+    }
+    .skills li {
+        display: inline-block;
+        background-color: rgba($color-light, 0.25);
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 4px;
+    }
+}
+
+@media #{$mq-md} {
+    .tabset {
+        flex-direction: row-reverse;
+
+        .nav-tabs {
+            width: 21.4%;
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .main-content {
+        width: 78.6%;
+    }
+}

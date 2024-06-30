@@ -4,19 +4,19 @@
         <li><a class="main-link" href="#about">{{ __('nav.about') }}</a></li>
         <li><a class="main-link" href="#projects">{{ __('nav.projects') }}</a></li>
         <li><a class="main-link" href="#contact">{{ __('nav.contact') }}</a></li>
-        <li class="nav__secondary">
-            <ul>
+        <li id="navSecondary" class="nav__secondary">
+            <ul class="nav__secondary__list">
                 <li class="nav__locale">
                     <button class="submenu-selector"
                         aria-label="{{ __('locales.selectedLang') }} {{ __(App\Enums\Locale::getFullLanguageName(app()->getLocale())) }}">
                         {{ app()->getLocale() }}
                     </button>
-                    <ul>
+                    <ul class="submenu">
                         @foreach (App\Enums\Locale::values() as $locale)
                             <li>
                                 <a @if ($locale === app()->getLocale()) class="locale-link active" @else class="locale-link" @endif
                                     aria-label="{{ __('locales.labelText') }} {{ __(App\Enums\Locale::getFullLanguageName($locale)) }}"
-                                    href="/{{ $locale }}">{{ $locale }}</a>
+                                    href="/{{ $locale }}" tabindex="0">{{ $locale }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -31,7 +31,7 @@
                                 d="m16,8.61c-4.02,0-7.35,3.25-7.35,7.32s3.34,7.32,7.35,7.32,7.35-3.32,7.35-7.32-3.34-7.32-7.35-7.32Zm0,13.28c-3.34,0-5.99-2.65-5.99-5.96s2.72-5.96,5.99-5.96,5.99,2.65,5.99,5.96c0,3.32-2.72,5.96-5.99,5.96Z" />
                         </svg>
                     </button>
-                    <ul>
+                    <ul class="submenu">
                         <li><x-slider name="switch-dark-mode" /><span>{{ __('settings.darkmode') }}</span></li>
                         <li><x-slider name="switch-dyslexia-mode" /><span>{{ __('settings.dyslexiamode') }}</span></li>
                     </ul>

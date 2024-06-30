@@ -2,8 +2,14 @@
 
 import "./bootstrap";
 import NavigationManager from "./components/NavigationManager";
+import TabGroup from "./components/TabGroup";
 
-window.addEventListener("resize", toggleMenu);
+const smallScreenBreakpoint = 1240;
+
+window.addEventListener("resize", () => {
+    toggleMenu(event);
+    duplicateSecondaryNav();
+});
 window.addEventListener("scroll", () => {
     navScrollFunction();
 });
@@ -12,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSettings();
     const navigationManager = new NavigationManager();
     navigationManager.setActiveNav(window.location.hash);
+    const tabGroup = new TabGroup();
+    duplicateSecondaryNav();
 });
 
 function navScrollFunction() {
@@ -23,11 +31,25 @@ function navScrollFunction() {
     }
 }
 
+function duplicateSecondaryNav() {
+    document.getElementById("navSecondaryDuplicate")?.remove();
+    if (window.innerWidth >= smallScreenBreakpoint) {
+        const navSecondary = document
+            .getElementById("navSecondary")
+            .cloneNode(true);
+        navSecondary.querySelectorAll(".submenu").forEach((el) => el.remove());
+        navSecondary.id = "navSecondaryDuplicate";
+        navSecondary.classList.add("invisible");
+
+        const navMain = document.getElementById("navMain");
+        navMain.append(navSecondary);
+    }
+}
+
 // const contactSection = document.getElementById("contact");
 // const contactForm = document.getElementById("contactForm");
 // const $finalPosition = contactSection.offsetTop;
 // const $finalHeight = contactSection.offsetHeight;
-const smallScreenBreakpoint = 1240;
 
 // window.addEventListener("scroll", () => {
 //     const scrollPosition = window.scrollY;
