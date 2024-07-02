@@ -1,6 +1,7 @@
 <section id="about" class="content-grid text">
-    <h2 class="title article__title--main"><span class="article__title--underline">{!! __('about.about') !!}</span>
-        {!! __('about.me') !!}</h2>
+    <h2 class="title article__title--main">
+        <span class="article__title--underline">{{ __('about.title_underline') }}</span> {{ __('about.title_normal') }}
+    </h2>
     <article class="article">
         <h3 class="article__title">{!! __('about.section_1.title') !!}</h3>
         <p class="article__content">{!! __('about.section_1.content_1') !!}</p>

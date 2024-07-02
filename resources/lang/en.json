@@ -1,98 +1,103 @@
 {
-    "locales": {
-        "selectedLang": "Current language:",
-        "labelText": "Change the current language to",
-        "english": "English",
-        "dutch": "Dutch",
-        "french": "French",
-        "spanish": "Spanish"
-    },
-    "auth": {
-        "invalid_credentials": "Invalid credentials. Please try again."
-    },
-    "validation": {
-        "required": "Please enter a :attribute.",
-        "email": "Please enter a valid email address."
-    },
-    "attributes": {
-        "name": "name",
-        "email": "email address",
-        "password": "password",
-        "subject": "subject",
-        "message": "message"
-    },
-    "nav": {
-        "about": "About",
-        "projects": "Projects",
-        "contact": "Contact",
-        "settings": "Settings"
-    },
-    "settings": {
-        "darkmode": "Dark Mode",
-        "dyslexiamode": "Dyslexia Mode"
-    },
-    "general_form": {
-        "name": "Name",
-        "email": "Email",
-        "subject": "Subject",
-        "message": "Message"
-    },
-    "contact_form": {
-        "subjects": {
-            "general_inquiry": "General Inquiry",
-            "project_collaboration": "Project Collaboration",
-            "job_offer": "Job Offer",
-            "bug_reporting": "Bug Reporting",
-            "other": "Other"
-        }
-    },
-    "inbox": {
-        "from": "From",
-        "subject": "Subject",
-        "received": "Received",
-        "date": "Date",
-        "time": "Time"
-    },
-    "buttons": {
-        "projects": "Dive Into My Projects",
-        "contact": "Let's Connect",
-        "login": "Login",
-        "send": "Send",
-        "delete": "Delete"
-    },
-    "hero": {
-        "intro": "Welcome to my website! I'm a Full Stack Developer who loves creating seamless user experiences and robust backend systems. Check out my projects to see my work in action."
-    },
-    "about": {
-        "about": "About",
-        "me": "me",
-        "section_1": {
-            "title": "Once Upon a Time...",
-            "content_1": "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer."
-        },
-        "section_2": {
-            "title": "The Academic Wanderer",
-            "content_1": "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much theory in a rigid environment, not enough exploring for my liking. Student life, however, was a blast."
-        },
-        "section_3": {
-            "title": "The Family Biz Coder",
-            "content_1": "Post-college, I joined the family business but couldn't shake off my coding addiction. I even ended up coding all the assignments for my American girlfriend at the time. She constantly told me, \"You're so good at this; you should really get your degree!\" I guess I should thank her for the push."
-        },
-        "section_4": {
-            "title": "\"We'll Fast-forward To A Few Years Later\" (- Alanis Morissette)",
-            "content_1": "Fast forward to now, and I've completed the VDAB course for full-stack developers to expand my skills. One memorable experience was the SCRUM project, where I learned the magic of teamwork and agile methodologies. It was incredibly fun; we constantly introduced new ways to make the daily stand-up meetings entertaining and engaging. Our team was always there for each other, brainstorming solutions and supporting one another through challenges. It felt like piecing together a tech puzzle with a bunch of brilliant minds, and it made the entire experience unforgettable."
-        },
-        "section_5": {
-            "title": "Tech Wizardry",
-            "content_1": "In my voyage through the vast seas of programming, I've amassed a diverse arsenal of languages and tools, each adding a new spell to my tech repertoire. It all began in high school with <b class=\"lang-tag\">VBA</b>, where I took my first plunge into the world of coding. College ushered me deeper into the coding realms, where I encountered <b class=\"lang-tag\">Assembler</b>, <b class=\"lang-tag\">Java</b>, and <b class=\"lang-tag\">COBOL</b>, alongside the foundational trio of <b class=\"lang-tag\">HTML</b>, <b class=\"lang-tag\">CSS</b>, and <b class=\"lang-tag\">JavaScript</b>, complemented by their backend companions <b class=\"lang-tag\">SQL</b> and <b class=\"lang-tag\">PHP</b>.",
-            "content_2": "My quest for innovation led me to ponder why PHP couldn't be more like JavaScript, until I stumbled upon the Good Witch of the <b class=\"lang-tag\">Node.js</b>, accompanied by <b class=\"lang-tag\">NoSQL</b> and <b class=\"lang-tag\">ReQL</b>. This definitely wasn't Kansas anymore. I dipped my toes into <b class=\"lang-tag\">Python</b> and thanks to my then girlfriend I got to learn <b class=\"lang-tag\">C++</b>, <b class=\"lang-tag\">Spring</b> for Java and <b class=\"lang-tag\">Flask</b> for Python as well.",
-            "content_3": "Emboldened by my newfound knowledge, I embarked on creating my own Metube in Node.js, leveraging ReQL and <b class=\"lang-tag\">EJS</b> as a template engine, all shielded by an <b class=\"lang-tag\">NGINX</b> proxy, serving hundreds of videos. Sadly, its demise came swiftly when the HDD on which it all ran locked up.",
-            "content_4": "Continuously seeking new horizons, I found myself entangled in a love-hate affair with <b class=\"lang-tag\">Angular</b>'s <b class=\"lang-tag\">TypeScript</b>, a relationship I'm still navigating. Thanks to VDAB, I now delved into the realms of <b class=\"lang-tag\">SASS</b>, <b class=\"lang-tag\">Laravel</b>, <b class=\"lang-tag\">Twig</b>, and <b class=\"lang-tag\">Blade</b> as well.",
-            "content_5": "Throughout my journey, I have also encountered <b class=\"lang-tag\">Twitter Bootstrap</b>, <b class=\"lang-tag\">Tailwind CSS</b>, and <b class=\"lang-tag\">JQuery</b>. While initially enamored by their convenience, I've since found myself gravitating towards their vanilla counterparts. There's a certain charm in crafting solutions from scratch, allowing for greater customization and control. It's a journey marked by discovery, experimentation, and the constant pursuit of excellence."
-        },
-        "section_6": {
-            "title": "The Grand Quest",
-            "content_1": "I'm on a mission to solve complex problems and create seamless, user-friendly applications. I thrive in collaborative environments and am always eager to learn something new. My ultimate goal? To make a lasting impact with the solutions I develop."
-        }
-    }
+	"locales": {
+		"selectedLang": "Current language:",
+		"labelText": "Change the current language to",
+		"english": "English",
+		"dutch": "Dutch",
+		"french": "French",
+		"spanish": "Spanish"
+	},
+	"auth": {
+		"invalid_credentials": "Invalid credentials. Please try again."
+	},
+	"validation": {
+		"required": "Please enter a :attribute.",
+		"email": "Please enter a valid email address."
+	},
+	"attributes": {
+		"name": "name",
+		"email": "email address",
+		"password": "password",
+		"subject": "subject",
+		"message": "message"
+	},
+	"nav": {
+		"about": "About",
+		"projects": "Projects",
+		"contact": "Contact",
+		"settings": "Settings"
+	},
+	"settings": {
+		"darkmode": "Dark Mode",
+		"dyslexiamode": "Dyslexia Mode"
+	},
+	"general_form": {
+		"name": "Name",
+		"email": "Email",
+		"subject": "Subject",
+		"message": "Message"
+	},
+	"contact_form": {
+		"subjects": {
+			"general_inquiry": "General Inquiry",
+			"project_collaboration": "Project Collaboration",
+			"job_offer": "Job Offer",
+			"bug_reporting": "Bug Reporting",
+			"other": "Other"
+		}
+	},
+	"inbox": {
+		"from": "From",
+		"subject": "Subject",
+		"received": "Received",
+		"date": "Date",
+		"time": "Time"
+	},
+	"buttons": {
+		"projects": "Dive Into My Projects",
+		"contact": "Let's Connect",
+		"login": "Login",
+		"send": "Send",
+		"delete": "Delete"
+	},
+	"hero": {
+		"intro": "Welcome to my website! I'm a Full Stack Developer who loves creating seamless user experiences and robust backend systems. Check out my projects to see my work in action."
+	},
+	"about": {
+		"title_underline": "About",
+		"title_normal": "me",
+		"section_1": {
+			"title": "Once Upon a Time...",
+			"content_1": "There was a kid who spent countless hours playing games on the MS-DOS computer at home, finding endless joy in the pixelated adventures and whirring sounds of the machine. At age 10, he stood before his classmates and gave his first presentation about the wonders of the internet. From that moment, he was captivated, hooked on the boundless possibilities that the digital world had to offer."
+		},
+		"section_2": {
+			"title": "The Academic Wanderer",
+			"content_1": "In high school, I dabbled in a bit of everything: Latin, Economics, Maths, Modern Languages—you name it. Despite my love for these subjects, nothing truly clicked until I discovered informatics. College was supposed to be my grand adventure in tech, but it turned out to be a bit too much theory in a rigid environment, not enough exploring for my liking. Student life, however, was a blast."
+		},
+		"section_3": {
+			"title": "The Family Biz Coder",
+			"content_1": "Post-college, I joined the family business but couldn't shake off my coding addiction. I even ended up coding all the assignments for my American girlfriend at the time. She constantly told me, \"You're so good at this; you should really get your degree!\" I guess I should thank her for the push."
+		},
+		"section_4": {
+			"title": "\"We'll Fast-forward To A Few Years Later\" (- Alanis Morissette)",
+			"content_1": "Fast forward to now, and I've completed the VDAB course for full-stack developers to expand my skills. One memorable experience was the SCRUM project, where I learned the magic of teamwork and agile methodologies. It was incredibly fun; we constantly introduced new ways to make the daily stand-up meetings entertaining and engaging. Our team was always there for each other, brainstorming solutions and supporting one another through challenges. It felt like piecing together a tech puzzle with a bunch of brilliant minds, and it made the entire experience unforgettable."
+		},
+		"section_5": {
+			"title": "Tech Wizardry",
+			"content_1": "In my voyage through the vast seas of programming, I've amassed a diverse arsenal of languages and tools, each adding a new spell to my tech repertoire. It all began in high school with <b class=\"lang-tag\">VBA</b>, where I took my first plunge into the world of coding. College ushered me deeper into the coding realms, where I encountered <b class=\"lang-tag\">Assembler</b>, <b class=\"lang-tag\">Java</b>, and <b class=\"lang-tag\">COBOL</b>, alongside the foundational trio of <b class=\"lang-tag\">HTML</b>, <b class=\"lang-tag\">CSS</b>, and <b class=\"lang-tag\">JavaScript</b>, complemented by their backend companions <b class=\"lang-tag\">SQL</b> and <b class=\"lang-tag\">PHP</b>.",
+			"content_2": "My quest for innovation led me to ponder why PHP couldn't be more like JavaScript, until I stumbled upon the Good Witch of the <b class=\"lang-tag\">Node.js</b>, accompanied by <b class=\"lang-tag\">NoSQL</b> and <b class=\"lang-tag\">ReQL</b>. This definitely wasn't Kansas anymore. I dipped my toes into <b class=\"lang-tag\">Python</b> and thanks to my then girlfriend I got to learn <b class=\"lang-tag\">C++</b>, <b class=\"lang-tag\">Spring</b> for Java and <b class=\"lang-tag\">Flask</b> for Python as well.",
+			"content_3": "Emboldened by my newfound knowledge, I embarked on creating my own Metube in Node.js, leveraging ReQL and <b class=\"lang-tag\">EJS</b> as a template engine, all shielded by an <b class=\"lang-tag\">NGINX</b> proxy, serving hundreds of videos. Sadly, its demise came swiftly when the HDD on which it all ran locked up.",
+			"content_4": "Continuously seeking new horizons, I found myself entangled in a love-hate affair with <b class=\"lang-tag\">Angular</b>'s <b class=\"lang-tag\">TypeScript</b>, a relationship I'm still navigating. Thanks to VDAB, I now delved into the realms of <b class=\"lang-tag\">SASS</b>, <b class=\"lang-tag\">Laravel</b>, <b class=\"lang-tag\">Twig</b>, and <b class=\"lang-tag\">Blade</b> as well.",
+			"content_5": "Throughout my journey, I have also encountered <b class=\"lang-tag\">Twitter Bootstrap</b>, <b class=\"lang-tag\">Tailwind CSS</b>, and <b class=\"lang-tag\">JQuery</b>. While initially enamored by their convenience, I've since found myself gravitating towards their vanilla counterparts. There's a certain charm in crafting solutions from scratch, allowing for greater customization and control. It's a journey marked by discovery, experimentation, and the constant pursuit of excellence."
+		},
+		"section_6": {
+			"title": "The Grand Quest",
+			"content_1": "I'm on a mission to solve complex problems and create seamless, user-friendly applications. I thrive in collaborative environments and am always eager to learn something new. My ultimate goal? To make a lasting impact with the solutions I develop."
+		}
+	},
+	"contact": {
+		"title_underline": "Let's",
+		"title_normal": "connect",
+		"text": "Drop me a line and let's make things happen."
+	}
 }

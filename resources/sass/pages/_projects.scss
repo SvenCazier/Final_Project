@@ -3,71 +3,76 @@
     flex-direction: column;
     width: 100%;
 
-    h2 {
-        color: #ffcc00;
-    }
-
-    .project-background {
-        position: relative;
-
-        img {
-            filter: grayscale(1) blur(1px) brightness(0.75);
-        }
-
-        &::after {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: $color-primary;
-        }
-    }
-
     .nav-tabs {
         width: 100%;
-        background: red;
 
         ul {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-            a {
-                display: block;
-                background-color: #666666;
-                padding: 5px;
-                margin: 5px 0;
-                text-decoration: none;
-                color: #ffffff;
-                border-radius: 5px;
+            li {
+                background: $color-primary;
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                label {
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    padding: 1em;
+                    cursor: pointer;
+                    white-space: nowrap;
+
+                    &:hover {
+                        background: $color-primary-light;
+                    }
+                }
             }
         }
     }
 
-    .main-content {
+    .tab-panels {
         flex: 1;
-        background: green;
-
-        h1 {
-            color: #ffcc00;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
 
         .tab-panel {
             display: none;
-            flex-direction: column;
+            grid-template-areas:
+                "banner banner banner"
+                "content content content"
+                "footer footer footer";
+
             height: 100%;
 
             &.active {
-                display: flex;
+                display: grid;
             }
 
-            main {
-                flex: 1;
+            .tab-panel__banner {
+                grid-area: banner;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .tab-panel__content {
+                grid-area: content;
+            }
+
+            .tab-panel__footer {
+                grid-area: footer;
+
+                .skills {
+                    li {
+                        display: inline-block;
+                        background-color: rgba($color-light, 0.25);
+                        padding: 5px 10px;
+                        margin: 5px;
+                        border-radius: 4px;
+                    }
+                }
             }
         }
 
@@ -79,22 +84,18 @@
             }
         }
     }
+}
 
-    .tech-section {
-        background-color: #333333;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-    .tech-section .skills {
-        display: flex;
-    }
-    .skills li {
-        display: inline-block;
-        background-color: rgba($color-light, 0.25);
-        padding: 5px 10px;
-        margin: 5px;
-        border-radius: 4px;
+@media #{$mq-sm} {
+    .tabset {
+        .nav-tabs {
+            ul {
+                display: flex;
+                li {
+                    flex: 1;
+                }
+            }
+        }
     }
 }
 
@@ -109,9 +110,17 @@
                 flex-direction: column;
             }
         }
-    }
 
-    .main-content {
-        width: 78.6%;
+        .tab-panels {
+            width: 78.6%;
+
+            .tab-panel {
+                grid-template-areas:
+                    "banner banner banner"
+                    "footer content content"
+                    "footer content content";
+                grid-gap: 1em;
+            }
+        }
     }
 }

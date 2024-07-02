@@ -2,4 +2,16 @@
 
 section#home {
     background: $color-primary;
+
+    h1 {
+        font-size: clamp(2em, 9.0625em, 50vw);
+    }
+}
+
+@media #{$mq-md} {
+    section#home {
+        h1 {
+            font-size: clamp(2em, 9.0625em, 50vw);
+        }
+    }
 }

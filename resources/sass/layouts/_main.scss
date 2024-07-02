@@ -1,6 +1,5 @@
 // _main.scss
-
-main {
+.main-content {
     > section:not(.hero) {
         padding-top: 3.75em;
     }
@@ -11,7 +10,7 @@ main {
 }
 
 @media print {
-    main {
+    .main-content {
         > section:not(.hero) {
             padding-top: 0;
         }

@@ -1,98 +1,103 @@
 {
-    "locales": {
-        "selectedLang": "Huidige taal:",
-        "labelText": "Verander de huidige taal in",
-        "english": "Engels",
-        "dutch": "Nederlands",
-        "french": "Frans",
-        "spanish": "Spaans"
-    },
-    "auth": {
-        "invalid_credentials": "Ongeldige inloggegevens. Probeer opnieuw."
-    },
-    "validation": {
-        "required": "Gelieve een :attribute in te vullen.",
-        "email": "Gelieve een geldig e-mailadres in te vullen."
-    },
-    "attributes": {
-        "name": "naam",
-        "email": "e-mailadres",
-        "password": "wachtwoord",
-        "subject": "onderwerp",
-        "message": "bericht"
-    },
-    "nav": {
-        "about": "Over",
-        "projects": "Projecten",
-        "contact": "Contacteer",
-        "settings": "Instellingen"
-    },
-    "settings": {
-        "darkmode": "Donkere Modus",
-        "dyslexiamode": "Dyslexiemodus"
-    },
-    "general_form": {
-        "name": "Naam",
-        "email": "E-mail",
-        "subject": "Onderwerp",
-        "message": "Bericht"
-    },
-    "contact_form": {
-        "subjects": {
-            "general_inquiry": "Algemene Vraag",
-            "project_collaboration": "Project Samenwerking",
-            "job_offer": "Werkaanbieding",
-            "bug_reporting": "Foutmelding",
-            "other": "Overig"
-        }
-    },
-    "inbox": {
-        "from": "Van",
-        "subject": "Onderwerp",
-        "received": "Ontvangen",
-        "date": "Datum",
-        "time": "Tijd"
-    },
-    "buttons": {
-        "projects": "Verken Mijn Projecten",
-        "contact": "Contacteer Mij",
-        "login": "Aanmelden",
-        "send": "Verzend",
-        "delete": "Verwijderen"
-    },
-    "hero": {
-        "intro": "Welkom op mijn website! Ik ben een Full Stack Developer die graag naadloze gebruikerservaringen en robuuste backend-systemen creëert. Bekijk mijn projecten om mijn werk in actie te zien."
-    },
-    "about": {
-        "about": "Over",
-        "me": "mij",
-        "section_1": {
-            "title": "Er Was Eens...",
-            "content_1": "Er was een kind dat talloze uren doorbracht met het spelen van spelletjes op de MS-DOS-computer thuis, eindeloos plezier vindend in de gepixelde avonturen en het gezoem van de machine. Op 10-jarige leeftijd stond hij voor zijn klasgenoten en gaf zijn eerste presentatie over de wonderen van het internet. Vanaf dat moment was hij gefascineerd, verslaafd aan de grenzeloze mogelijkheden die de digitale wereld te bieden had."
-        },
-        "section_2": {
-            "title": "De Academische Zwerver",
-            "content_1": "Op de middelbare school probeerde ik van alles: Latijn, Economie, Wiskunde, Moderne Talen - je noemt het. Ondanks mijn liefde voor deze vakken, klikte er niets echt tot ik informatica ontdekte. De universiteit had mijn grote avontuur in de technologie moeten zijn, maar het bleek te veel theorie in een rigide omgeving, te weinig ontdekken naar mijn zin. Het studentenleven daarentegen was geweldig."
-        },
-        "section_3": {
-            "title": "De Familie Bedrijf Programmeur",
-            "content_1": "Na de universiteit ging ik bij het familiebedrijf werken, maar ik kon mijn codeerverslaving niet afschudden. Ik eindigde zelfs met het coderen van alle opdrachten voor mijn Amerikaanse vriendin destijds. Ze zei constant tegen me: \"Je bent hier zo goed in; je moet echt je diploma halen!\" Ik denk dat ik haar moet bedanken voor de duw."
-        },
-        "section_4": {
-            "title": "\"We Spoelen Door Naar Een Paar Jaar Later\" (- Alanis Morissette)",
-            "content_1": "Fast forward naar nu, en ik heb de VDAB-cursus voor full-stack ontwikkelaars voltooid om mijn vaardigheden uit te breiden. Een gedenkwaardige ervaring was het SCRUM-project, waar ik de magie van teamwork en agile methodologieën leerde. Het was ongelooflijk leuk; we bedachten constant nieuwe manieren om de dagelijkse stand-up meetings leuk en boeiend te maken. Ons team was er altijd voor elkaar, we brainstormden oplossingen en ondersteunden elkaar bij uitdagingen. Het voelde als het in elkaar zetten van een tech-puzzel met een stel briljante geesten, en het maakte de hele ervaring onvergetelijk."
-        },
-        "section_5": {
-            "title": "Tech Tovenaarschap",
-            "content_1": "In mijn reis door de uitgestrekte zeeën van programmeren heb ik een divers arsenaal aan talen en tools verzameld, elk toevoegend aan mijn tech-repertoire. Het begon allemaal op de middelbare school met <b class=\"lang-tag\">VBA</b>, waar ik mijn eerste duik in de wereld van coderen nam. De universiteit bracht me dieper in de coderingswerelden, waar ik <b class=\"lang-tag\">Assembler</b>, <b class=\"lang-tag\">Java</b> en <b class=\"lang-tag\">COBOL</b> ontmoette, samen met de fundamentele drie-eenheid van <b class=\"lang-tag\">HTML</b>, <b class=\"lang-tag\">CSS</b> en <b class=\"lang-tag\">JavaScript</b>, aangevuld met hun back-end metgezellen <b class=\"lang-tag\">SQL</b> en <b class=\"lang-tag\">PHP</b>.",
-            "content_2": "Mijn zoektocht naar innovatie bracht me ertoe om me af te vragen waarom PHP niet meer op JavaScript kon lijken, tot ik de Goede Heks van <b class=\"lang-tag\">Node.js</b> tegenkwam, vergezeld van <b class=\"lang-tag\">NoSQL</b> en <b class=\"lang-tag\">ReQL</b>. Dit was duidelijk niet Kansas meer. Ik stak mijn tenen in <b class=\"lang-tag\">Python</b> en dankzij mijn toenmalige vriendin leerde ik <b class=\"lang-tag\">C++</b>, <b class=\"lang-tag\">Spring</b> voor Java en <b class=\"lang-tag\">Flask</b> voor Python.",
-            "content_3": "Gesterkt door mijn nieuwe kennis, begon ik met het creëren van mijn eigen Metube in Node.js, gebruikmakend van ReQL en <b class=\"lang-tag\">EJS</b> als sjabloonmotor, alles beschermd door een <b class=\"lang-tag\">NGINX</b> proxy, die honderden video's bediende. Helaas kwam het snel ten einde toen de HDD waarop alles draaide vastliep.",
-            "content_4": "Altijd op zoek naar nieuwe horizonten, raakte ik verstrikt in een haat-liefde verhouding met <b class=\"lang-tag\">Angular</b>'s <b class=\"lang-tag\">TypeScript</b>, een relatie die ik nog steeds aan het navigeren ben. Dankzij VDAB ben ik nu ook ingewijd in de werelden van <b class=\"lang-tag\">SASS</b>, <b class=\"lang-tag\">Laravel</b>, <b class=\"lang-tag\">Twig</b> en <b class=\"lang-tag\">Blade</b>.",
-            "content_5": "Gedurende mijn reis ben ik ook in aanraking gekomen met <b class=\"lang-tag\">Twitter Bootstrap</b>, <b class=\"lang-tag\">Tailwind CSS</b> en <b class=\"lang-tag\">JQuery</b>. Hoewel ik aanvankelijk gecharmeerd was door hun gemak, heb ik sindsdien de neiging gekregen om naar hun vanille-tegenhangers te graviteren. Er is een bepaalde charme in het zelf oplossen van oplossingen, wat zorgt voor meer maatwerk en controle. Het is een reis gemarkeerd door ontdekking, experimentatie en de constante zoektocht naar excellentie."
-        },
-        "section_6": {
-            "title": "De Grote Zoektocht",
-            "content_1": "Ik ben op een missie om complexe problemen op te lossen en naadloze, gebruiksvriendelijke applicaties te creëren. Ik gedij in samenwerkingsomgevingen en ben altijd bereid om iets nieuws te leren. Mijn ultieme doel? Een blijvende impact maken met de oplossingen die ik ontwikkel."
-        }
-    }
+	"locales": {
+		"selectedLang": "Huidige taal:",
+		"labelText": "Verander de huidige taal in",
+		"english": "Engels",
+		"dutch": "Nederlands",
+		"french": "Frans",
+		"spanish": "Spaans"
+	},
+	"auth": {
+		"invalid_credentials": "Ongeldige inloggegevens. Probeer opnieuw."
+	},
+	"validation": {
+		"required": "Gelieve een :attribute in te vullen.",
+		"email": "Gelieve een geldig e-mailadres in te vullen."
+	},
+	"attributes": {
+		"name": "naam",
+		"email": "e-mailadres",
+		"password": "wachtwoord",
+		"subject": "onderwerp",
+		"message": "bericht"
+	},
+	"nav": {
+		"about": "Over",
+		"projects": "Projecten",
+		"contact": "Contact",
+		"settings": "Instellingen"
+	},
+	"settings": {
+		"darkmode": "Donkere Modus",
+		"dyslexiamode": "Dyslexiemodus"
+	},
+	"general_form": {
+		"name": "Naam",
+		"email": "E-mail",
+		"subject": "Onderwerp",
+		"message": "Bericht"
+	},
+	"contact_form": {
+		"subjects": {
+			"general_inquiry": "Algemene Vraag",
+			"project_collaboration": "Project Samenwerking",
+			"job_offer": "Werkaanbieding",
+			"bug_reporting": "Foutmelding",
+			"other": "Overig"
+		}
+	},
+	"inbox": {
+		"from": "Van",
+		"subject": "Onderwerp",
+		"received": "Ontvangen",
+		"date": "Datum",
+		"time": "Tijd"
+	},
+	"buttons": {
+		"projects": "Verken Mijn Projecten",
+		"contact": "Contacteer Mij",
+		"login": "Aanmelden",
+		"send": "Verzend",
+		"delete": "Verwijderen"
+	},
+	"hero": {
+		"intro": "Welkom op mijn website! Ik ben een Full Stack Developer die graag naadloze gebruikerservaringen en robuuste backend-systemen creëert. Bekijk mijn projecten om mijn werk in actie te zien."
+	},
+	"about": {
+		"title_underline": "Over",
+		"title_normal": "mij",
+		"section_1": {
+			"title": "Er Was Eens...",
+			"content_1": "Er was een kind dat talloze uren doorbracht met het spelen van spelletjes op de MS-DOS-computer thuis, eindeloos plezier vindend in de gepixelde avonturen en het gezoem van de machine. Op 10-jarige leeftijd stond hij voor zijn klasgenoten en gaf zijn eerste presentatie over de wonderen van het internet. Vanaf dat moment was hij gefascineerd, verslaafd aan de grenzeloze mogelijkheden die de digitale wereld te bieden had."
+		},
+		"section_2": {
+			"title": "De Academische Zwerver",
+			"content_1": "Op de middelbare school probeerde ik van alles: Latijn, Economie, Wiskunde, Moderne Talen - je noemt het. Ondanks mijn liefde voor deze vakken, klikte er niets echt tot ik informatica ontdekte. De universiteit had mijn grote avontuur in de technologie moeten zijn, maar het bleek te veel theorie in een rigide omgeving, te weinig ontdekken naar mijn zin. Het studentenleven daarentegen was geweldig."
+		},
+		"section_3": {
+			"title": "De Familie Bedrijf Programmeur",
+			"content_1": "Na de universiteit ging ik bij het familiebedrijf werken, maar ik kon mijn codeerverslaving niet afschudden. Ik eindigde zelfs met het coderen van alle opdrachten voor mijn Amerikaanse vriendin destijds. Ze zei constant tegen me: \"Je bent hier zo goed in; je moet echt je diploma halen!\" Ik denk dat ik haar moet bedanken voor de duw."
+		},
+		"section_4": {
+			"title": "\"We Spoelen Door Naar Een Paar Jaar Later\" (- Alanis Morissette)",
+			"content_1": "Fast forward naar nu, en ik heb de VDAB-cursus voor full-stack ontwikkelaars voltooid om mijn vaardigheden uit te breiden. Een gedenkwaardige ervaring was het SCRUM-project, waar ik de magie van teamwork en agile methodologieën leerde. Het was ongelooflijk leuk; we bedachten constant nieuwe manieren om de dagelijkse stand-up meetings leuk en boeiend te maken. Ons team was er altijd voor elkaar, we brainstormden oplossingen en ondersteunden elkaar bij uitdagingen. Het voelde als het in elkaar zetten van een tech-puzzel met een stel briljante geesten, en het maakte de hele ervaring onvergetelijk."
+		},
+		"section_5": {
+			"title": "Tech Tovenaarschap",
+			"content_1": "In mijn reis door de uitgestrekte zeeën van programmeren heb ik een divers arsenaal aan talen en tools verzameld, elk toevoegend aan mijn tech-repertoire. Het begon allemaal op de middelbare school met <b class=\"lang-tag\">VBA</b>, waar ik mijn eerste duik in de wereld van coderen nam. De universiteit bracht me dieper in de coderingswerelden, waar ik <b class=\"lang-tag\">Assembler</b>, <b class=\"lang-tag\">Java</b> en <b class=\"lang-tag\">COBOL</b> ontmoette, samen met de fundamentele drie-eenheid van <b class=\"lang-tag\">HTML</b>, <b class=\"lang-tag\">CSS</b> en <b class=\"lang-tag\">JavaScript</b>, aangevuld met hun back-end metgezellen <b class=\"lang-tag\">SQL</b> en <b class=\"lang-tag\">PHP</b>.",
+			"content_2": "Mijn zoektocht naar innovatie bracht me ertoe om me af te vragen waarom PHP niet meer op JavaScript kon lijken, tot ik de Goede Heks van <b class=\"lang-tag\">Node.js</b> tegenkwam, vergezeld van <b class=\"lang-tag\">NoSQL</b> en <b class=\"lang-tag\">ReQL</b>. Dit was duidelijk niet Kansas meer. Ik stak mijn tenen in <b class=\"lang-tag\">Python</b> en dankzij mijn toenmalige vriendin leerde ik <b class=\"lang-tag\">C++</b>, <b class=\"lang-tag\">Spring</b> voor Java en <b class=\"lang-tag\">Flask</b> voor Python.",
+			"content_3": "Gesterkt door mijn nieuwe kennis, begon ik met het creëren van mijn eigen Metube in Node.js, gebruikmakend van ReQL en <b class=\"lang-tag\">EJS</b> als sjabloonmotor, alles beschermd door een <b class=\"lang-tag\">NGINX</b> proxy, die honderden video's bediende. Helaas kwam het snel ten einde toen de HDD waarop alles draaide vastliep.",
+			"content_4": "Altijd op zoek naar nieuwe horizonten, raakte ik verstrikt in een haat-liefde verhouding met <b class=\"lang-tag\">Angular</b>'s <b class=\"lang-tag\">TypeScript</b>, een relatie die ik nog steeds aan het navigeren ben. Dankzij VDAB ben ik nu ook ingewijd in de werelden van <b class=\"lang-tag\">SASS</b>, <b class=\"lang-tag\">Laravel</b>, <b class=\"lang-tag\">Twig</b> en <b class=\"lang-tag\">Blade</b>.",
+			"content_5": "Gedurende mijn reis ben ik ook in aanraking gekomen met <b class=\"lang-tag\">Twitter Bootstrap</b>, <b class=\"lang-tag\">Tailwind CSS</b> en <b class=\"lang-tag\">JQuery</b>. Hoewel ik aanvankelijk gecharmeerd was door hun gemak, heb ik sindsdien de neiging gekregen om naar hun vanille-tegenhangers te graviteren. Er is een bepaalde charme in het zelf oplossen van oplossingen, wat zorgt voor meer maatwerk en controle. Het is een reis gemarkeerd door ontdekking, experimentatie en de constante zoektocht naar excellentie."
+		},
+		"section_6": {
+			"title": "De Grote Zoektocht",
+			"content_1": "Ik ben op een missie om complexe problemen op te lossen en naadloze, gebruiksvriendelijke applicaties te creëren. Ik gedij in samenwerkingsomgevingen en ben altijd bereid om iets nieuws te leren. Mijn ultieme doel? Een blijvende impact maken met de oplossingen die ik ontwikkel."
+		}
+	},
+	"contact": {
+		"title_underline": "Laat",
+		"title_normal": "je horen",
+		"text": "Stuur me een bericht en laten we samen iets bereiken."
+	}
 }

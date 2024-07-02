@@ -29,9 +29,14 @@ section {
     .right {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         height: 100%;
+    }
+
+    .left {
+        margin-bottom: 1.5em;
     }
 }
 
@@ -39,6 +44,10 @@ section {
     section {
         &.content-grid {
             grid-template-columns: [full-width-start] 2em [content-start] 1fr [content-end] 2em [full-width-end];
+        }
+
+        .left {
+            margin-bottom: 2.5em;
         }
     }
 }
@@ -55,6 +64,10 @@ section {
     section {
         &.content-grid {
             grid-template-columns: [full-width-start] 12em [content-start] 1fr [content-end] 12em [full-width-end];
+        }
+
+        .left {
+            margin-bottom: initial;
         }
     }
 }

@@ -14,32 +14,27 @@
     }
 }
 
-.article__title--main {
-    display: inline-block;
-    margin-bottom: 0.5em;
-}
+.article__title {
+    &--main {
+        margin-bottom: 0.5em;
+    }
 
-.article__title--underline {
-    position: relative;
+    &--underline {
+        position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 125%;
-        border-bottom: 8px solid $color-dark;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: calc(100% + 0.5em);
+            border-bottom: 0.1em solid $color-dark;
+        }
     }
 }
 
 @media print {
     .article {
         display: table;
-    }
-
-    .article__title--underline {
-        &::before {
-            border-bottom: 2px solid $color-dark;
-        }
     }
 }

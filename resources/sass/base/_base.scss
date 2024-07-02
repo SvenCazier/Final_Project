@@ -27,13 +27,20 @@ h2 {
 
     &.title {
         font-family: $font-family-secondary;
-        font-size: 5.25em;
+        font-size: clamp(3em, 5vw, 4.25em);
         font-weight: 900;
+        text-align: center;
     }
 }
 
 h3 {
     font-size: 1.5em;
+
+    &.title {
+        font-family: $font-family-secondary;
+        font-size: 2.5em;
+        font-weight: 900;
+    }
 }
 
 h4 {
@@ -41,7 +48,8 @@ h4 {
 }
 
 h5 {
-    font-size: 1.25em;
+    font-size: 1.125em;
+    font-weight: normal;
 }
 
 h6 {
@@ -79,6 +87,15 @@ svg {
         }
         &--primary {
             fill: $color-primary;
+        }
+    }
+}
+
+@media #{$mq-md} {
+    h2,
+    h3 {
+        &.title {
+            text-align: initial;
         }
     }
 }

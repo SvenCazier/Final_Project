@@ -1,15 +1,14 @@
 // _contact.scss
 
 section#contact {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1em;
+    overflow-x: hidden;
 
     .left {
         width: 100%;
     }
 
     .right {
+        margin-bottom: 1.5em;
         width: 100%;
 
         form {
@@ -22,19 +21,32 @@ section#contact {
 
 @media #{$mq-md} {
     section#contact {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        overflow-x: hidden;
 
         .left {
             width: 50%;
+            margin: auto;
         }
 
         .right {
+            align-items: flex-start;
             width: 50%;
+
             form {
-                width: 700px;
+                max-width: 500px;
                 transform: translateX(100%);
+            }
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    section#contact {
+        .right {
+            form {
+                max-width: 700px;
             }
         }
     }
@@ -43,6 +55,7 @@ section#contact {
 @media print {
     section#contact {
         form {
+            display: table;
             margin: 0 auto;
         }
     }

@@ -12,8 +12,8 @@ class Project extends Model
 {
     use HasFactory, HasUuids;
 
-    public function projects(): BelongsToMany
+    public function technologies(): BelongsToMany
     {
-        return $this->belongsToMany(Technology::class);
+        return $this->belongsToMany(Technology::class, 'project_technology');
     }
 }

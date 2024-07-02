@@ -3,70 +3,51 @@
 import "./bootstrap";
 import NavigationManager from "./components/NavigationManager";
 import TabGroup from "./components/TabGroup";
+import ContactFormAnimator from "./components/ContactFormAnimator";
 
 const smallScreenBreakpoint = 1240;
 
+document.addEventListener("DOMContentLoaded", () => {
+	navScrollFunction();
+	duplicateSecondaryNav();
+	loadSettings();
+	const navigationManager = new NavigationManager();
+	const tabGroup = new TabGroup();
+	const contactFormAnimator = new ContactFormAnimator(smallScreenBreakpoint);
+	navigationManager.setActiveNav(window.location.hash);
+});
+
 window.addEventListener("resize", () => {
-    toggleMenu(event);
-    duplicateSecondaryNav();
+	toggleMenu(event);
+	duplicateSecondaryNav();
 });
 window.addEventListener("scroll", () => {
-    navScrollFunction();
-});
-document.addEventListener("DOMContentLoaded", () => {
-    navScrollFunction();
-    loadSettings();
-    const navigationManager = new NavigationManager();
-    navigationManager.setActiveNav(window.location.hash);
-    const tabGroup = new TabGroup();
-    duplicateSecondaryNav();
+	navScrollFunction();
 });
 
 function navScrollFunction() {
-    const navbar = document.getElementById("navbar");
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        navbar.classList.remove("expanded");
-    } else {
-        navbar.classList.add("expanded");
-    }
+	const navbar = document.getElementById("navbar");
+	if (navbar) {
+		if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+			navbar.classList.remove("expanded");
+		} else {
+			navbar.classList.add("expanded");
+		}
+	}
 }
 
 function duplicateSecondaryNav() {
-    document.getElementById("navSecondaryDuplicate")?.remove();
-    if (window.innerWidth >= smallScreenBreakpoint) {
-        const navSecondary = document
-            .getElementById("navSecondary")
-            .cloneNode(true);
-        navSecondary.querySelectorAll(".submenu").forEach((el) => el.remove());
-        navSecondary.id = "navSecondaryDuplicate";
-        navSecondary.classList.add("invisible");
-
-        const navMain = document.getElementById("navMain");
-        navMain.append(navSecondary);
-    }
+	document.getElementById("navSecondaryDuplicate")?.remove();
+	if (window.innerWidth >= smallScreenBreakpoint) {
+		const navSecondary = document.getElementById("navSecondary")?.cloneNode(true);
+		if (navSecondary) {
+			navSecondary.querySelectorAll(".submenu").forEach((el) => el.remove());
+			navSecondary.id = "navSecondaryDuplicate";
+			navSecondary.classList.add("invisible");
+			document.getElementById("navMain")?.append(navSecondary);
+		}
+	}
 }
-
-// const contactSection = document.getElementById("contact");
-// const contactForm = document.getElementById("contactForm");
-// const $finalPosition = contactSection.offsetTop;
-// const $finalHeight = contactSection.offsetHeight;
-
-// window.addEventListener("scroll", () => {
-//     const scrollPosition = window.scrollY;
-//     const $finalCalc = $finalPosition - $finalHeight / 2;
-
-//     if (window.innerWidth >= smallScreenBreakpoint) {
-//         const translateY = Math.min(scrollPosition - $finalCalc, $finalHeight);
-//         if (scrollPosition > $finalPosition - $finalHeight) {
-//             contactForm.style.transform = `translateX(${Math.max(
-//                 translateY / -10,
-//                 -50
-//             )}%)`;
-//         }
-//     } else {
-//         contactForm.style.transform = `translate(0, -50px)`;
-//     }
-// });
 
 const navHamburger = document.getElementById("navHamburger");
 
@@ -74,25 +55,23 @@ navHamburger.addEventListener("click", toggleMenu);
 const navMain = document.getElementById("navMain");
 
 function toggleMenu(event) {
-    if (window.innerWidth < smallScreenBreakpoint) {
-        if (event.type === "click") {
-            navMain.classList.toggle("show");
-        }
-    } else {
-        navMain.classList.remove("show");
-    }
+	if (window.innerWidth < smallScreenBreakpoint) {
+		if (event.type === "click") {
+			navMain.classList.toggle("show");
+		}
+	} else {
+		navMain.classList.remove("show");
+	}
 }
 
 const localeLinks = document.querySelectorAll(".locale-link");
 localeLinks.forEach((localeLink) => {
-    localeLink.addEventListener("click", redirectWithHash);
+	localeLink.addEventListener("click", redirectWithHash);
 });
 
 function redirectWithHash(event) {
-    event.preventDefault();
-    window.location.href = `${event.target.getAttribute("href")}${
-        window.location.hash
-    }`;
+	event.preventDefault();
+	window.location.href = `${event.target.getAttribute("href")}${window.location.hash}`;
 }
 
 const htmlElement = document.querySelector("html");
@@ -104,34 +83,30 @@ darkModeSwitch.addEventListener("change", setDarkMode);
 dyslexiaModeSwitch.addEventListener("change", setDyslexiaMode);
 
 function loadSettings() {
-    const darkModeEnabled = localStorage.getItem("darkmode") === "true";
-    const dyslexiaModeEnabled = localStorage.getItem("dyslexiamode") === "true";
+	const darkModeEnabled = localStorage.getItem("darkmode") === "true";
+	const dyslexiaModeEnabled = localStorage.getItem("dyslexiamode") === "true";
 
-    darkModeSwitch.checked = darkModeEnabled;
-    dyslexiaModeSwitch.checked = dyslexiaModeEnabled;
+	darkModeSwitch.checked = darkModeEnabled;
+	dyslexiaModeSwitch.checked = dyslexiaModeEnabled;
 
-    toggleDarkMode(darkModeEnabled);
-    toggleDyslexiaMode(dyslexiaModeEnabled);
+	toggleDarkMode(darkModeEnabled);
+	toggleDyslexiaMode(dyslexiaModeEnabled);
 }
 
 function setDarkMode() {
-    localStorage.setItem("darkmode", this.checked);
-    toggleDarkMode(this.checked);
+	localStorage.setItem("darkmode", this.checked);
+	toggleDarkMode(this.checked);
 }
 
 function setDyslexiaMode() {
-    localStorage.setItem("dyslexiamode", this.checked);
-    toggleDyslexiaMode(this.checked);
+	localStorage.setItem("dyslexiamode", this.checked);
+	toggleDyslexiaMode(this.checked);
 }
 
 function toggleDarkMode(darkModeEnabled) {
-    darkModeEnabled
-        ? htmlElement.classList.add("darkmode")
-        : htmlElement.classList.remove("darkmode");
+	darkModeEnabled ? htmlElement.classList.add("darkmode") : htmlElement.classList.remove("darkmode");
 }
 
 function toggleDyslexiaMode(dyslexiaModeEnabled) {
-    dyslexiaModeEnabled
-        ? htmlElement.classList.add("dyslexia-friendly")
-        : htmlElement.classList.remove("dyslexia-friendly");
+	dyslexiaModeEnabled ? htmlElement.classList.add("dyslexia-friendly") : htmlElement.classList.remove("dyslexia-friendly");
 }

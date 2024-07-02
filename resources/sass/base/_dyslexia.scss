@@ -2,22 +2,24 @@
 
 html {
     &.dyslexia-friendly {
-        font-size: 1em !important;
-        line-height: 1.5 !important;
-        letter-spacing: 0.12em !important;
-        word-spacing: 0.42em !important;
-        text-transform: none !important;
-        font-style: normal !important;
-        text-decoration: none !important;
-        animation: none !important;
-        transition: none !important;
-
         * {
             font-family: $font-family-dyslexia !important;
         }
 
         *:focus {
             outline: 2px solid $color-dyslexia-accent !important;
+        }
+
+        body {
+            font-size: 1em !important;
+            line-height: 1.5 !important;
+            letter-spacing: 0.12em !important;
+            word-spacing: 0.42em !important;
+            text-transform: none !important;
+            font-style: normal !important;
+            text-decoration: none !important;
+            animation: none !important;
+            transition: none !important;
         }
 
         // a {

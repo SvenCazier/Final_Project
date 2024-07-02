@@ -53,9 +53,15 @@ nav {
             background: $color-primary;
 
             a {
+                padding: 1em;
+
                 &.active {
                     text-decoration: underline 2px solid $color-white;
                     text-underline-offset: 0.25em;
+                }
+
+                &:hover {
+                    background: $color-primary-light;
                 }
             }
         }
@@ -190,6 +196,14 @@ nav {
                 &:not(:last-of-type) {
                     margin-right: 1.5em;
                 }
+
+                a {
+                    padding: initial;
+
+                    &:hover {
+                        background: initial;
+                    }
+                }
             }
         }
 
@@ -210,6 +224,10 @@ nav {
 
             .nav__secondary__list {
                 display: flex;
+
+                li:last-of-type .submenu {
+                    transform: translateX(-65%);
+                }
             }
 
             .submenu {
@@ -235,7 +253,7 @@ nav {
                     position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
-                    padding-top: 8px;
+                    padding: 0.5rem 0;
                     background: $color-primary;
                     box-shadow:
                         0 3px 6px rgba(0, 0, 0, 0.16),
@@ -252,6 +270,10 @@ nav {
                         a {
                             padding: 1em 1.5em;
                             width: 100%;
+
+                            &:hover {
+                                background: $color-primary-light;
+                            }
                         }
                     }
                 }
@@ -281,6 +303,8 @@ nav {
 
 @media print {
     nav {
+        position: static;
+
         .nav__main {
             display: flex;
             flex-direction: row;

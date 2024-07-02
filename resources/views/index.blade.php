@@ -22,10 +22,10 @@
     <header>
         <x-nav.nav class="expanded" />
     </header>
-    <main>
+    <main class="main-content">
         <x-layouts.home />
         <x-layouts.about />
-        <x-layouts.projects />
+        <x-layouts.projects :data="$projects" name="project" />
         <x-layouts.contact />
     </main>
     <x-layouts.footer />
