@@ -4,14 +4,19 @@ section#home {
     background: $color-primary;
 
     h1 {
-        font-size: clamp(2em, 9.0625em, 50vw);
+        font-size: clamp(2em, 9.0625em, 12vw);
+
+        :nth-child(odd) {
+            display: block;
+            transform: skew(0deg, -30deg) scaleY(1);
+        }
+
+        :nth-child(even) {
+            display: block;
+            transform: skew(60deg, -30deg) scaleY(0.5) translateX(-8.25%) translateY(-20%);
+        }
     }
 }
 
 @media #{$mq-md} {
-    section#home {
-        h1 {
-            font-size: clamp(2em, 9.0625em, 50vw);
-        }
-    }
 }
