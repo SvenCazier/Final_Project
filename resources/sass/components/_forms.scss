@@ -36,19 +36,19 @@ form {
             width: 100%;
             padding: 0.375em 0.625em;
             font-size: 1.125em;
+            color: $color-black;
             background: none;
             border: none;
-            border-color: rgba($color-black, 0.42);
             outline: none;
 
             &.input--standard {
-                border-bottom: 1px solid;
+                border-bottom: 1px solid rgba($color-black, 0.42);
                 min-height: 42px;
             }
 
             &.input--filled {
                 background: rgba($color-black, 0.1);
-                border-bottom: 1px solid;
+                border-bottom: 1px solid rgba($color-black, 0.42);
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
                 padding-top: 1.125em;
@@ -56,10 +56,33 @@ form {
             }
 
             &.input--outlined {
-                border: 1px solid;
+                border: 1px solid rgba($color-black, 0.42);
                 border-radius: $border-radius;
                 min-height: 43px;
             }
+        }
+
+        .form__select {
+            appearance: none;
+            position: relative;
+            cursor: pointer;
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+
+        &:has(.form__select)::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 7px;
+            height: 7px;
+            border-bottom: 2px solid #0a0909;
+            border-left: 2px solid #0a0909;
+            transform: rotate(-45deg) translateY(-75%);
+            pointer-events: none;
         }
 
         .form__textarea {
@@ -151,3 +174,125 @@ form {
         display: table;
     }
 }
+
+html.darkmode {
+    form {
+        .form-control {
+            .form__input,
+            .form__select,
+            .form__textarea {
+                color: $color-light;
+
+                &.input--standard {
+                    border-bottom: 1px solid rgba($color-light, 0.42);
+                }
+
+                &.input--filled {
+                    background: rgba($color-light, 0.1);
+                    border-bottom: 1px solid rgba($color-light, 0.42);
+                }
+
+                &.input--outlined {
+                    border: 1px solid rgba($color-light, 0.42);
+                }
+            }
+
+            &:has(.form__select)::before {
+                border-bottom: 2px solid $color-light;
+                border-left: 2px solid $color-light;
+            }
+
+            &:has(.input--standard)::after,
+            &:has(.input--filled)::after,
+            &:has(.input--outlined)::after {
+                border-color: $color-primary-light;
+            }
+
+            &:has(.input--standard:focus) .form__label,
+            &:has(.input--standard:not(:placeholder-shown)) .form__label,
+            &:has(.input--standard > option:checked) .form__label,
+            &:has(.input--filled:focus) .form__label,
+            &:has(.input--filled:not(:placeholder-shown)) .form__label,
+            &:has(.input--filled > option:checked) .form__label,
+            &:has(.input--outlined:focus) .form__label,
+            &:has(.input--outlined:not(:placeholder-shown)) .form__label,
+            &:has(.input--outlined > option:checked) .form__label {
+                color: $color-primary-light;
+            }
+
+            &:has(.input--outlined:focus) .form__label,
+            &:has(.input--outlined:not(:placeholder-shown)) .form__label,
+            &:has(.input--outlined > option:checked) .form__label {
+                background: $color-dark-elevation-3;
+            }
+
+            .form__select {
+                option {
+                    background: $color-dark-elevation-8;
+                }
+            }
+        }
+    }
+}
+
+// .form-control {
+//   position: relative;
+//   margin-bottom: 2.5em;
+//   .form__select {
+//     appearance: none;
+//     position: relative;
+//     cursor: pointer;
+//     width: 100%;
+//     padding: 0.375em 0.625em;
+//     font-size: 1.125em;
+//     border: none;
+//     outline: none;
+//     color: black;
+//     border-bottom: 1px solid rgba(black, 0.42);
+//     min-height: 42px;
+
+//     &::-ms-expand {
+//       display: none;
+//     }
+
+//     &.custom__select {
+//       caret-color: transparent;
+//     }
+//   }
+
+//   &:has(.form__select)::before {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     width: 7px;
+//     height: 7px;
+//     border-bottom: 2px solid #0a0909;
+//     border-left: 2px solid #0a0909;
+//     transform: rotate(-45deg) translateY(-75%);
+//     pointer-events: none;
+//   }
+
+//   .custom__select__options {
+//     display: none;
+//     position: absolute;
+//     z-index: 1;
+//     width: 100%;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     background: purple;
+
+//     &.show {
+//       display: block;
+//     }
+
+//     li {
+//         background: red;
+
+//       &:hover {
+//         background: green;
+//       }
+//     }
+//   }
+// }

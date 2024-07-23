@@ -83,7 +83,9 @@ darkModeSwitch.addEventListener("change", setDarkMode);
 dyslexiaModeSwitch.addEventListener("change", setDyslexiaMode);
 
 function loadSettings() {
-	const darkModeEnabled = localStorage.getItem("darkmode") === "true";
+	const prefersColorSchemeDark = window?.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false;
+	const darkModeLocalStorage = localStorage.getItem("darkmode");
+	const darkModeEnabled = darkModeLocalStorage === null ? prefersColorSchemeDark : darkModeLocalStorage === "true";
 	const dyslexiaModeEnabled = localStorage.getItem("dyslexiamode") === "true";
 
 	darkModeSwitch.checked = darkModeEnabled;

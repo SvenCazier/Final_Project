@@ -18,8 +18,10 @@
                 <section id="{{ $item->id }}" class="tab-panel">
                     <header class="tab-panel__banner">
                         <picture>
-                            <img
-                                src="https://www.guardianoffshore.com.au/wp-content/uploads/2015/03/banner-placeholder.jpg">
+                            <source media="(min-width: 1240px)" srcset="{{ url('/img/dummyx1040.png') }}" />
+                            <source media="(min-width: 600px)" srcset="{{ url('/img/dummyx840.png') }}" />
+                            <source media="(max-width: 599px)" srcset="{{ url('/img/dummyx540.png') }}" />
+                            <img loading="lazy" src="{{ url('/img/dummyx1040.png') }}">
                         </picture>
                     </header>
                     <main class="tab-panel__content">

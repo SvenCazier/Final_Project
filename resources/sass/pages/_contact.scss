@@ -60,3 +60,13 @@ section#contact {
         }
     }
 }
+
+html.darkmode {
+    section#contact {
+        .right {
+            form {
+                background: $color-dark-elevation-3;
+            }
+        }
+    }
+}

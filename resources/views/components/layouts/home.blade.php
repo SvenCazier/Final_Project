@@ -4,10 +4,10 @@
         <h1 class="title"><span>FULL STACK</span><span>DEVELOPER</span></h1>
     </div>
     <div class="right">
-        <article>
+        <article class="right__intro">
             {{ __('hero.intro') }}
         </article>
-        <article>
+        <article class="right__cta">
             <a class="button button--outline cta" href="#projects">{{ __('buttons.projects') }}</a>
             <a class="button button--text cta" href="#contact">{{ __('buttons.contact') }}</a>
         </article>

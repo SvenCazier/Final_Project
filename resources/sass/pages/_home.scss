@@ -3,20 +3,53 @@
 section#home {
     background: $color-primary;
 
-    h1 {
-        font-size: clamp(2em, 9.0625em, 12vw);
+    .left {
+        margin-top: 3.75em;
 
-        :nth-child(odd) {
-            display: block;
-            transform: skew(0deg, -30deg) scaleY(1);
+        h1 {
+            font-size: clamp(2em, 9.0625em, 12vw);
+
+            :nth-child(odd) {
+                display: block;
+                transform: skew(0deg, -20deg) scaleY(1);
+            }
+
+            :nth-child(even) {
+                display: block;
+                transform: skew(60deg, -20deg) scaleY(0.5) translateX(1.75%) translateY(-50%);
+            }
+        }
+    }
+
+    .right {
+        justify-content: space-evenly;
+
+        &__intro {
         }
 
-        :nth-child(even) {
-            display: block;
-            transform: skew(60deg, -30deg) scaleY(0.5) translateX(-8.25%) translateY(-20%);
+        &__cta {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
 
-@media #{$mq-md} {
+@media #{$mq-xs} {
+    section#home {
+        .right {
+            &__intro {
+            }
+
+            &__cta {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+html.darkmode {
+    section#home {
+        background: $color-dark;
+        color: $color-primary-light;
+    }
 }

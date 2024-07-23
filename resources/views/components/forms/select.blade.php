@@ -1,4 +1,4 @@
-@props(['label', 'name', 'style' => 'standard'])
+@props(['label', 'name', 'style' => 'standard', 'options' => []])
 
 @php
     $inputClasses = [
