@@ -69,6 +69,12 @@ class CustomSelect {
 				this.setIndex(index);
 			}
 		});
+
+		// CHANGE TO GOING AROUND WITH MODULO
+
+		// for (let i = 0; i < this.target.nextElementSibling.querySelectorAll("li").length - 1; i++) {
+		//     translate to index using modulo, with current index equivalent of 0
+		// }
 	}
 
 	moveIndexBy(amount) {
