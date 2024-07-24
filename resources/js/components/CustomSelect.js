@@ -54,10 +54,10 @@ class CustomSelect {
 				this.moveIndexBy(1);
 				break;
 			case "Home":
-			case "End":
+			case "PageUp":
 				this.setIndex(0);
 				break;
-			case "PageUp":
+			case "End":
 			case "PageDown":
 				this.setIndex(this.options.length - 1);
 				break;
