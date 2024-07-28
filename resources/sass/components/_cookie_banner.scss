@@ -16,8 +16,12 @@
     &.expanded {
         width: calc(100% - 1em);
         transition:
-            width 0.5s ease,
-            height 0.75s 0.1s ease;
+            width 0.75s ease,
+            height 0.75s 0.75s ease;
+    }
+
+    &.no-transition {
+        transition: none !important;
     }
 
     &-toggle {

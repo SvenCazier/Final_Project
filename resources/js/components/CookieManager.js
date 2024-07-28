@@ -3,25 +3,16 @@
 "use strict";
 
 class CookieManager {
-	cookieBanner;
-	cookieBannerContent;
-	cookieBannerToggle;
-	cookieBannerCollapsedHeight;
-	acceptButton;
-	declineButton;
-	clearButton;
+	preventRefresh = false;
 
 	constructor() {
 		this.cookieBanner = document.getElementById("cookieBanner");
-		this.cookieBannerCollapsedHeight = this.cookieBanner.style.height;
-
 		this.cookieBannerContent = document.getElementById("cookieBannerContent");
-
 		this.cookieBannerToggle = document.querySelector(".cookie-banner-toggle");
-
 		this.acceptButton = document.getElementById("acceptCookies");
 		this.declineButton = document.getElementById("declineCookies");
 		this.clearButton = document.getElementById("clearCookies");
+		this.cookieBannerCollapsedHeight = this.cookieBanner.clientHeight + "px";
 
 		this.init();
 	}
@@ -47,11 +38,10 @@ class CookieManager {
 		this.clearButton.addEventListener("click", this.clearStorage.bind(this));
 
 		const resizeObserver = new ResizeObserver(this.refreshBanner.bind(this));
-
 		resizeObserver.observe(this.cookieBannerContent);
 	}
 
-	cloneCookieBanner() {
+	getBannerHeight() {
 		const cookieBannerClone = this.cookieBanner.cloneNode(true);
 		cookieBannerClone.style.visibility = "hidden";
 		cookieBannerClone.style.position = "absolute";
@@ -66,25 +56,35 @@ class CookieManager {
 	}
 
 	expandBanner() {
-		const height = this.cloneCookieBanner();
-		this.cookieBanner.style.height = `${height}px`;
+		this.cookieBanner.classList.remove("no-transition");
 		this.cookieBanner.classList.add("expanded");
+		this.cookieBanner.style.height = `${this.getBannerHeight()}px`;
+
+		// necessary evil to allow the banner to expand without refreshbanner being triggered and preventing the transition
+		this.preventRefresh = true;
+		setTimeout(() => {
+			this.preventRefresh = false;
+		}, 1500);
 	}
 
 	collapseBanner() {
+		this.cookieBanner.classList.remove("no-transition");
 		this.cookieBanner.style.height = this.cookieBannerCollapsedHeight;
 		this.cookieBanner.classList.remove("expanded");
 	}
 
 	refreshBanner() {
-		if (this.cookieBanner.classList.contains("expanded")) {
-			this.collapseBanner();
-			this.expandBanner();
+		if (!this.preventRefresh && this.cookieBanner.classList.contains("expanded")) {
+			this.cookieBanner.classList.add("no-transition");
+			this.cookieBanner.style.height = `${this.getBannerHeight()}px`;
+			this.cookieBanner.offsetHeight;
+			this.cookieBanner.classList.remove("no-transition");
 		}
 	}
 
 	acceptCookies() {
 		localStorage.setItem("acceptsCookies", true);
+		this.collapseBanner();
 	}
 
 	acceptsCookies() {
@@ -93,6 +93,7 @@ class CookieManager {
 
 	declineCookies() {
 		localStorage.clear();
+		this.collapseBanner();
 	}
 
 	setLocalStorageValue(key, value) {
@@ -109,7 +110,7 @@ class CookieManager {
 	}
 
 	clearStorage() {
-		// clear all stored preferences except for cookie acceptance
+		// Clear all stored preferences except for cookie acceptance
 		const acceptsCookies = this.acceptsCookies();
 		this.declineCookies();
 		if (acceptsCookies) this.acceptCookies();
