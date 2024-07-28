@@ -70,11 +70,55 @@ form {
             &::-ms-expand {
                 display: none;
             }
+
+            &.custom__select {
+                caret-color: transparent;
+            }
+        }
+
+        .custom__select__options {
+            display: none;
+            position: absolute;
+            z-index: 99;
+            width: 100%;
+            margin: 0.125em 0 0 0;
+            box-shadow:
+                0 3px 6px rgba(0, 0, 0, 0.16),
+                0 3px 6px rgba(0, 0, 0, 0.23);
+            text-align: left;
+
+            &.show {
+                display: block;
+            }
+
+            li {
+                padding: 0.125em 0.5em;
+                font-size: 1.125em;
+                cursor: pointer;
+                border-left: 1px solid rgba($color-black, 0.42);
+                border-right: 1px solid rgba($color-black, 0.42);
+                background: $color-white;
+
+                &:first-child {
+                    border-radius: $border-radius $border-radius 0 0;
+                    border-top: 1px solid rgba($color-black, 0.42);
+                }
+                &:last-child {
+                    border-radius: 0 0 $border-radius $border-radius;
+                    border-bottom: 1px solid rgba($color-black, 0.42);
+                }
+
+                &.highlight {
+                    background: $color-primary;
+                    color: $color-white;
+                }
+            }
         }
 
         &:has(.form__select)::before {
             content: "";
             position: absolute;
+            z-index: 1;
             top: 50%;
             right: 0;
             width: 7px;
@@ -231,68 +275,26 @@ html.darkmode {
                     background: $color-dark-elevation-8;
                 }
             }
+
+            .custom__select__options {
+                li {
+                    border-left: 1px solid rgba($color-light, 0.42);
+                    border-right: 1px solid rgba($color-light, 0.42);
+                    background: $color-dark-elevation-8;
+
+                    &:first-child {
+                        border-top: 1px solid rgba($color-light, 0.42);
+                    }
+                    &:last-child {
+                        border-bottom: 1px solid rgba($color-light, 0.42);
+                    }
+
+                    &.highlight {
+                        background: $color-primary-light;
+                        color: $color-dark;
+                    }
+                }
+            }
         }
     }
 }
-
-// .form-control {
-//   position: relative;
-//   margin-bottom: 2.5em;
-//   .form__select {
-//     appearance: none;
-//     position: relative;
-//     cursor: pointer;
-//     width: 100%;
-//     padding: 0.375em 0.625em;
-//     font-size: 1.125em;
-//     border: none;
-//     outline: none;
-//     color: black;
-//     border-bottom: 1px solid rgba(black, 0.42);
-//     min-height: 42px;
-
-//     &::-ms-expand {
-//       display: none;
-//     }
-
-//     &.custom__select {
-//       caret-color: transparent;
-//     }
-//   }
-
-//   &:has(.form__select)::before {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     right: 0;
-//     width: 7px;
-//     height: 7px;
-//     border-bottom: 2px solid #0a0909;
-//     border-left: 2px solid #0a0909;
-//     transform: rotate(-45deg) translateY(-75%);
-//     pointer-events: none;
-//   }
-
-//   .custom__select__options {
-//     display: none;
-//     position: absolute;
-//     z-index: 1;
-//     width: 100%;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//     background: purple;
-
-//     &.show {
-//       display: block;
-//     }
-
-//     li {
-//         background: red;
-
-//       &:hover {
-//         background: green;
-//       }
-//     }
-//   }
-// }

@@ -1,0 +1,142 @@
+.cookie-banner {
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    background-color: $color-white;
+    color: $color-black;
+    padding: 0.75em;
+    border-radius: $border-radius;
+    height: 3.75em;
+    width: 3.75em;
+    overflow: hidden;
+    transition:
+        width 0.75s 0.75s ease,
+        height 0.75s ease;
+
+    &.expanded {
+        width: calc(100% - 1em);
+        transition:
+            width 0.5s ease,
+            height 0.75s 0.1s ease;
+    }
+
+    &-toggle {
+        display: none;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.75em;
+
+        &__header {
+            margin-bottom: 0.75em;
+        }
+
+        &__body {
+            margin-bottom: 2.5em;
+
+            em {
+                font-style: normal;
+                font-weight: bolder;
+            }
+        }
+
+        &__footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .cookie__footer__main-buttons {
+                display: flex;
+                justify-content: space-evenly;
+                gap: 0.5em;
+
+                button {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .cookie-banner-toggle-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3.75em;
+        background: $color-white;
+
+        .cookie-icon-label {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 3.75em;
+            width: 3.75em;
+            border-radius: $border-radius;
+            cursor: pointer;
+
+            .cookie-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 2em;
+
+                .svg--fill {
+                    fill: $color-primary;
+                }
+                .svg--stroke {
+                    fill: none;
+                    stroke: $color-primary;
+                    stroke-width: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$mq-sm} {
+    .cookie-banner {
+        &.expanded {
+            width: 550px;
+        }
+    }
+}
+
+@media print {
+    .cookie-banner {
+        display: none;
+    }
+}
+
+html.darkmode {
+    .cookie-banner {
+        background-color: $color-dark-elevation-5;
+        color: $color-white;
+
+        &-content {
+            &__body {
+                em {
+                    letter-spacing: 0.07em;
+                }
+            }
+        }
+    }
+
+    .cookie-banner-toggle-container {
+        background: $color-dark-elevation-5;
+
+        .cookie-icon-label {
+            .cookie-icon {
+                .svg--fill {
+                    fill: $color-primary-light;
+                }
+                .svg--stroke {
+                    fill: none;
+                    stroke: $color-primary-light;
+                }
+            }
+        }
+    }
+}

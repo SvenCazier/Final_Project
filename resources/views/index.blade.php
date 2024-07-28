@@ -35,6 +35,7 @@
         <x-layouts.contact />
     </main>
     <x-layouts.footer />
+    <x-cookie-banner />
 </body>
 
 </html>

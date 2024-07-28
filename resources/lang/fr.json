@@ -33,9 +33,10 @@
 	},
 	"general_form": {
 		"name": "Nom",
-		"email": "E-mail",
+		"email": "Adresse e-mail",
 		"subject": "Sujet",
-		"message": "Message"
+		"message": "Message",
+		"password": "Mot de passe"
 	},
 	"contact_form": {
 		"subjects": {
@@ -76,10 +77,10 @@
 		},
 		"section_3": {
 			"title": "Le Codeur de L'Entreprise Familiale",
-			"content_1": "Après l'université, j'ai rejoint l'entreprise familiale, mais je ne pouvais pas me débarrasser de mon addiction au codage. J'ai même fini par coder toutes les missions pour ma petite amie américaine de l'époque. Elle me disait constamment : \"Tu es tellement bon dans ce domaine; tu devrais vraiment obtenir ton diplôme !\" Je suppose que je devrais la remercier pour la poussée."
+			"content_1": "Après l'université, j'ai rejoint l'entreprise familiale, mais je ne pouvais pas me débarrasser de mon addiction au codage. J'ai même fini par coder toutes les missions pour ma petite amie américaine de l'époque. Elle me disait constamment : «Tu es tellement bon dans ce domaine; tu devrais vraiment obtenir ton diplôme !» Je suppose que je devrais la remercier pour la poussée."
 		},
 		"section_4": {
-			"title": "\"On Avancera De Quelques Années\" (- Alanis Morissette)",
+			"title": "«On Avancera De Quelques Années» (- Alanis Morissette)",
 			"content_1": "Avance rapide jusqu'à maintenant, et j'ai terminé le cours de développeurs full-stack de VDAB pour élargir mes compétences. Une expérience mémorable a été le projet SCRUM, où j'ai appris la magie du travail d'équipe et des méthodologies agiles. C'était incroyablement amusant; nous trouvions constamment de nouvelles façons de rendre les réunions debout quotidiennes amusantes et engageantes. Notre équipe était toujours là les uns pour les autres, brainstormant des solutions et se soutenant mutuellement face aux défis. Cela ressemblait à assembler un puzzle technologique avec des esprits brillants, et cela a rendu l'expérience inoubliable."
 		},
 		"section_5": {
@@ -95,9 +96,28 @@
 			"content_1": "Je suis en mission pour résoudre des problèmes complexes et créer des applications fluides et conviviales. Je prospère dans les environnements collaboratifs et suis toujours désireux d'apprendre quelque chose de nouveau. Mon objectif ultime ? Avoir un impact durable avec les solutions que je développe."
 		}
 	},
+	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, inspiré de YouTube, est un projet conçu comme une plateforme pour héberger mes propres vidéos. Initialement développé en utilisant du pur Node.js avec le moteur de templates EJS, cette deuxième itération fonctionne sur une API développée en Node.js et un frontend construit en Angular. De plus, elle comporte désormais des chapitres, des sous-titres et un algorithme de recherche à correspondance floue.",
+	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) soutient une alliance Whiteout Survival avec un site web propulsé par PHP et JimBot, un bot Discord qui personnifie une API d'événements. JimBot s'intègre parfaitement à la fois avec Discord et le site web de l'alliance, facilitant la gestion des événements en temps réel et améliorant la communication et la coordination entre les membres de l'alliance.",
+	"Implemented as a JavaScript class, this project implements the Caesar Cipher using modulo arithmetic, with the possibility of importing a file.": "Implémenté en tant que classe JavaScript, ce projet met en œuvre le chiffre de César en utilisant l'arithmétique modulo, avec la possibilité d'importer un fichier.",
+	"Schattenjager is a Pacman-style game implemented in JavaScript, challenging players with adjustable levels of randomly placed walls, lives, treasures, and enemy movement speeds. Navigate through the maze, collect treasures, avoid enemies, and see if you can conquer its challenges!": "Schattenjager est un jeu de style Pacman implémenté en JavaScript, défiant les joueurs avec des niveaux ajustables de murs placés au hasard, de vies, de trésors et de vitesses de mouvement des ennemis. Naviguez dans le labyrinthe, collectez des trésors, évitez les ennemis et voyez si vous pouvez relever ses défis!",
+	"Pizza is a web application structured in a layered MVC format for a pizza webshop. It features a quirky approach to managing customer data to minimize duplicate entries, ensuring seamless guest checkout and registration. Find out more by checking it out on GitHub.": "Pizza est une application web structurée dans un format MVC en couches pour une boutique en ligne de pizzas. Elle propose une approche originale de la gestion des données client pour minimiser les entrées en double, garantissant une validation et une inscription des invités sans faille. En savoir plus en le consultant sur GitHub.",
+	"Prularia is a webshop application developed collaboratively using SCRUM methodology, where I integrated several previously developed components to streamline our development process. Given that it was a collaborative project, not all code was written by me, but as a general rule you could say that sections with lots of comments were at least visited by me.": "Prularia est une application de boutique en ligne développée de manière collaborative en utilisant la méthodologie SCRUM, où j'ai intégré plusieurs composants développés précédemment pour rationaliser notre processus de développement. Étant donné qu'il s'agissait d'un projet collaboratif, tout le code n'a pas été écrit par moi, mais en règle générale, on pourrait dire que les sections avec beaucoup de commentaires ont au moins été visitées par moi.",
 	"contact": {
 		"title_underline": "Laissez",
 		"title_normal": "un message",
 		"text": "Envoyez-moi un message et faisons avancer les choses ensemble."
+	},
+	"admin": {
+		"login": "Se connecter",
+		"logout": "Se déconnecter",
+		"Nothing to display": "Rien à afficher"
+	},
+	"cookiebanner": {
+		"title": "Rejoignez la Révolution du Consentement aux Cookies!",
+		"text": "Nous utilisons des <em>cookies fonctionnels</em> pour améliorer votre expérience de navigation. Ces cookies enregistrent vos préférences concernant <em>le consentement aux cookies</em>, <em>la langue</em>, <em>le mode sombre</em> et <em>le mode adapté à la dyslexie</em>. Nous ne stockons ni ne partageons aucune donnée personnelle. Vous pouvez choisir de sauvegarder ces paramètres en cliquant sur <em>«Accepter»</em>, ou retirer votre consentement à tout moment en cliquant sur <em>«Refuser»</em>. De plus, vous pouvez cliquer sur <em>«Effacer»</em> pour supprimer vos préférences sans changer votre statut de consentement.",
+		"accept": "Accepter",
+		"decline": "Refuser",
+		"clear": "Effacer",
+		"toggle": "Ouvrir/Fermer la bannière des cookies"
 	}
 }

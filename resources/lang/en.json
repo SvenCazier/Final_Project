@@ -35,7 +35,8 @@
 		"name": "Name",
 		"email": "Email",
 		"subject": "Subject",
-		"message": "Message"
+		"message": "Message",
+		"password": "Password"
 	},
 	"contact_form": {
 		"subjects": {
@@ -95,9 +96,28 @@
 			"content_1": "I'm on a mission to solve complex problems and create seamless, user-friendly applications. I thrive in collaborative environments and am always eager to learn something new. My ultimate goal? To make a lasting impact with the solutions I develop."
 		}
 	},
+	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.",
+	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.",
+	"Implemented as a JavaScript class, this project implements the Caesar Cipher using modulo arithmetic, with the possibility of importing a file.": "Implemented as a JavaScript class, this project implements the Caesar Cipher using modulo arithmetic, with the possibility of importing a file.",
+	"Schattenjager is a Pacman-style game implemented in JavaScript, challenging players with adjustable levels of randomly placed walls, lives, treasures, and enemy movement speeds. Navigate through the maze, collect treasures, avoid enemies, and see if you can conquer its challenges!": "Schattenjager is a Pacman-style game implemented in JavaScript, challenging players with adjustable levels of randomly placed walls, lives, treasures, and enemy movement speeds. Navigate through the maze, collect treasures, avoid enemies, and see if you can conquer its challenges!",
+	"Pizza is a web application structured in a layered MVC format for a pizza webshop. It features a quirky approach to managing customer data to minimize duplicate entries, ensuring seamless guest checkout and registration. Find out more by checking it out on GitHub.": "Pizza is a web application structured in a layered MVC format for a pizza webshop. It features a quirky approach to managing customer data to minimize duplicate entries, ensuring seamless guest checkout and registration. Find out more by checking it out on GitHub.",
+	"Prularia is a webshop application developed collaboratively using SCRUM methodology, where I integrated several previously developed components to streamline our development process. Given that it was a collaborative project, not all code was written by me, but as a general rule you could say that sections with lots of comments were at least visited by me.": "Prularia is a webshop application developed collaboratively using SCRUM methodology, where I integrated several previously developed components to streamline our development process. Given that it was a collaborative project, not all code was written by me, but as a general rule you could say that sections with lots of comments were at least visited by me.",
 	"contact": {
 		"title_underline": "Let's",
 		"title_normal": "connect",
 		"text": "Drop me a line and let's make things happen."
+	},
+	"admin": {
+		"login": "Login",
+		"logout": "Logout",
+		"Nothing to display": "Nothing to display"
+	},
+	"cookiebanner": {
+		"title": "Join the Cookie Consent Revolution!",
+		"text": "We use <em>functional cookies</em> to improve your browsing experience. These cookies store your preferences for <em>cookie consent</em>, <em>language</em>, <em>dark mode</em>, and <em>dyslexia-friendly mode</em>. We do not store or share any personal data. You can opt in to save these settings by clicking <em>\"Accept\"</em>, or withdraw your consent at any time by clicking <em>\"Decline\"</em>. Additionally, you can click <em>\"Clear\"</em> to delete your preferences without changing your consent status.",
+		"accept": "Accept",
+		"decline": "Decline",
+		"clear": "Clear",
+		"toggle": "Open/Close cookie banner"
 	}
 }

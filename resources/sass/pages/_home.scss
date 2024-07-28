@@ -4,7 +4,7 @@ section#home {
     background: $color-primary;
 
     .left {
-        margin-top: 3.75em;
+        margin-top: 5.75em;
 
         h1 {
             font-size: clamp(2em, 9.0625em, 12vw);
@@ -42,6 +42,8 @@ section#home {
 
             &__cta {
                 flex-direction: row;
+                justify-content: space-evenly;
+                width: 100%;
             }
         }
     }

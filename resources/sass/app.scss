@@ -8,7 +8,6 @@
 @import "base/colors";
 @import "base/typography";
 @import "base/base";
-@import "base/darkmode";
 @import "base/dyslexia";
 @import "base/reduced_motion";
 @import "base/printable";
@@ -24,6 +23,7 @@
 @import "pages/home";
 @import "pages/projects";
 @import "pages/contact";
+@import "pages/login";
 
 // Import component styles
 @import "components/nav";
@@ -36,6 +36,4 @@
 @import "components/socials";
 @import "components/divider";
 @import "components/switch";
-// @import "components/modal";
-// @import "components/form_group";
-// @import "components/cookie_banner";
+@import "components/cookie_banner";

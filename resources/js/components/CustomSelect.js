@@ -8,15 +8,20 @@ class CustomSelect {
 		HIDE: 1,
 		TOGGLE: 2,
 	});
-	specialKeys = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Tab"];
+	specialKeys = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Tab", "Shift", "Control", "Alt", "Meta"];
 	target = null;
-	currentIndex = -1;
-	debounceTime = 300;
-	searchString = "";
 	options = null;
+	hiddenInput = null;
+	currentIndex = -1;
+	debounceTime;
+	searchString = "";
 	clearSearchTimeout = null;
+	visibleElements;
 
-	constructor() {
+	constructor(debounceTime = 300, visibleElements = 5) {
+		this.debounceTime = debounceTime;
+		this.visibleElements = visibleElements;
+
 		const customSelects = document.querySelectorAll(".custom__select");
 
 		customSelects.forEach((customSelect) => {
@@ -24,12 +29,11 @@ class CustomSelect {
 			customSelect.addEventListener("keydown", this.handleSelectKeyDown.bind(this));
 		});
 
-		document.addEventListener("click", this.somethingElse.bind(this));
+		document.addEventListener("click", this.handleClickOutside.bind(this));
 	}
 
 	handleSelectClick(e) {
 		this.target = e.target;
-		//e.target.blur();
 		this.toggleOptions(this.toggleOption.TOGGLE);
 	}
 
@@ -38,6 +42,7 @@ class CustomSelect {
 		if (!this.specialKeys.includes(e.key)) e.preventDefault();
 		switch (e.key) {
 			case "Enter":
+				this.setCurrentValue();
 				this.toggleOptions(this.toggleOption.TOGGLE);
 				break;
 			case " ":
@@ -49,20 +54,25 @@ class CustomSelect {
 				break;
 			case "ArrowUp":
 				this.moveIndexBy(-1);
+				this.setCurrentValue();
 				break;
 			case "ArrowDown":
 				this.moveIndexBy(1);
+				this.setCurrentValue();
 				break;
 			case "Home":
 			case "PageUp":
 				this.setIndex(0);
+				this.setCurrentValue();
 				break;
 			case "End":
 			case "PageDown":
 				this.setIndex(this.options.length - 1);
+				this.setCurrentValue();
 				break;
 			default:
 				this.typeSearch(e.key);
+				this.setCurrentValue();
 				break;
 		}
 	}
@@ -74,8 +84,9 @@ class CustomSelect {
 	typeSearch(key) {
 		clearTimeout(this.clearSearchTimeout);
 
-		this.searchString += key;
-		const startIndex = this.currentIndex + 1; // starts at first element after current index, if current index === -1 => starts at beginning
+		this.searchString += key.toLowerCase();
+		console.log(this.searchString);
+		const startIndex = this.currentIndex + 1; // Start searching from next item
 		const foundIndex = this.findIndex(startIndex);
 		if (foundIndex !== -1) this.setIndex(foundIndex);
 
@@ -85,19 +96,16 @@ class CustomSelect {
 	}
 
 	findIndex(startIndex) {
-		const noIndex = -1;
-
-		if (!this.options || this.options.length === 0) return noIndex;
-		if (this.searchString === "") return noIndex; // safety check since every string "starts with" ""
+		if (!this.options || this.options.length === 0 || this.searchString === "") return -1;
 
 		for (let i = 0; i < this.options.length; i++) {
 			const index = (startIndex + i) % this.options.length;
-			if (this.options[index].innerText.startsWith(this.searchString)) {
+			if (this.options[index].innerText.toLowerCase().startsWith(this.searchString)) {
 				return index;
 			}
 		}
 
-		return noIndex;
+		return -1;
 	}
 
 	moveIndexBy(amount) {
@@ -105,25 +113,34 @@ class CustomSelect {
 	}
 
 	setIndex(index) {
+		this.currentIndex = index;
+		this.highlightIndex(index);
+	}
+
+	highlightIndex(index) {
 		this.options.forEach((option) => {
 			option.classList.remove("highlight");
 		});
 		this.options[index].classList.add("highlight");
-		this.currentIndex = index;
 	}
 
 	setCurrentValue() {
-		// set the value to whatever the value of the li on the current index is (if not -1)
+		if (this.currentIndex !== -1 && this.options) {
+			this.target.value = this.options[this.currentIndex].innerText;
+			this.hiddenInput.value = this.options[this.currentIndex].dataset.value;
+		}
 	}
 
-	somethingElse(e) {
+	handleClickOutside(e) {
 		if (this.target && this.target !== e.target) {
 			this.toggleOptions(this.toggleOption.HIDE);
 		}
 	}
 
 	toggleOptions(toggleOption) {
-		const optionsList = this.target.nextElementSibling;
+		this.hiddenInput = this.target.parentElement.querySelector("input[type='hidden']");
+		const optionsList = this.target.parentElement.querySelector(".custom__select__options");
+		if (!optionsList) return;
 
 		switch (toggleOption) {
 			case this.toggleOption.SHOW:
@@ -140,40 +157,24 @@ class CustomSelect {
 
 	showOptions(optionsList) {
 		optionsList.classList.add("show");
+
+		optionsList.style.maxHeight = `${optionsList.firstElementChild.offsetHeight * this.visibleElements}px`;
+		optionsList.style.overflowY = "auto";
+
 		this.options = optionsList.querySelectorAll("li");
 		this.options.forEach((option, index) => {
-			option.addEventListener("mouseenter", () => this.setIndex(index));
+			option.addEventListener("mouseenter", () => {
+				this.setIndex(index);
+			});
+			option.addEventListener("click", this.setCurrentValue.bind(this));
 		});
 	}
 
 	hideOptions(optionsList) {
 		optionsList.classList.remove("show");
-		this.options.forEach((option) => {
-			option.parentNode.replaceChild(option.cloneNode(true), option); // replace with clone to remove eventlisteners
-		});
-		this.options = null;
-		this.target = null;
-	}
-
-	handleOptionHover() {
-		index = 0;
-		this.setIndex(index);
-		// set currently hovered as currentIndex
+		this.options.forEach((option) => option.replaceWith(option.cloneNode(true))); // Replace with clone to easily remove all event listeners
+		this.options = this.target = null;
 	}
 }
 
 export default CustomSelect;
-
-/*
-
-ENTER => OPEN/CLOSE, ON CLOSE SELECT THE HOVERED OPTION
-
-SPACE, ESC, TAB => JUST OPEN AND CLOSE, DOESN'T CHANGE SELECTION
-
-ARROW UP/DOWN, HOME, END, PAGE UP, PAGE DOWN, CLICK => SELECT THE ELEMENT
-
-ARROW UP/DOWN, HOME, END, PAGE UP, PAGE DOWN, HOVER => CHANGE STYLE OF ELEMENT
-
-TYPING => LOOK UP FIRST VALUE IN ARRAY OF OPTIONS, STARTING FROM CURRENTLY SELECTED/HOVERED (HAS PRECEDENCE OVER CURRENTLY SELECTED) ELEMENT, IF NOT FOUND => GO AROUND UNTIL BACK TO CURRENTLY SELECTED/HOVERED ELEMENT
-
-*/

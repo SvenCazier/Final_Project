@@ -59,10 +59,6 @@ nav {
                     text-decoration: underline 2px solid $color-white;
                     text-underline-offset: 0.25em;
                 }
-
-                &:hover {
-                    background: $color-primary-light;
-                }
             }
         }
     }
@@ -335,18 +331,14 @@ html.darkmode {
         }
 
         .nav__main {
-            background: $color-primary;
+            background: $color-dark-elevation-3;
 
             li {
-                background: $color-primary;
+                background: $color-dark-elevation-3;
 
                 a {
                     &.active {
                         text-decoration: underline 2px solid $color-primary-light;
-                    }
-
-                    &:hover {
-                        background: $color-primary-light;
                     }
                 }
             }
@@ -355,7 +347,7 @@ html.darkmode {
         li.nav__secondary {
             .nav__locale {
                 li {
-                    background: $color-primary;
+                    background: $color-dark-elevation-3;
 
                     &:not(:last-of-type) {
                         border-right: 1px solid $color-white;
@@ -396,12 +388,24 @@ html.darkmode {
                 .nav__locale,
                 .nav__settings {
                     .submenu {
-                        background: $color-primary;
+                        background: $color-dark-elevation-9;
 
-                        a {
-                            &:hover {
-                                background: $color-primary-light;
+                        li {
+                            background: $color-dark-elevation-9;
+                            a {
+                                &:hover {
+                                    background: $color-primary-light;
+                                    color: $color-dark;
+                                }
                             }
+                        }
+                    }
+                }
+
+                .nav__locale {
+                    li {
+                        &:not(:last-of-type) {
+                            border: none;
                         }
                     }
                 }

@@ -30,4 +30,14 @@ enum ContactFormSubject: string
             self::OTHER->value => __("contact_form.subjects.other"),
         };
     }
+
+    public static function getContactFormSubjectOptions(): array
+    {
+        return collect(ContactFormSubject::cases())->map(function (ContactFormSubject $subject) {
+            return [
+                'value' => $subject->value,
+                'label' => $subject->label(),
+            ];
+        })->all();
+    }
 }

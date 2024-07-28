@@ -2,6 +2,8 @@
 "use strict";
 
 class TabGroup {
+	imageRatio = 4.2;
+
 	constructor() {
 		this.init();
 	}
@@ -18,6 +20,8 @@ class TabGroup {
 				this.changeActivePanel(radio);
 			}
 		});
+
+		window.addEventListener("resize", this.resizeBannerHeight.bind(this));
 	}
 
 	handleKeyDown(e, radio) {
@@ -53,6 +57,7 @@ class TabGroup {
 				panel.classList.remove("active");
 			});
 			targetPanel.classList.add("active");
+			this.setBannerImage();
 		}
 	}
 
@@ -61,6 +66,38 @@ class TabGroup {
 			radio.checked = true;
 			this.changeActivePanel(radio);
 		}
+	}
+
+	setBannerImage() {
+		const bannerElement = this.getBannerElement();
+		if (!bannerElement) return;
+
+		const blurredURL = bannerElement.querySelector("img").getAttribute("src").replace("x1040.png", "xblurred.jpg");
+
+		bannerElement.style.backgroundImage = `url("${blurredURL}")`;
+		bannerElement.style.backgroundPosition = "center";
+		bannerElement.style.backgroundRepeat = "no-repeat";
+		bannerElement.style.backgroundSize = "cover";
+
+		this.resizeBannerHeight();
+	}
+
+	resizeBannerHeight() {
+		const bannerElement = this.getBannerElement();
+		if (!bannerElement) return;
+
+		const bannerWidth = bannerElement.offsetWidth;
+		bannerElement.style.height = `${bannerWidth / this.imageRatio}px`;
+	}
+
+	getBannerElement() {
+		const activePanel = document.querySelector(".tab-panel.active");
+		if (!activePanel) return;
+
+		const bannerElement = activePanel.querySelector("header picture");
+		if (!bannerElement) return;
+
+		return bannerElement;
 	}
 }
 

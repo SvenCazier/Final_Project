@@ -18,6 +18,7 @@
 
             li {
                 background: $color-primary;
+                color: $color-white;
 
                 input[type="radio"] {
                     display: none;
@@ -33,7 +34,18 @@
 
                     &:hover {
                         background: $color-primary-light;
+                        color: $color-black;
                     }
+                }
+
+                input[type="radio"]:checked + label {
+                    text-decoration: underline 1px solid $color-white;
+                    text-underline-offset: 0.25em;
+                }
+
+                input[type="radio"]:checked + label:hover {
+                    text-decoration: underline 1px solid $color-black;
+                    text-underline-offset: 0.25em;
                 }
             }
         }
@@ -70,9 +82,21 @@
 
             .tab-panel__content {
                 grid-area: content;
+                display: flex;
+                flex-direction: column;
 
                 h2 {
                     font-size: clamp(2em, 3vw, 3.25em);
+                }
+
+                p {
+                    flex: 1;
+                    width: clamp(45ch, 100%, 70ch);
+                }
+
+                .project__links {
+                    display: flex;
+                    justify-content: space-evenly;
                 }
             }
 
@@ -159,9 +183,20 @@ html.darkmode {
 
                     label {
                         &:hover {
-                            background: $color-primary;
-                            color: $color-light;
+                            background: $color-dark-elevation-1;
+                            color: $color-white;
                         }
+                    }
+
+                    input[type="radio"]:checked + label,
+                    input[type="radio"]:checked + label:hover {
+                        background: $color-dark-elevation-1;
+                        color: $color-white;
+                    }
+
+                    input[type="radio"]:checked + label:hover {
+                        text-decoration: underline 1px solid $color-white;
+                        text-underline-offset: 0.25em;
                     }
                 }
             }
@@ -169,6 +204,10 @@ html.darkmode {
 
         .tab-panels {
             .tab-panel {
+                .tab-panel__banner {
+                    filter: brightness(0.5);
+                }
+
                 .tab-panel__footer {
                     .skills {
                         li {

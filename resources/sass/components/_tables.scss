@@ -72,3 +72,21 @@
         text-align: left;
     }
 }
+
+.emptyInboxMessage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    p {
+        font-size: 2em;
+        font-weight: bold;
+        color: rgba($color-black, 0.3);
+        text-transform: uppercase;
+        user-select: none;
+    }
+}

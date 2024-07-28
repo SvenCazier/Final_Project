@@ -35,7 +35,8 @@
 		"name": "Nombre",
 		"email": "Correo electrónico",
 		"subject": "Asunto",
-		"message": "Mensaje"
+		"message": "Mensaje",
+		"password": "Contraseña"
 	},
 	"contact_form": {
 		"subjects": {
@@ -76,10 +77,10 @@
 		},
 		"section_3": {
 			"title": "El Programador del Negocio Familiar",
-			"content_1": "Después de la universidad, me uní al negocio familiar, pero no pude dejar mi adicción a la programación. Incluso terminé codificando todas las tareas para mi novia estadounidense de entonces. Ella me decía constantemente: \"Eres tan bueno en esto; ¡deberías obtener tu título!\" Supongo que debería agradecerle por el empujón."
+			"content_1": "Después de la universidad, me uní al negocio familiar, pero no pude dejar mi adicción a la programación. Incluso terminé codificando todas las tareas para mi novia estadounidense de entonces. Ella me decía constantemente: «Eres tan bueno en esto; ¡deberías obtener tu título!» Supongo que debería agradecerle por el empujón."
 		},
 		"section_4": {
-			"title": "\"Avancemos Unos Años\" (- Alanis Morissette)",
+			"title": "«Avancemos Unos Años» (- Alanis Morissette)",
 			"content_1": "Avancemos rápido hasta ahora, y he completado el curso de desarrolladores full-stack de VDAB para ampliar mis habilidades. Una experiencia memorable fue el proyecto SCRUM, donde aprendí la magia del trabajo en equipo y las metodologías ágiles. Fue increíblemente divertido; constantemente encontrábamos nuevas formas de hacer que las reuniones diarias de pie fueran divertidas y atractivas. Nuestro equipo siempre estaba ahí para apoyarse mutuamente, ideando soluciones y apoyándose mutuamente frente a los desafíos. Se sentía como armar un rompecabezas tecnológico con un grupo de mentes brillantes, y eso hizo que toda la experiencia fuera inolvidable."
 		},
 		"section_5": {
@@ -95,9 +96,28 @@
 			"content_1": "Estoy en una misión para resolver problemas complejos y crear aplicaciones fluidas y fáciles de usar. Me desenvuelvo bien en entornos colaborativos y siempre estoy ansioso por aprender algo nuevo. ¿Mi objetivo final? Dejar una huella duradera con las soluciones que desarrollo."
 		}
 	},
+	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, inspirado en YouTube, es un proyecto diseñado como una plataforma para alojar mis propios videos. Originalmente desarrollado con Node.js puro y el motor de plantillas EJS, esta segunda iteración funciona con una API desarrollada en Node.js y un frontend construido en Angular. Además, ahora cuenta con capítulos, subtítulos y un algoritmo de búsqueda de coincidencia difusa.",
+	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) apoya a una alianza de Whiteout Survival con un sitio web respaldado por PHP y JimBot, un bot de Discord que personifica una API de eventos. JimBot se integra perfectamente con tanto Discord como el sitio web de la alianza, facilitando la gestión de eventos en tiempo real y mejorando la comunicación y coordinación entre los miembros de la alianza.",
+	"Implemented as a JavaScript class, this project implements the Caesar Cipher using modulo arithmetic, with the possibility of importing a file.": "Implementado como una clase de JavaScript, este proyecto implementa el Cifrado César usando aritmética modular, con la posibilidad de importar un archivo.",
+	"Schattenjager is a Pacman-style game implemented in JavaScript, challenging players with adjustable levels of randomly placed walls, lives, treasures, and enemy movement speeds. Navigate through the maze, collect treasures, avoid enemies, and see if you can conquer its challenges!": "Schattenjager es un juego al estilo Pacman implementado en JavaScript, que desafía a los jugadores con niveles ajustables de muros colocados al azar, vidas, tesoros y velocidades de movimiento de los enemigos. Navega por el laberinto, recolecta tesoros, evita a los enemigos y ¡mira si puedes conquistar sus desafíos!",
+	"Pizza is a web application structured in a layered MVC format for a pizza webshop. It features a quirky approach to managing customer data to minimize duplicate entries, ensuring seamless guest checkout and registration. Find out more by checking it out on GitHub.": "Pizza es una aplicación web estructurada en un formato MVC en capas para una tienda de pizzas en línea. Presenta un enfoque peculiar para gestionar los datos de los clientes y minimizar las entradas duplicadas, asegurando una experiencia de compra y registro sin inconvenientes. Descubre más al respecto en GitHub.",
+	"Prularia is a webshop application developed collaboratively using SCRUM methodology, where I integrated several previously developed components to streamline our development process. Given that it was a collaborative project, not all code was written by me, but as a general rule you could say that sections with lots of comments were at least visited by me.": "Prularia es una aplicación de tienda en línea desarrollada de manera colaborativa utilizando la metodología SCRUM, donde integré varios componentes desarrollados previamente para optimizar nuestro proceso de desarrollo. Dado que fue un proyecto colaborativo, no todo el código fue escrito por mí, pero como regla general, se podría decir que las secciones con muchos comentarios al menos fueron revisadas por mí.",
 	"contact": {
 		"title_underline": "Haga",
 		"title_normal": "su pregunta",
 		"text": "Envíame un mensaje y hagamos que las cosas sucedan juntos."
+	},
+	"admin": {
+		"login": "Iniciar sesión",
+		"logout": "Cerrar sesión",
+		"Nothing to display": "Nada que mostrar"
+	},
+	"cookiebanner": {
+		"title": "¡Únase a la Revolución del Consentimiento de Cookies!",
+		"text": "Usamos <em>cookies funcionales</em> para mejorar su experiencia de navegación. Estas cookies almacenan sus preferencias para <em>consentimiento de cookies</em>, <em>idioma</em>, <em>modo oscuro</em> y <em>modo amigable para la dislexia</em>. No almacenamos ni compartimos datos personales. Puede optar por guardar estas configuraciones haciendo clic en <em>«Aceptar»</em>, o retirar su consentimiento en cualquier momento haciendo clic en <em>«Rechazar»</em>. Además, puede hacer clic en <em>«Limpiar»</em> para eliminar sus preferencias sin cambiar su estado de consentimiento.",
+		"accept": "Aceptar",
+		"decline": "Rechazar",
+		"clear": "Limpiar",
+		"toggle": "Abrir/Cerrar la barra de cookies"
 	}
 }

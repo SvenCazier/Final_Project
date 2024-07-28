@@ -79,14 +79,8 @@ svg {
     height: 1.5rem;
 
     .svg {
-        &--black {
-            fill: $color-black;
-        }
-        &--white {
+        &--fill {
             fill: $color-white;
-        }
-        &--primary {
-            fill: $color-primary;
         }
     }
 }
@@ -110,6 +104,18 @@ svg {
     h2 {
         &.title {
             font-size: 2em;
+        }
+    }
+}
+
+html.darkmode {
+    body {
+        background: $color-dark;
+        color: $color-light;
+    }
+    .svg {
+        &--fill {
+            fill: $color-primary-light;
         }
     }
 }

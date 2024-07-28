@@ -35,7 +35,8 @@
 		"name": "Naam",
 		"email": "E-mail",
 		"subject": "Onderwerp",
-		"message": "Bericht"
+		"message": "Bericht",
+		"password": "Wachtwoord"
 	},
 	"contact_form": {
 		"subjects": {
@@ -95,9 +96,28 @@
 			"content_1": "Ik ben op een missie om complexe problemen op te lossen en naadloze, gebruiksvriendelijke applicaties te creëren. Ik gedij in samenwerkingsomgevingen en ben altijd bereid om iets nieuws te leren. Mijn ultieme doel? Een blijvende impact maken met de oplossingen die ik ontwikkel."
 		}
 	},
+	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, geïnspireerd door YouTube, is een project ontworpen als een platform voor het hosten van mijn eigen video's. Oorspronkelijk ontwikkeld met puur Node.js en de EJS templating-engine, draait deze tweede iteratie op een API ontwikkeld in Node.js en een frontend gebouwd in Angular. Bovendien bevat het nu hoofdstukken, ondertitels en een Fuzzy Matching zoekalgoritme.",
+	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) ondersteunt een Whiteout Survival-alliantie met een PHP-gebaseerde website en JimBot, een Discord-bot die een event-API verpersoonlijkt. JimBot integreert naadloos met zowel Discord als de website van de alliantie, wat realtime evenementenbeheer mogelijk maakt en de communicatie en coördinatie onder alliantieleden verbetert.",
+	"Implemented as a JavaScript class, this project implements the Caesar Cipher using modulo arithmetic, with the possibility of importing a file.": "Geïmplementeerd als een JavaScript-klasse, implementeert dit project de Caesar-cijfer met behulp van modulo-rekenkunde, met de mogelijkheid om een bestand te importeren.",
+	"Schattenjager is a Pacman-style game implemented in JavaScript, challenging players with adjustable levels of randomly placed walls, lives, treasures, and enemy movement speeds. Navigate through the maze, collect treasures, avoid enemies, and see if you can conquer its challenges!": "Schattenjager is een spel in Pacman-stijl, geïmplementeerd in JavaScript, waarin spelers worden uitgedaagd met aanpasbare niveaus van willekeurig geplaatste muren, levens, schatten en vijandige bewegingssnelheden. Navigeer door het doolhof, verzamel schatten, ontwijk vijanden en kijk of je de uitdagingen kunt overwinnen!",
+	"Pizza is a web application structured in a layered MVC format for a pizza webshop. It features a quirky approach to managing customer data to minimize duplicate entries, ensuring seamless guest checkout and registration. Find out more by checking it out on GitHub.": "Pizza is een webapplicatie gestructureerd in een gelaagd MVC-formaat voor een pizzawinkel. Het biedt een eigenzinnige aanpak voor het beheren van klantgegevens om dubbele invoer te minimaliseren, wat zorgt voor een naadloze gastafreken en registratie. Lees meer door het te bekijken op GitHub.",
+	"Prularia is a webshop application developed collaboratively using SCRUM methodology, where I integrated several previously developed components to streamline our development process. Given that it was a collaborative project, not all code was written by me, but as a general rule you could say that sections with lots of comments were at least visited by me.": "Prularia is een webshop-applicatie die gezamenlijk is ontwikkeld met behulp van de SCRUM-methodologie, waar ik verschillende eerder ontwikkelde componenten heb geïntegreerd om ons ontwikkelproces te stroomlijnen. Aangezien het een samenwerkingsproject was, is niet alle code door mij geschreven, maar als algemene regel zou je kunnen zeggen dat gedeelten met veel opmerkingen in ieder geval door mij zijn bezocht.",
 	"contact": {
 		"title_underline": "Laat",
-		"title_normal": "je horen",
+		"title_normal": "van je horen",
 		"text": "Stuur me een bericht en laten we samen iets bereiken."
+	},
+	"admin": {
+		"login": "Aanmelden",
+		"logout": "Afmelden",
+		"Nothing to display": "Niets om weer te geven"
+	},
+	"cookiebanner": {
+		"title": "Doe mee aan de Cookie Toestemming Revolutie!",
+		"text": "We gebruiken <em>functionele cookies</em> om uw browse-ervaring te verbeteren. Deze cookies slaan uw voorkeuren op voor <em>cookie-toestemming</em>, <em>taal</em>, <em>donkere modus</em> en <em>dyslexievriendelijke modus</em>. We slaan geen persoonlijke gegevens op en delen deze niet. U kunt ervoor kiezen om deze instellingen op te slaan door op <em>\"Accepteren\"</em> te klikken, of uw toestemming op elk moment in te trekken door op <em>\"Afwijzen\"</em> te klikken. Daarnaast kunt u op <em>\"Wissen\"</em> klikken om uw voorkeuren te verwijderen zonder uw toestemmingsstatus te wijzigen.",
+		"accept": "Accepteren",
+		"decline": "Afwijzen",
+		"clear": "Wissen",
+		"toggle": "Openen/Sluiten cookie banner"
 	}
 }

@@ -40,5 +40,7 @@
     @endforeach
 </table>
 @if (!count($tableData))
-    <p>Nothing to display</p>
+    <div class="emptyInboxMessage">
+        <p>{{ __('admin.Nothing to display') }}</p>
+    </div>
 @endif

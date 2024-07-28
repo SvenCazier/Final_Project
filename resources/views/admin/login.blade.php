@@ -14,13 +14,13 @@
     <header>
         <x-admin.nav />
     </header>
-    <main>
+    <main class="login">
         <section class="content-grid">
             <x-forms.form method="POST" action="/{{ app()->getLocale() }}/login">
-                <x-forms.input label="Email" name="email" type="text" />
-                <x-forms.input label="Password" name="password" type="password" />
+                <x-forms.input label="{{ __('general_form.email') }}" name="email" type="text" />
+                <x-forms.input label="{{ __('general_form.password') }}" name="password" type="password" />
                 <x-forms.error :error="$errors->first('invalid_credentials')" />
-                <x-button>Login</x-button>
+                <x-button>{{ __('admin.login') }}</x-button>
             </x-forms.form>
         </section>
     </main>

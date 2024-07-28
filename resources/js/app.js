@@ -4,17 +4,24 @@ import "./bootstrap";
 import NavigationManager from "./components/NavigationManager";
 import TabGroup from "./components/TabGroup";
 import ContactFormAnimator from "./components/ContactFormAnimator";
+import CookieManager from "./components/CookieManager";
+import LocaleManager from "./components/LocaleManager";
+import SettingsManager from "./components/SettingsManager";
+import CustomSelect from "./components/CustomSelect";
 
 const smallScreenBreakpoint = 1240;
 
 document.addEventListener("DOMContentLoaded", () => {
 	navScrollFunction();
 	duplicateSecondaryNav();
-	loadSettings();
+	const cookieManager = new CookieManager();
 	const navigationManager = new NavigationManager();
-	const tabGroup = new TabGroup();
-	const contactFormAnimator = new ContactFormAnimator(smallScreenBreakpoint);
 	navigationManager.setActiveNav(window.location.hash);
+	new LocaleManager(cookieManager);
+	new SettingsManager(cookieManager);
+	new TabGroup();
+	new ContactFormAnimator(smallScreenBreakpoint);
+	new CustomSelect();
 });
 
 window.addEventListener("resize", () => {
@@ -62,53 +69,4 @@ function toggleMenu(event) {
 	} else {
 		navMain.classList.remove("show");
 	}
-}
-
-const localeLinks = document.querySelectorAll(".locale-link");
-localeLinks.forEach((localeLink) => {
-	localeLink.addEventListener("click", redirectWithHash);
-});
-
-function redirectWithHash(event) {
-	event.preventDefault();
-	window.location.href = `${event.target.getAttribute("href")}${window.location.hash}`;
-}
-
-const htmlElement = document.querySelector("html");
-
-const darkModeSwitch = document.getElementById("switch-dark-mode");
-const dyslexiaModeSwitch = document.getElementById("switch-dyslexia-mode");
-
-darkModeSwitch.addEventListener("change", setDarkMode);
-dyslexiaModeSwitch.addEventListener("change", setDyslexiaMode);
-
-function loadSettings() {
-	const prefersColorSchemeDark = window?.matchMedia("(prefers-color-scheme: dark)")?.matches ?? false;
-	const darkModeLocalStorage = localStorage.getItem("darkmode");
-	const darkModeEnabled = darkModeLocalStorage === null ? prefersColorSchemeDark : darkModeLocalStorage === "true";
-	const dyslexiaModeEnabled = localStorage.getItem("dyslexiamode") === "true";
-
-	darkModeSwitch.checked = darkModeEnabled;
-	dyslexiaModeSwitch.checked = dyslexiaModeEnabled;
-
-	toggleDarkMode(darkModeEnabled);
-	toggleDyslexiaMode(dyslexiaModeEnabled);
-}
-
-function setDarkMode() {
-	localStorage.setItem("darkmode", this.checked);
-	toggleDarkMode(this.checked);
-}
-
-function setDyslexiaMode() {
-	localStorage.setItem("dyslexiamode", this.checked);
-	toggleDyslexiaMode(this.checked);
-}
-
-function toggleDarkMode(darkModeEnabled) {
-	darkModeEnabled ? htmlElement.classList.add("darkmode") : htmlElement.classList.remove("darkmode");
-}
-
-function toggleDyslexiaMode(dyslexiaModeEnabled) {
-	dyslexiaModeEnabled ? htmlElement.classList.add("dyslexia-friendly") : htmlElement.classList.remove("dyslexia-friendly");
 }

@@ -38,3 +38,13 @@
         display: table;
     }
 }
+
+html.darkmode {
+    .article__title {
+        &--underline {
+            &::before {
+                border-bottom: 0.1em solid $color-light;
+            }
+        }
+    }
+}

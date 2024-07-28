@@ -1,6 +1,13 @@
 .page-footer {
     padding: 0.75em 0;
     background: $color-primary;
-    color: white;
+    color: $color-white;
     text-align: center;
+}
+
+html.darkmode {
+    .page-footer {
+        background: $color-dark-elevation-9;
+        color: $color-primary-light;
+    }
 }
