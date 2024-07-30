@@ -5,3 +5,9 @@
     font-size: $font-small;
     font-weight: 700;
 }
+
+html.darkmode {
+    .error {
+        font-weight: initial;
+    }
+}

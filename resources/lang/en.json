@@ -1,4 +1,5 @@
 {
+	"description": "Explore my full-stack developer portfolio showcasing my expertise in front-end and back-end technologies. Discover innovative projects, dynamic web applications, and solutions crafted with modern frameworks and best practices.",
 	"locales": {
 		"selectedLang": "Current language:",
 		"labelText": "Change the current language to",
@@ -95,6 +96,12 @@
 			"title": "The Grand Quest",
 			"content_1": "I'm on a mission to solve complex problems and create seamless, user-friendly applications. I thrive in collaborative environments and am always eager to learn something new. My ultimate goal? To make a lasting impact with the solutions I develop."
 		}
+	},
+	"projects": {
+		"title_underline": "My",
+		"title_normal": "projects",
+		"View live version": "View live version",
+		"View GitHub repository": "View GitHub repository"
 	},
 	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.",
 	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.",

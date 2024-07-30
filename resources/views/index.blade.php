@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="{{ __('description') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sven Cazier</title>
     <link rel="alternate" hreflang="en" href="{{ url('') }}/en" />
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="no-print">
         <x-nav.nav class="expanded" />
     </header>
     <main class="main-content">

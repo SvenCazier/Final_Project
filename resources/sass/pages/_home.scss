@@ -25,6 +25,7 @@ section#home {
         justify-content: space-evenly;
 
         &__intro {
+            color: $color-white;
         }
 
         &__cta {
@@ -49,9 +50,38 @@ section#home {
     }
 }
 
+@media print {
+    section#home {
+        .left {
+            margin-top: 0;
+
+            h1 {
+                :nth-child(odd) {
+                    transform: none;
+                }
+
+                :nth-child(even) {
+                    transform: none;
+                }
+            }
+        }
+        .right {
+            &__intro {
+                color: #000000;
+            }
+        }
+    }
+}
+
 html.darkmode {
     section#home {
         background: $color-dark;
         color: $color-primary-light;
+
+        .right {
+            &__intro {
+                color: $color-primary-light;
+            }
+        }
     }
 }

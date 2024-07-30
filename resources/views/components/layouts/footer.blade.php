@@ -2,7 +2,7 @@
     <section class="content-grid">
         <ul class="socials">
             <li class="socials__item">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/sven-c-3062ab9b" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <title>LinkedIn</title>
                         <path class="svg--fill"
@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li class="socials__item">
-                <a href="#">
+                <a href="https://github.com/SvenCazier" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <title>Github</title>
                         <path class="svg--fill"

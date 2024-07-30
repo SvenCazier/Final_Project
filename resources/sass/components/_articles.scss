@@ -17,6 +17,10 @@
 .article__title {
     &--main {
         margin-bottom: 0.5em;
+
+        &.center {
+            text-align: center;
+        }
     }
 
     &--underline {
@@ -36,6 +40,18 @@
 @media print {
     .article {
         display: table;
+    }
+
+    .article__title {
+        &--main {
+            page-break-before: always;
+        }
+
+        &--underline {
+            &::before {
+                display: none;
+            }
+        }
     }
 }
 

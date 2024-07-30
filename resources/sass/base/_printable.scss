@@ -1,8 +1,45 @@
 // _printable.scss
-
 @media print {
-    a::after {
-        content: " (" attr(href) ") ";
-        text-decoration: underline;
+    html {
+        .no-print {
+            display: none !important;
+        }
+
+        .no-split {
+            page-break-inside: avoid !important;
+        }
+
+        &:not(.dyslexia-friendly) {
+            body {
+                font-family: system-ui, sans-serif !important;
+                font-size: 12pt !important;
+            }
+        }
+
+        body {
+            color: #000000 !important;
+            background: #ffffff !important;
+        }
+
+        a {
+            font-size: 12pt !important;
+            text-transform: capitalize !important;
+            color: #000 !important;
+
+            &::after {
+                content: " (" attr(href) ") ";
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    @page {
+        size: letter;
+        margin: 1in;
     }
 }

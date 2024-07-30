@@ -8,20 +8,22 @@ import CookieManager from "./components/CookieManager";
 import LocaleManager from "./components/LocaleManager";
 import SettingsManager from "./components/SettingsManager";
 import CustomSelect from "./components/CustomSelect";
+import LabelButton from "./components/LabelButton";
 
 const smallScreenBreakpoint = 1240;
 
 document.addEventListener("DOMContentLoaded", () => {
 	navScrollFunction();
 	duplicateSecondaryNav();
-	const cookieManager = new CookieManager();
-	const navigationManager = new NavigationManager();
-	navigationManager.setActiveNav(window.location.hash);
+	const cookieManager = new CookieManager(4);
 	new LocaleManager(cookieManager);
 	new SettingsManager(cookieManager);
 	new TabGroup();
+	const navigationManager = new NavigationManager();
+	navigationManager.setActiveNav(window.location.hash);
 	new ContactFormAnimator(smallScreenBreakpoint);
 	new CustomSelect();
+	new LabelButton();
 });
 
 window.addEventListener("resize", () => {

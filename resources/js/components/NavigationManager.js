@@ -23,7 +23,6 @@ class NavigationManager {
 				const section = document.getElementById(navLink.hash.substring(1));
 				if (section) {
 					const sectionTopOffset = Math.max(0, windowHeight - section.offsetHeight);
-
 					this.#sectionArray.push({
 						hash: navLink.hash,
 						top: section.offsetTop - sectionTopOffset - (sectionTopOffset === 0 ? navbarHeight : 0),

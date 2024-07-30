@@ -8,8 +8,8 @@
             {{ __('hero.intro') }}
         </article>
         <article class="right__cta">
-            <a class="button button--outline cta" href="#projects">{{ __('buttons.projects') }}</a>
-            <a class="button button--text cta" href="#contact">{{ __('buttons.contact') }}</a>
+            <a class="button button--outline cta no-print" href="#projects">{{ __('buttons.projects') }}</a>
+            <a class="button button--text cta no-print" href="#contact">{{ __('buttons.contact') }}</a>
         </article>
     </div>
 

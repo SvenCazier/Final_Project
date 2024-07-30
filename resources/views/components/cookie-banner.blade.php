@@ -1,4 +1,4 @@
-<aside id="cookieBanner" class="cookie-banner elevate">
+<aside id="cookieBanner" class="cookie-banner elevate no-print">
     <input id="cookie-banner-toggle" type="checkbox" class="cookie-banner-toggle">
     <div id="cookieBannerContent" class="cookie-banner-content">
         <header class="cookie-banner-content__header">
@@ -13,15 +13,18 @@
         </main>
         <footer class="cookie-banner-content__footer">
             <div class="cookie__footer__main-buttons">
-                <button id="acceptCookies" class="button button--contained">{{ __('cookiebanner.accept') }}</button>
-                <button id="declineCookies" class="button button--text">{{ __('cookiebanner.decline') }}</button>
+                <button id="acceptCookies" class="button button--contained"
+                    tabindex="1">{{ __('cookiebanner.accept') }}</button>
+                <button id="declineCookies" class="button button--text"
+                    tabindex="2">{{ __('cookiebanner.decline') }}</button>
             </div>
-            <button id="clearCookies" class="button button--outline">{{ __('cookiebanner.clear') }}</button>
+            <button id="clearCookies" class="button button--outline"
+                tabindex="3">{{ __('cookiebanner.clear') }}</button>
         </footer>
     </div>
     <div class="cookie-banner-toggle-container">
         <label for="cookie-banner-toggle" class="cookie-icon-label" role="button"
-            aria-label="{{ __('cookiebanner.toggle') }}" title="{{ __('cookiebanner.toggle') }}">
+            aria-label="{{ __('cookiebanner.toggle') }}" title="{{ __('cookiebanner.toggle') }}" tabindex="4">
             <svg class="cookie-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                 <path class="svg--stroke"
                     d="M25.9,13.4c1.3,1.9,2.9,2.5,5,1.2c0.1,0.7,0.1,1.5,0.1,2.2c-0.4,8.3-7.5,14.7-15.7,14.2 C7,30.6,0.6,23.6,1,15.3C1.4,7,8.7,0.6,17,1c-0.7,2.3-0.1,4.3,1.8,5C17,11.5,20.8,15,25.9,13.4L25.9,13.4z" />

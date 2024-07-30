@@ -96,6 +96,7 @@
 
                 .project__links {
                     display: flex;
+                    flex-direction: column;
                     justify-content: space-evenly;
                 }
             }
@@ -114,6 +115,25 @@
                         padding: 5px 10px;
                         margin: 5px;
                         border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$mq-xs} {
+    .tabset {
+        .tab-panels {
+            .tab-panel {
+                .tab-panel__content {
+                    .project__links {
+                        flex-direction: row;
+                        gap: 1em;
+
+                        .button {
+                            width: 50%;
+                        }
                     }
                 }
             }
@@ -156,17 +176,12 @@
 @media print {
     .tabset {
         display: block;
-
-        .nav-tabs {
-            display: none;
-        }
-
         .tab-panels {
             .tab-panel {
                 display: block;
-
-                .tab-panel__banner {
-                    display: none;
+                .tab-panel__content {
+                    display: block;
+                    min-height: max-content !important;
                 }
             }
         }

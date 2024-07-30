@@ -172,7 +172,7 @@ class CustomSelect {
 
 	hideOptions(optionsList) {
 		optionsList.classList.remove("show");
-		this.options.forEach((option) => option.replaceWith(option.cloneNode(true))); // Replace with clone to easily remove all event listeners
+		this.options?.forEach((option) => option.replaceWith(option.cloneNode(true))); // Replace with clone to easily remove all event listeners
 		this.options = this.target = null;
 	}
 }

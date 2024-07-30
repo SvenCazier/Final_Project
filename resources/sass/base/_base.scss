@@ -56,17 +56,13 @@ h6 {
     font-size: 1em;
 }
 
-a:focus,
-a:focus-within,
 a:focus-visible,
-a:active,
-button:focus,
-button:focus-within,
 button:focus-visible,
-button:active {
+label:focus-visible {
     outline: 2px solid $color-secondary-dark;
     outline-offset: 4px;
     border-radius: $border-radius;
+    position: relative;
 }
 
 button {

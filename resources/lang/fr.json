@@ -1,4 +1,5 @@
 {
+	"description": "Découvrez mon portfolio de développeur Full-Stack mettant en avant mon expertise en technologies front-end et back-end. Explorez des projets innovants, des applications web dynamiques et des solutions conçues avec des frameworks modernes et les meilleures pratiques.",
 	"locales": {
 		"selectedLang": "Langue actuelle:",
 		"labelText": "Changer la langue actuelle en",
@@ -95,6 +96,12 @@
 			"title": "La Grande Quête",
 			"content_1": "Je suis en mission pour résoudre des problèmes complexes et créer des applications fluides et conviviales. Je prospère dans les environnements collaboratifs et suis toujours désireux d'apprendre quelque chose de nouveau. Mon objectif ultime ? Avoir un impact durable avec les solutions que je développe."
 		}
+	},
+	"projects": {
+		"title_underline": "Mes",
+		"title_normal": "projets",
+		"View live version": "Voir la version en ligne",
+		"View GitHub repository": "Voir le dépôt GitHub"
 	},
 	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, inspiré de YouTube, est un projet conçu comme une plateforme pour héberger mes propres vidéos. Initialement développé en utilisant du pur Node.js avec le moteur de templates EJS, cette deuxième itération fonctionne sur une API développée en Node.js et un frontend construit en Angular. De plus, elle comporte désormais des chapitres, des sous-titres et un algorithme de recherche à correspondance floue.",
 	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) soutient une alliance Whiteout Survival avec un site web propulsé par PHP et JimBot, un bot Discord qui personnifie une API d'événements. JimBot s'intègre parfaitement à la fois avec Discord et le site web de l'alliance, facilitant la gestion des événements en temps réel et améliorant la communication et la coordination entre les membres de l'alliance.",

@@ -3,6 +3,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100vw;
     z-index: 99999;
     display: flex;
     flex-direction: column;
@@ -275,9 +276,7 @@ nav {
                 }
 
                 &:hover .submenu,
-                .submenu-selector:focus + .submenu,
-                .submenu-selector:active + .submenu,
-                .submenu:focus-within {
+                &:focus-within .submenu {
                     display: block;
                 }
             }
@@ -322,7 +321,7 @@ nav {
 
 html.darkmode {
     nav {
-        background: $color-dark-elevation-9;
+        background: $color-dark-elevation-7;
         color: $color-primary-light;
 
         a,
@@ -388,10 +387,10 @@ html.darkmode {
                 .nav__locale,
                 .nav__settings {
                     .submenu {
-                        background: $color-dark-elevation-9;
+                        background: $color-dark-elevation-8;
 
                         li {
-                            background: $color-dark-elevation-9;
+                            background: $color-dark-elevation-8;
                             a {
                                 &:hover {
                                     background: $color-primary-light;

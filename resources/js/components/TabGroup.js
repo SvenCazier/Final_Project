@@ -9,6 +9,7 @@ class TabGroup {
 	}
 
 	init() {
+		this.radiobutton = document.getElementById("project-0");
 		document.querySelectorAll("[data-tab-group]").forEach((radio) => {
 			radio.addEventListener("keydown", (e) => {
 				this.handleKeyDown(e, radio);
@@ -21,7 +22,8 @@ class TabGroup {
 			}
 		});
 
-		window.addEventListener("resize", this.resizeBannerHeight.bind(this));
+		this.changePanelHeight();
+		window.addEventListener("resize", this.handleResize.bind(this));
 	}
 
 	handleKeyDown(e, radio) {
@@ -98,6 +100,54 @@ class TabGroup {
 		if (!bannerElement) return;
 
 		return bannerElement;
+	}
+
+	handleResize() {
+		this.resizeBannerHeight();
+		this.changePanelHeight();
+	}
+
+	changePanelHeight() {
+		const projectsSection = document.getElementById("projects");
+		if (!projectsSection) return;
+
+		const largestContentHeight = this.getLargestContentsHeight(projectsSection);
+		if (!largestContentHeight) return;
+
+		const tabPanelContents = projectsSection.querySelectorAll(".tab-panel__content");
+		this.setContentsHeight(tabPanelContents, largestContentHeight);
+	}
+
+	getLargestContentsHeight(projectsSection) {
+		const projectsSectionClone = projectsSection.cloneNode(true);
+		projectsSectionClone.querySelector(".nav-tabs").remove();
+		projectsSectionClone.style.visibility = "hidden";
+
+		const clonedtabPanelContents = projectsSectionClone.querySelectorAll(".tab-panel__content");
+		if (!clonedtabPanelContents) return 0;
+		this.setContentsHeight(clonedtabPanelContents, 0);
+
+		const clonedTabPanels = projectsSectionClone.querySelectorAll(".tab-panel");
+		if (!clonedTabPanels) return 0;
+
+		clonedTabPanels.forEach((panel) => {
+			panel.style.display = "contents";
+		});
+
+		document.body.appendChild(projectsSectionClone);
+
+		const content = clonedTabPanels[0].querySelector(".tab-panel__content");
+		const contentHeight = content.offsetHeight;
+
+		document.body.removeChild(projectsSectionClone);
+
+		return contentHeight;
+	}
+
+	setContentsHeight(contents, contentHeight) {
+		contents.forEach((content) => {
+			content.style.minHeight = `${contentHeight}px`;
+		});
 	}
 }
 

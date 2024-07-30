@@ -4,14 +4,16 @@
     right: 0.5em;
     background-color: $color-white;
     color: $color-black;
-    padding: 0.75em;
+    padding: 2em;
     border-radius: $border-radius;
-    height: 3.75em;
-    width: 3.75em;
+    height: 4em;
+    width: 4em;
     overflow: hidden;
     transition:
         width 0.75s 0.75s ease,
         height 0.75s ease;
+    z-index: 99;
+    max-height: calc(100dvh - 5em);
 
     &.expanded {
         width: calc(100% - 1em);
@@ -31,13 +33,17 @@
     &-content {
         display: flex;
         flex-direction: column;
-        margin-bottom: 3.75em;
+        margin-bottom: 2em;
+        max-height: calc(100% - 2em);
+        overflow-x: hidden;
 
         &__header {
+            padding: 0 0.5em;
             margin-bottom: 0.75em;
         }
 
         &__body {
+            padding: 0 0.5em;
             margin-bottom: 2.5em;
 
             em {
@@ -50,11 +56,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 0 0.5em;
 
             .cookie__footer__main-buttons {
                 display: flex;
                 justify-content: space-evenly;
-                gap: 0.5em;
+                gap: 1em;
 
                 button {
                     flex: 1;
@@ -68,15 +75,15 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 3.75em;
+        height: 4em;
         background: $color-white;
 
         .cookie-icon-label {
             position: absolute;
-            bottom: 0;
-            right: 0;
-            height: 3.75em;
-            width: 3.75em;
+            bottom: 0.5em;
+            right: 0.5em;
+            height: 3em;
+            width: 3em;
             border-radius: $border-radius;
             cursor: pointer;
 
@@ -85,7 +92,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                height: 2em;
+                height: 2.25em;
 
                 .svg--fill {
                     fill: $color-primary;
@@ -103,7 +110,15 @@
 @media #{$mq-sm} {
     .cookie-banner {
         &.expanded {
-            width: 550px;
+            width: 50%;
+        }
+    }
+}
+
+@media #{$mq-md} {
+    .cookie-banner {
+        &.expanded {
+            width: 650px;
         }
     }
 }
@@ -116,7 +131,7 @@
 
 html.darkmode {
     .cookie-banner {
-        background-color: $color-dark-elevation-5;
+        background-color: $color-dark-elevation-9;
         color: $color-white;
 
         &-content {
@@ -129,7 +144,7 @@ html.darkmode {
     }
 
     .cookie-banner-toggle-container {
-        background: $color-dark-elevation-5;
+        background: $color-dark-elevation-9;
 
         .cookie-icon-label {
             .cookie-icon {

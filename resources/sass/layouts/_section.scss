@@ -40,6 +40,16 @@ section {
     }
 }
 
+html.dyslexia-friendly {
+    section {
+        &.content-grid {
+            &.text {
+                grid-template-columns: [full-width-start] 1em [content-start] 1fr [content-end] 1em [full-width-end];
+            }
+        }
+    }
+}
+
 @media #{$mq-xs} {
     section {
         &.content-grid {
@@ -48,6 +58,16 @@ section {
 
         .left {
             margin-bottom: 2.5em;
+        }
+    }
+
+    html.dyslexia-friendly {
+        section {
+            &.content-grid {
+                &.text {
+                    grid-template-columns: [full-width-start] auto [content-start] clamp(45ch, 50%, 70ch) [content-end] auto [full-width-end];
+                }
+            }
         }
     }
 }
@@ -76,6 +96,27 @@ section {
     section {
         &.content-grid {
             grid-template-columns: [full-width-start] auto [content-start] 1040px [content-end] auto [full-width-end];
+        }
+    }
+}
+
+@media print {
+    section {
+        &.full-height {
+            min-height: 0;
+        }
+
+        &.content-grid {
+            display: block;
+        }
+
+        .left,
+        .right {
+            display: block;
+        }
+
+        .left {
+            margin-bottom: 0;
         }
     }
 }

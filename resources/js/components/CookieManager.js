@@ -3,18 +3,24 @@
 "use strict";
 
 class CookieManager {
-	preventRefresh = false;
+	isPreventRefresh = false;
+	delay = 1500;
+	hideContentTimeout = null;
+	setScrollTimeout = null;
 
-	constructor() {
+	constructor(dimension) {
 		this.cookieBanner = document.getElementById("cookieBanner");
-		this.cookieBannerContent = document.getElementById("cookieBannerContent");
-		this.cookieBannerToggle = document.querySelector(".cookie-banner-toggle");
-		this.acceptButton = document.getElementById("acceptCookies");
-		this.declineButton = document.getElementById("declineCookies");
-		this.clearButton = document.getElementById("clearCookies");
-		this.cookieBannerCollapsedHeight = this.cookieBanner.clientHeight + "px";
 
-		this.init();
+		if (this.cookieBanner) {
+			this.cookieBannerContent = document.getElementById("cookieBannerContent");
+			this.cookieBannerToggle = document.querySelector(".cookie-banner-toggle");
+			this.acceptButton = document.getElementById("acceptCookies");
+			this.declineButton = document.getElementById("declineCookies");
+			this.clearButton = document.getElementById("clearCookies");
+			this.cookieBannerCollapsedHeight = dimension + "em";
+
+			this.init();
+		}
 	}
 
 	init() {
@@ -39,16 +45,23 @@ class CookieManager {
 
 		const resizeObserver = new ResizeObserver(this.refreshBanner.bind(this));
 		resizeObserver.observe(this.cookieBannerContent);
+		resizeObserver.observe(document.body);
 	}
 
 	getBannerHeight() {
+		// if opened close and reopen?
 		const cookieBannerClone = this.cookieBanner.cloneNode(true);
 		cookieBannerClone.style.visibility = "hidden";
 		cookieBannerClone.style.position = "absolute";
 		cookieBannerClone.style.height = "auto";
+
+		const cookieBannerContentClone = cookieBannerClone.querySelector("#cookieBannerContent");
+		cookieBannerContentClone.style.display = "flex";
+
 		cookieBannerClone.classList.add("expanded");
 
 		document.body.appendChild(cookieBannerClone);
+
 		const height = cookieBannerClone.offsetHeight;
 		document.body.removeChild(cookieBannerClone);
 
@@ -56,27 +69,50 @@ class CookieManager {
 	}
 
 	expandBanner() {
+		clearTimeout(this.hideContentTimeout);
 		this.cookieBanner.classList.remove("no-transition");
 		this.cookieBanner.classList.add("expanded");
 		this.cookieBanner.style.height = `${this.getBannerHeight()}px`;
+		this.cookieBannerContent.style.display = "flex";
 
-		// necessary evil to allow the banner to expand without refreshbanner being triggered and preventing the transition
-		this.preventRefresh = true;
-		setTimeout(() => {
-			this.preventRefresh = false;
-		}, 1500);
+		this.setScrollTimeout = setTimeout(() => {
+			this.cookieBannerContent.style.overflowY = "auto";
+		}, this.delay);
+
+		this.preventRefresh();
 	}
 
 	collapseBanner() {
+		clearTimeout(this.setScrollTimeout);
+		this.cookieBannerContent.style.overflowY = "hidden";
 		this.cookieBanner.classList.remove("no-transition");
 		this.cookieBanner.style.height = this.cookieBannerCollapsedHeight;
 		this.cookieBanner.classList.remove("expanded");
+
+		this.hideContentTimeout = setTimeout(() => {
+			this.cookieBannerContent.style.display = "none";
+		}, this.delay);
+
+		this.preventRefresh();
+	}
+
+	preventRefresh() {
+		// necessary evil to allow the banner to expand without refreshbanner being triggered and preventing the transition
+		this.isPreventRefresh = true;
+		setTimeout(() => {
+			this.isPreventRefresh = false;
+		}, this.delay);
 	}
 
 	refreshBanner() {
-		if (!this.preventRefresh && this.cookieBanner.classList.contains("expanded")) {
+		if (!this.isPreventRefresh && this.cookieBanner.classList.contains("expanded")) {
 			this.cookieBanner.classList.add("no-transition");
 			this.cookieBanner.style.height = `${this.getBannerHeight()}px`;
+			this.cookieBanner.offsetHeight;
+			this.cookieBanner.classList.remove("no-transition");
+		} else if (!this.isPreventRefresh && !this.cookieBanner.classList.contains("expanded")) {
+			this.cookieBanner.classList.add("no-transition");
+			this.cookieBanner.style.height = this.cookieBannerCollapsedHeight;
 			this.cookieBanner.offsetHeight;
 			this.cookieBanner.classList.remove("no-transition");
 		}

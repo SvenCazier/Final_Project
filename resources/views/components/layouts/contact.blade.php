@@ -1,4 +1,4 @@
-<section id="contact" class="content-grid">
+<section id="contact" class="content-grid no-print">
     <div class="left">
         <h2 class="title article__title--main">
             <span class="article__title--underline">{{ __('contact.title_underline') }}</span>

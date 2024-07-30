@@ -1,4 +1,5 @@
 {
+	"description": "Explora mi portafolio de desarrollador Full-Stack que muestra mi experiencia en tecnologías front-end y back-end. Descubre proyectos innovadores, aplicaciones web dinámicas y soluciones elaboradas con frameworks modernos y las mejores prácticas.",
 	"locales": {
 		"selectedLang": "Idioma actual:",
 		"labelText": "Cambiar el idioma actual a",
@@ -95,6 +96,12 @@
 			"title": "La Gran Búsqueda",
 			"content_1": "Estoy en una misión para resolver problemas complejos y crear aplicaciones fluidas y fáciles de usar. Me desenvuelvo bien en entornos colaborativos y siempre estoy ansioso por aprender algo nuevo. ¿Mi objetivo final? Dejar una huella duradera con las soluciones que desarrollo."
 		}
+	},
+	"projects": {
+		"title_underline": "Mis",
+		"title_normal": "proyectos",
+		"View live version": "Ver versión en vivo",
+		"View GitHub repository": "Ver el repositorio de GitHub"
 	},
 	"MeTube, inspired by YouTube, is a project designed as a platform for hosting my own videos. Originally developed using pure Node.js with the EJS templating engine, this second iteration runs on an API developed in Node.js and a frontend built in Angular. Furthermore, it features chapters, subtitles, and a Fuzzy Matching search algorithm now.": "MeTube, inspirado en YouTube, es un proyecto diseñado como una plataforma para alojar mis propios videos. Originalmente desarrollado con Node.js puro y el motor de plantillas EJS, esta segunda iteración funciona con una API desarrollada en Node.js y un frontend construido en Angular. Además, ahora cuenta con capítulos, subtítulos y un algoritmo de búsqueda de coincidencia difusa.",
 	"JIM(Bot) supports a Whiteout Survival alliance with a PHP-backed website and JimBot, a Discord bot that personifies an event API. JimBot seamlessly integrates with both Discord and the alliance's website, facilitating real-time event management and enhancing communication and coordination among alliance members.": "JIM(Bot) apoya a una alianza de Whiteout Survival con un sitio web respaldado por PHP y JimBot, un bot de Discord que personifica una API de eventos. JimBot se integra perfectamente con tanto Discord como el sitio web de la alianza, facilitando la gestión de eventos en tiempo real y mejorando la comunicación y coordinación entre los miembros de la alianza.",
